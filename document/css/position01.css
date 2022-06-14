@@ -1,0 +1,34 @@
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 중간에 위치하게 하는 공식 !!! */
+    /* 자기자신의 50%, 따로 X 마지막만 적용, (x, y) */
+    /* 자기자신을 움직임, 레이아웃을 안 깸 */
+    width: 450px;
+    height: 350px;
+    background: bisque;
+}
+
+.popup h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+}
+/* 이거 맞나? */
+
+.popup button {
+    position: absolute;
+    /* 기준을 잡아줌 */
+    bottom: 15px;
+    right: 15px;
+
+    width: 80px;
+    height: 30px;
+}

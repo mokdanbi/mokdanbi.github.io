@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font 적용 방법 */
+
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* icon 적용 방법 */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#event {
+    text-align: center;
+}
+
+#event h2 {
+    font-size: 31px;
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+#event p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+#event .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#event img {
+    max-width: 80%;
+    transition: 0.5s;
+}
+
+#event figure {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#event figure:hover img {
+    transform: scale(2);
+}
+
+#event figure a {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    top: -50px;
+    padding: 50px 30px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#event figure:hover a {
+    transform: translate(-50%, -50%);
+    padding: 50px 30px;
+    border-radius: 50%;
+}

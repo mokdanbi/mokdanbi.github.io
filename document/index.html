@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li>pre {
+            margin-bottom: 0;
+        }
+
+        ol li {
+            margin: 5px 0 30px 0;
+            border-bottom: 1px solid #ddd;
+            padding: 0 0 30px 0;
+        }
+
+        strong {
+            display: block;
+            color: #f00;
+            padding-top: 10px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 11px;
+            font-weight: 200;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>display</h2>
+    <ol>
+        <li>
+            <!--
+                2022.05.17
+                경로
+                ./ 나의 형제 레벨
+                ../ 나의 부모 레벨
+            -->
+            <a href="./doc/box01.html" target="_blank">box 01</a>
+            <!--blank : 새 창으로 열기-->
+            <p>태그의 일반적인 성질</p>
+            <em>2022.05.17</em>
+            <pre>
+주로 width: 1200px;
+가운데 정렬 margin: 0 auto;
+hr : 가로 선
+width : auto;</pre>
+        </li>
+        <li>
+            <a href="./doc/box02.html" target="_blank">box 02</a>
+            <p>박스의 기본 성질</p>
+            <em>2022.05.17</em>
+            <strong>
+                ★★★★
+            </strong>
+            <pre>
+*는 all
+box-sizing: border-box;
+border: 1px solid #000;
+display: block;은 inline인 tag를 박스로 변경</pre>
+        </li>
+        <li>
+            <a href="./doc/box03.html" target="_blank">box 03</a>
+            <p>박스를 가로로 나열하기</p>
+            <em>2022.05.17</em>
+            <strong>
+                ★★★★★
+            </strong>
+            <pre>
+text-align: center;
+font-weight: bolder;
+display: flex; (한 줄 정렬)
+사이 간격 띄우기 gap (익스플로러X)
+flex: 1; (똑같이 1로 나눠줌)
+block으로 만들어야 margin, padding 가능</pre>
+        </li>
+        <li>
+            <a href="./doc/box04.html" target="_blank">box 04</a>
+            <p>레이아웃의 기초 - 박스의 위치 변경 (display flex를 이용한 박스 배열)</p>
+            <em>2022.05.18</em>
+            <pre>
+link는 reset이 먼저
+line-height
+display: flex;
+justify-content: center; 중앙정렬
+justify-content: flex-end; 오른쪽정렬
+justify-content: space-between; 사이 간격 같게 띄우기
+margin-left: auto; 나눠서 오른쪽으로 붙일 때
+gap 사이 간격</pre>
+        </li>
+    </ol>
+
+    <h2>position</h2>
+    <!-- position: static, relative, absolute, fixed -->
+    <ol>
+        <li>
+            <a href="./doc/position01.html" target="_blank">position 01</a>
+            <p>포지션의 기초 - 팝업창 띄우기와 close 버튼 만들기</p>
+            <em>2022.05.19</em>
+            <pre>
+div안에 button 생성
+
+<중간에 위치>
+position: absolute; > 떠오르게 한다, 겹친다
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); > 자기자신만 움직이고 레이아웃을 깨지 않는다
+
+버튼을 눌렀을 때 사라지는 팝업창
+👉 document.querySelector('버튼').addEventListener('클릭', function(){console.log('콘솔');
+document.querySelector('팝업').style.display = 'none';})
+</pre>
+        </li>
+        <li>
+            <a href="./doc/position02.html" target="_blank">position 02</a>
+            <p>포지션을 사용해 사라지는 메뉴바 만들기 (메뉴 버튼 만들기)</p>
+            <em>2022.05.19</em>
+            <pre>
+nav>ul>li>a
+nav class=on
+div안에 span 생성 > 메뉴버튼
+
+버튼을 눌렀을 때 나타나고 사라지는 팝업창
+👉  document.querySelector('버튼').addEventListener('클릭', function()
+{document.querySelector('nav').classList.toggle('on');
+this.classList.toggle('on');})
+
+position : fixed; > 스크롤 X 그자리에 고정
+vh 단위 > viewport height
+transition : 0.5s; > 나타나는 속도 (transform과 다르다)
+transform : rotate(45deg); > 각도
+opacity: 0; > 투명도 0 (display: none; 처럼 수치나 중간단계가 없으면 애니메이션 적용 X)
+
+</pre>
+        </li>
+        <li>
+            <a href="./doc/position03.html" target="_blank">position 03</a>
+            <p>hover 활용하기, web font와 icon 적용하기</p>
+            <em>2022.05.20</em>
+            <pre>
+id는 단 하나의 이름만을 가진다.
+i > icon > inline-block 속성, 정사각형
+font와 icon 적용 방법
+                
+~::before > ~의 앞에
+~::after > ~의 뒤에
+내용이 있는 것은 ㄴㄴ
+                
+:hover > 마우스를 올렸을 때
+overflow: hidden; > 바깥으로 나가는 부분 숨기기
+position: relative; > ★ 기준으로 만들기 ★
+position: absolute;
+transform: > layout을 깨지 않음, 박스를 만들지 않음
+border-radius: 50% > 원
+
+💡 폰트 사이즈가 홀수일 때 가독성이 Gooooood
+   gap의 기본 수치는 30px
+</pre>
+        </li>
+        <li>
+            <a href="./doc/position04.html" target="_blank">position 04</a>
+            <p>여러 이미지 중 하나씩 넘기도록 만들기</p>
+            <em>2022.05.25</em>
+            <pre>
+ul을 감싸는 div에 relative, ul에 absolute
+div에 하나만 보이는 width, height를 지정하고 overflow: hidden;
+ul에 transition-timing-function : cubic-bezier( , , , );
+
+
+개어려운 js .. (っ °Д °;)っ .. 정신을 잃고 쓰러졌다 ㅇ<-<
+
+$(function(){
+    $('.number li').on('click', function(){
+        var idx = $(this).index();
+        console.log(idx);
+        $('.shoes .case ul').css({top:-450 * idx})
+    })
+})
+
+</pre>
+        </li>
+        <li>
+            <a href="./doc/position05.html" target="_blank">position 05</a>
+            <p>누르면 바뀌는 얼굴, 숨겨지는 상단메뉴 만들기</p>
+            <em>2022.05.25-26</em>
+            <pre>
+absolute를 사용해 전부 띄워주고 top, left 값을 준다
+.on을 주고 transform : rotate(~deg)를 변경해준다
+
+top_banner 속 container에 height를 준다
+overflow: hidden;
+transition: ~s;
+.container.active는 height: 0;
+
+<h3>$(function (){
+    $('.smile').on('click', function(){
+        $(this).toggleClass('active')
+    })
+
+    $('.top_banner button').on('click', function(){
+        $('.top_banner .container').toggleClass('active')
+    })
+})</h3>
+</pre>
+        </li>
+        <li>
+            <a href="./doc/position06.html" target="_blank">position 06</a>
+            <p>히든 메뉴 만들기, keyframes를 활용한 애니메이션 적용</p>
+            <em>2022.05.26</em>
+            <pre>
+weicon 사용 👉 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+                
+.top_banner를 만들어 .container와 button(icon)을 함께 넣어준다
+.top_banner.active 하면 button::after > open, .container > height:0
+.top_banner에 relative를 주고 button에 absoulte를 준다
+cursor: pointer; > 커서를 포인터로 변경
+                
+.right_banner는 fixed, .active할 때 right 값 변경
+
+<h3>$(function() {
+$('.top_banner button').on('click', function(){
+    $('.top_banner').toggleClass('active')
+    })
+                
+$('.right_banner').on('click', function(){
+    $(this).toggleClass('active')
+    })
+})</h3>
+
+애니메이션 적용 👉 animation: ~ 1s infinite linear;
+
+<h3>@keyframes ~ {
+    to {
+        transform: ---;
+    }
+}</h3>
+</pre>
+        </li>
+        <li>
+            <a href="./doc/basic01.html" target="_blank">basic 01</a>
+            <p>반응형 메뉴 만들기</p>
+            <em>2022.05.30</em>
+            <pre>
+@media (max-width:1000px) { }
+반응형 만들기 : { } 안에 수치를 바꿈
+
+display: flex;
+flex-direction: colum; > flex를 위에서 밑으로 정렬
+🎈 z-index: 999; > 가장 상단에 위치함
+width: calc(100% - 90px); > 100%의 넓이에서 90px를 뺌
+</pre>
+        </li>
+    </ol>
+
+    <h2>slick</h2>
+    <ol>
+        <li>
+            <a href="./doc/slick01.html" target="_blank">slick 01</a>
+            <p>메인 슬라이드 만들기</p>
+            <em>2022.05.31</em>
+            <pre>
+background: url() no-repeat center center/cover;
+.main_visual .main_slider .slick-arrow
+.main_visual .main_slider .slick-prev
+.main_visual .main_slider .slick-next
+.main_visual .main_slider .slick-dots
+
+js 🔻
+<h3>$(function(){
+    $('.main_slider').on('init reInit afterChange', function(e,s,c){
+        console.log(e, s, c);
+        $('.num').text ((c ? c + 1 : 1) + " / " + s.slideCount);
+        let cur = $('.slick-current');
+        cur.addClass('xx').siblings().removeClass('xx');
+    });
+
+    $('.main_slider').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        // 기본 3000 (3초)
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    });
+})</h3>
+
+css 🔻
+<h3>.main_visual .main_slider figure.xx a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.5s 1s, transform 0.5s 1s;
+}</h3>
+</pre>
+        </li>
+</body>
+
+</html>

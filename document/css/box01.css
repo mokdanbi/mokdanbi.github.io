@@ -1,0 +1,26 @@
+body {
+    margin: 0 0 0 0;
+}
+
+h1 {color: darkred;}
+
+.box00 {
+    width: 1200px;
+    margin: 0 auto 0 auto;
+    background: #00f;
+    color: #fff;
+}
+.box01 {
+    width:50%;
+    background: #f00;
+}
+.box02 {
+    margin-left: 100px;
+    width: 100%;
+    background: #ff0;
+}
+.box03 { 
+    margin-left: 100px;
+    width: auto;
+    background: #0f0;
+}

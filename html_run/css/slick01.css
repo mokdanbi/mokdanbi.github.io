@@ -1,0 +1,153 @@
+img {
+    max-width: 100%;
+}
+
+
+
+.visual_silder figure{
+    height: 600px;
+    /* 100vh : viewport size 100% */
+}
+
+.visual_silder .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+    /* cover(background size) : 박스를 꽉 채워라 , 다 보이도록 사이즈를 크게 만들어라 */
+}
+
+.visual_silder .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.visual_silder .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+
+.main {
+    position: relative;
+}
+
+.main .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+.main .slogan h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+}
+
+.main .slogan p {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+
+.main .slick-dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .slick-dots li {
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    background: #333;
+    margin: 0 2px;
+}
+
+.main .slick-dots li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #f00;
+}
+
+.main .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 3s;
+}
+
+.main .slick-dots li button {
+    display: none;
+}
+
+.main .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    /* 겹쳐있는 흐름을 바꿔줌 */
+    
+    font-size: 0;
+    border: none;
+    background: transparent;
+    /* 투명하게 */
+
+    width: 100px;
+    height: 100px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    opacity: 0.3;
+}
+
+.main .slick-arrow:hover {
+    opacity: 1;
+    transition: border 
+    0.3s;
+}
+
+.main .slick-prev {
+    /* left: 100px; (margin 대신 반응형) */
+    margin: 0 0 0 -700px;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    /* 속성을 두번쓰면 뒤의 속성이 앞의 속성을 덮어쓰기 때문에 한 번에 사용함! */
+}
+
+.main .slick-next {
+    /* left: auto; right: 100px; (margin 대신 반응형) */
+    margin: 0 0 0 700px;
+    transform: translate(-50%,-50%) rotate(135deg);
+}
+
+
+
+.main .wheel {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-size: 0;
+}
+
+.main .wheel span {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 10px;
+    background: #fff;
+    border-radius: 2px;
+    animation: wheel 1s infinite;
+}
+
+@keyframes wheel {
+    to {
+        top: 12px;
+    }
+}

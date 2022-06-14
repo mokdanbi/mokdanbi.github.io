@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font 적용 방법 */
+
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* icon 적용 방법 */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* font 적용 방법 */
+
+#event {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* #event i {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+} 배경을 원으로 만들어 줌 */
+
+#event .spin {
+    margin-bottom: 30px;
+}
+
+#event h2 {
+    font-size: 21px;
+    /* 폰트 사이즈가 홀수 일 때 가독성이 좋다 */
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+/* #event h2::before {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: rgb(231, 47, 47);
+    margin: 0 10px;
+    vertical-align: middle;
+}  */
+
+#event h2::before {
+    content: ". . . .";
+    display: inline-block;
+    width: 50px;
+    margin: 0 20px;
+    vertical-align: super;
+}
+
+#event h2::after {
+    content: ". . . .";
+    display: inline-block;
+    width: 50px;
+    margin: 0 20px;
+    vertical-align: super;
+}
+/* ~::before ~의 앞에
+~::after ~의 뒤에 */
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+}
+
+#event p::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    background: #999;
+    margin: 20px auto;
+}
+
+#event .container {
+    display: flex;
+    gap: 30px;
+    /* gap의 기본 수치 30px */
+    width: 1200px; 
+    margin: 0 auto;
+}
+
+#event img {
+    max-width: 100%;
+    /* 부모(.container)에서 상속받은 값 */
+    transition: 0.5s;
+    /* transition은 이미지에 준다 */
+}
+
+#event figure {
+    position: relative;
+    /* ★★★ 기준으로 만들어준다 ★★★ */
+    flex: 1;
+    overflow: hidden;
+    /* 바깥으로 나가는 것을 숨겨라 */
+}
+
+#event .container figure:hover img {
+    transform: scale(2);
+    /* layout을 깨지 않음. 박스를 만들지 않는다. */
+}
+
+#event figure a {
+    position: absolute;
+    /* figure에 relative를 줌 */
+    top: -40px;
+    left: 0;
+    padding: 10px 30px;
+    background: #333;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#event figure:hover a {
+    top: 0;
+}

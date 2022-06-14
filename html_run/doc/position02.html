@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            line-height: 100vh;
+        }
+
+        header {
+            background: #f00;
+        }
+
+        main {
+            background: #ff0;
+        }
+
+        footer {
+            background: #00f;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container figure {
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .container figure:nth-child(2) {
+            background: #333;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky">
+        header
+    </header>
+    <main class="sticky">
+
+    </main>
+    <section class="sticky">
+        <div class="container">
+            <figure>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro rem nobis tempora, quaerat laudantium
+                blanditiis aut placeat, unde nisi architecto molestias expedita et voluptas dignissimos corporis
+                commodi, quisquam sint adipisci qui velit nemo voluptate necessitatibus? Sint laborum in ex culpa
+                cupiditate necessitatibus delectus nesciunt dolores blanditiis ipsa praesentium illo ratione, suscipit
+                debitis libero cum repellat a at esse, corporis quo tenetur animi eligendi fugit. Alias laborum eveniet
+                aliquid impedit vero dignissimos harum excepturi consequuntur eos eligendi quae unde perferendis, ab sit
+                omnis cum praesentium aliquam. Voluptatum commodi nemo, eligendi aut saepe molestias sunt dolorem ex
+                dolorum, dicta neque tempore laboriosam perferendis officiis quisquam iusto quidem mollitia dolor. Animi
+                iste error nobis sunt fuga mollitia quaerat accusamus illo nam, recusandae ipsam debitis ut eligendi
+                laborum voluptate veritatis nemo officiis earum libero deleniti at! Perferendis dicta illum asperiores
+                molestiae error voluptatem commodi, debitis aliquid ab delectus eligendi, similique accusantium quas
+                perspiciatis rem quia unde iure soluta earum qui ullam non voluptatum culpa ea? Quos aut ab voluptatem,
+                mollitia in laudantium. Laboriosam quaerat veniam repellat numquam blanditiis quos, excepturi dolores
+                quas provident iusto veritatis maiores magnam illum culpa eveniet dolor reprehenderit fugiat. Tempora
+                eius explicabo eveniet voluptates consectetur laborum similique ab impedit facere voluptas ipsa sapiente
+                blanditiis praesentium perspiciatis at nemo reprehenderit culpa ad quae saepe cumque, amet minima sit!
+                Atque deleniti ipsum beatae, sapiente id qui rem nesciunt blanditiis, itaque vel possimus ratione eum
+                accusantium dolores numquam recusandae officia eligendi voluptatum cupiditate molestias esse
+                consequuntur eos? Ipsum quia illum accusamus animi quas repudiandae perferendis, delectus cupiditate,
+                necessitatibus iusto quaerat ipsam dolores aperiam! Harum tempora nostrum animi eum ipsum facilis
+                facere! Deserunt soluta quisquam fuga perferendis rerum. Ipsam reiciendis nulla id explicabo ab magni
+                illum, repellat enim officiis cumque, rerum odio alias! Perferendis, pariatur illum? Dolor dolorem nisi
+                error adipisci saepe repellat voluptas?
+            </figure>
+            <figure>
+
+            </figure>
+        </div>
+    </section>
+    <footer class="sticky">
+        footer
+    </footer>
+</body>
+
+</html>

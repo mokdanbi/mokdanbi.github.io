@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BASIC</title>
+    <style>
+        strong {
+            font-size: 13px;
+        }
+
+        .strong {
+            border: 1px dotted #333;
+            padding: 15px;
+        }
+
+        em {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML BASIC</h1>
+
+    <hr />
+
+    <h2>기본 박스 : box-model</h2>
+    <ul>
+        <li>
+            <a href="./doc/box01.html" target="_blank">기본 박스 01</a>
+            <p>기본적인 박스의 성질에 대한 이해</p>
+            <em>2022.06.02</em>
+            <pre>
+                width / height / padding / margin
+                width는 늘어남
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/display01.html" target="_blank">기본 박스 01 - 2</a>
+            <p>inline / block / inline-block</p>
+            <em>2022.06.03</em>
+            <pre>
+                inline 요소는 width, height, 상하 margin/padding 값을 줄 수 없다
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/box02.html" target="_blank">기본 박스 02</a>
+            <p>선택자에 대한 이해</p>
+            <em>2022.06.02</em>
+            <pre>
+                section li > li 모두
+                section li:nth-child(~) > ~번 째 li
+                🔸 section div:nth-child(2) > section전체에서 2번째인 div
+                section div:nth-of-type(2) > div 중 2번째
+                .color~li > .color 다음부터 li까지
+            </pre>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h2>다단 메뉴 : multi-menu</h2>
+    <ul>
+        <li>
+            <a href="./doc/test01.html" target="_blank">다단 메뉴 01</a>
+            <p>전체가 보이는 다단 메뉴</p>
+            <em>2022.06.02</em>
+            <pre>
+                ::before > 뒷 배경
+                배경과 다단메뉴에 z-index 적용
+                overflow : hidden; 후에 :hover 사용해 열어줌
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/multi_menu01.html" target="_blank">다단 메뉴 02</a>
+            <p>선택한 메뉴만 보이는 다단 메뉴</p>
+            <em>2022.06.02</em>
+            <pre>
+                top: 0; left: 0; = inset: 0 auto auto 0; (익스플로러 지원 X)
+                ::before로 border가 있는 네모를 만들어 rotate(45deg)를 주고 다단메뉴 li에 position: relative;를 주고 중앙으로 이동
+                background를 다시 깔아서 화살표처럼 만들어 줌
+
+                ::before에서 position과 inset으로 이동
+                border-radius: 50%로 동그랗게 만든 후 z-index와 border-box를 줌
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/multi_menu02.html" target="_blank">다단 메뉴 03</a>
+            <p>선택한 메뉴만 보이는 다단 메뉴</p>
+            <em>2022.06.02</em>
+            <pre>
+                position과 z-index를 사용해 띄운 후 visibility:hidden;으로 숨김
+                :hover 했을 때 visibility: visible;로 떠오르도록 설정
+                opacity:0; 에서 opacity:1;로 주고 transition으로 부드럽게</pre>
+        </li>
+    </ul>
+
+    <div class="strong">
+        <strong>
+            ⭐ position: relative; ⭐ position: absolute; ⭐ position 이해하기 .. 넘 어렵당 🔨🪓⛏<br />
+            relative는 자신이 기준, absolute는 위에 있는 position이 기준. 쓰는 순서가 중요!
+        </strong>
+    </div>
+
+    <hr />
+
+    <h2>position</h2>
+    <ul>
+        <li>
+            <a href="./doc/position01.html" target="_blank">position 01</a>
+            <p>position에 대한 이해</p>
+            <em>2022.06.03</em>
+            <pre>
+                position: realtive;
+                position: absolute;
+                position: fixed;
+                z-index: 999;
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/position02.html" target="_blank">position 02</a>
+            <p>position에 대한 이해 2</p>
+            <em>2022.06.03</em>
+            <pre>
+                position: sticky;
+                height: 100vh;
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/position03.html" target="_blank">position 03</a>
+            <p>position에 대한 이해 3</p>
+            <em>2022.06.03</em>
+            <pre>
+                섹션을 나누어 class에 sticky를 주고 적용
+                영역을 container로 묶어 left, right로 나눔
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/hover01.html" target="_blank">hover 01</a>
+            <p>hover를 이용한 position에 대한 이해</p>
+            <em>2022.06.07 (자리 비움 💬 복습하기)</em>
+            <pre>
+                hover와 before, after를 사용해 효과를 줌
+            </pre>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h2>html</h2>
+    <ul>
+        <li>
+            <a href="./doc/psdtohtml01.html" target="_blank">psd to html 01</a>
+            <p>photoshop 시안을 보고 html 만들기</p>
+            <em>2022.06.08</em>
+            <pre>
+                가로 1200로 간격 30 띄운 후 12칸으로 나눔
+                가로를 1900으로 늘린 후 각 사이즈에 맞게 제작
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/psdtohtml02.html" target="_blank">psd to html 02</a>
+            <p>photoshop 시안을 보고 html 만들기</p>
+            <em>2022.06.09</em>
+            <pre>
+                전체를 .Wrap으로 감싸고 각 부분에 id를 줌
+                header의 line-height: 100px;
+                a의 자간 조정 letter-spacing: -0.025em;
+                slogan 그림자 text-shadow: 0 0 3px #000;
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/pseudo_element01.html" target="_blank">가상요소 선택자 01</a>
+            <p>weicon 사용과 before, after에 대한 이해</p>
+            <em>2022.06.08</em>
+            <pre>
+                xeicon > style 태그에 content:"~"; font-famuily: xeicon !important; 사용
+                ::before와 ::after를 사용해 화면 구성하기
+            </pre>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h2>header</h2>
+    <ul>
+        <li>
+            <a href="./doc/basic01.html" target="_blank">basic</a>
+            <p>기본 틀 정리하기</p>
+            <em>2022.06.09</em>
+            <pre>
+                .Wrap으로 전체 감싸고 header/main/footer로 나누기
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/header01.html" target="_blank">header 01</a>
+            <p>header 가로 배치하기</p>
+            <em>2022.06.09</em>
+            <pre>
+                header의 line-height:100px;
+                .container와 ul에 display:flex;
+                .container는 justify-content:space-between; 으로 양쪽에 배치
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/header02.html" target="_blank">header 02</a>
+            <p>오른쪽 메뉴버튼 만들기</p>
+            <em>2022.06.09</em>
+            <pre>
+                header의 line-height:100px;
+                .container와 ul에 display:flex;
+                .container는 justify-content:space-between; 으로 양쪽에 배치
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/header03.html" target="_blank">header 03</a>
+            <p>menu 가운데 배치 하기</p>
+            <em>2022.06.09</em>
+            <pre>
+                space-between 으로 양쪽에 배치한 후, h1와 .btn에 각 width:200px;
+                .btn을 text-align: right;로 오른쪽에 붙여줌
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/header04.html" target="_blank">header 04</a>
+            <p>header 동일 간격으로 배치하기</p>
+            <em>2022.06.09</em>
+            <pre>
+                .container와 nav에 margin: 0 auto;
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/header05.html" target="_blank">header 05</a>
+            <p>menu 양쪽에 배치하기</p>
+            <em>2022.06.09</em>
+            <pre>
+                nav를 display:flex; justify-content: space-between;주고 nav>*는 flex:1; 준다
+                h1에 text-align:center;로 중간을 맞추고
+                오른쪽 메뉴에 justify-content: flex-end;로 맞춰준다
+        </pre>
+        </li>
+
+        <li>
+            <a href="./doc/multi_menu03.html" target="_blank">multi menu 03</a>
+            <p>반응형 다단 메뉴 만들기</p>
+            <em>2022.06.10</em>
+            <pre>
+                @media (max-width:768px) {} 를 사용해 반응형으로 만듦
+                .header .gnb>ul ul에 position: static;을 적용해 포지션을 없앤다
+                script ㅈㄴ 어려움 .. 아직 이해 못함
+        </pre>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h2>slick</h2>
+    <ul>
+        <li>
+            <a href="./doc/slick01.html" target="_blank">slick 01</a>
+            <p>slick을 이용해 slider 만들기</p>
+            <em>2022.06.13</em>
+            <pre>
+                css
+                background : url() no-repeat center center/cover;
+                transform: translate(-50%,-50%) rotate(-45deg);
+                ‼ 속성을 두번쓸 경우 뒤의 속성이 앞의 속성을 덮어씀, 한번에 사용
+                animation: ~ 1s infinite;
+
+                js
+                arrows: 버튼의 유무
+                autoplaySpeed : 머물러 있는 시간(3000=3s)
+                pasueOnHover : hover했을 때 멈추는지
+                slidesToShow : 한번에 몇개를 보여줄지
+        </pre>
+        </li>
+        <li>
+            <a href="./doc/slick02.html" target="_blank">slick 02</a>
+            <p>slick slide 만들기</p>
+            <em>2022.06.14</em>
+            <pre>
+
+        </pre>
+        </li>
+</body>
+
+</html>
