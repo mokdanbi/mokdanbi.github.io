@@ -103,6 +103,7 @@
 .slide02 .container .right {
     width: 70%;
     overflow: hidden;
+    margin: auto 0 0 0;
 }
 
 .slide02 .container .right .right_slider {
@@ -110,7 +111,7 @@
 }
 
 .slide02 .container .right figure {
-    padding: 30px 30px 0 0;
+    padding: 20px 30px 0 0;
 }
 
 .l_arrow i {
