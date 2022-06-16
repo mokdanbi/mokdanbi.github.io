@@ -38,5 +38,5 @@ $(function(){
         $('.main_slider').slick('slickPlay');
     })
 
-})
+})                                                    
 

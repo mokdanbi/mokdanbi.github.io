@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie 01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.mb.YTPlayer.min.css">
+    <style>
+        body {
+            height: 200vh;
+        }
+
+        .fixed_bg {
+            background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+            padding: 200px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .movie01 .container {
+            display: flex;
+            gap: 30px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .movie01 .container>div {
+            flex: 1;
+        }
+
+        .movie01 video {
+            max-width: 100%;
+        }
+
+        section h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        section p {
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0 0 30px 0;
+        }
+
+        .movie01 {
+            padding: 100px;
+        }
+
+        .movie01 .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .movie01 .right i {
+            padding: 10px;
+            font-size: 30px;
+            background: #f7f7f7;
+            border-radius: 30px;
+            margin: 0 10px 0 0;
+        }
+
+        .movie02 {
+            padding: 250px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .movie02 i {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="fixed_bg">
+        <h2>배경 고정하기 : parallax</h2>
+        <p>배경이 고정 되었습니다. 아주 신기해요</p>
+    </section>
+
+    <section class="movie01">
+        <div class="container">
+            <div class="left">
+                <video src="../img/movie01.mp4" autoplay muted playsinline class="vd01">
+                </video>
+                <!-- 자동재생 / 음소거 / 새 창 띄우지 않기 -->
+            </div>
+            <div class="right">
+                <div class="inner">
+                    <h2>mp4 동영상 플레이</h2>
+                    <p>이 귀여운 고양이를 보세요. 근디 또 나만 고양이 없어</p>
+                    <div class="controls">
+                        <i class="xi-pause"></i>
+                        <i class="xi-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="movie02">
+        <div id="bgndVideo" class="player" data-property="">
+            <h2>잔망루피 X TXT(투모로우바이투게더) mv</h2>
+            <p>어느 날 머리에서 뿔이 자랐다(Loopy ver.)</p>
+            <div class="controls">
+                <i class="xi-pause"></i>
+                <i class="xi-play"></i>
+                <i class="xi-headset"></i>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.movie01 .right i:nth-child(1)').on('click', function () {
+                $('.vd01').trigger('pause')
+            })
+
+            $('.movie01 .right i:nth-child(2)').on('click', function () {
+                $('.vd01').trigger('play')
+            })
+
+
+            // youtube player
+            $('#bgndVideo').YTPlayer({
+                videoURL: 'https://youtu.be/WzSaZuSTmZ4',
+                containment: '.movie02',
+                autoPlay: true,
+                mute: true,
+                showControls: false,
+                playOnlyIfVisible: true,
+                // 보일때만 재생
+            });
+
+            $('.movie02 i:nth-child(1)').on('click', function () {
+                $('#bgndVideo').YTPPause();
+            })
+
+            $('.movie02 i:nth-child(2)').on('click', function () {
+                $('#bgndVideo').YTPPlay();
+            })
+
+            $('.movie02 i:nth-child(3)').on('click', function () {
+                $('#bgndVideo').YTPUnmute();
+            })
+
+        }); // the end
+    </script>
+</body>
+
+</html>

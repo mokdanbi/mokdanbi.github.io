@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML BASIC</title>
     <style>
-        strong {
-            font-size: 13px;
-        }
-
         .strong {
             border: 1px dotted #333;
             padding: 15px;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0 0 30px 0;
         }
 
         em {
@@ -99,10 +98,8 @@
     </ul>
 
     <div class="strong">
-        <strong>
-            ⭐ position: relative; ⭐ position: absolute; ⭐ position 이해하기 .. 넘 어렵당 🔨🪓⛏<br />
-            relative는 자신이 기준, absolute는 위에 있는 position이 기준. 쓰는 순서가 중요!
-        </strong>
+        ⭐ position: relative; ⭐ position: absolute; ⭐ position 이해하기 .. 넘 어렵당 🔨🪓⛏<br />
+        relative는 자신이 기준, absolute는 위에 있는 position이 기준. 쓰는 순서가 중요!
     </div>
 
     <hr />
@@ -307,6 +304,73 @@
                 js는 해도해도 어렵다 ,, e,s,c 💢💤⁉⁉
         </pre>
         </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+        <li>
+            <a href="./doc/movie01.html" target="_blank">movie 01</a>
+            <p>YTPlayer를 이용해 youtube 영상 넣기</p>
+            <em>2022.06.16</em>
+            <pre>
+                배경 고정하기 > body에 height를 주고 box에 background fixed 적용
+
+                link rel="stylesheet" href="../css/jquery.mb.YTPlayer.min.css"
+                script src="../js/jquery.mb.YTPlayer.min.js"
+
+                video src="" autoplay(자동재생) muted(음소거) playsinline(새창X)
+        </pre>
+            <div class="strong">
+                youtube player 👇<br />
+                div id="bgndVideo" class="player" data-property=""<br />
+                $('#bgndVideo').YTPlayer({<br />
+                videoURL: 'https://youtu.be/WzSaZuSTmZ4',<br />
+                containment: '.movie02',<br />
+                autoPlay: true,<br />
+                mute: true,<br />
+                showControls: false,<br />
+                playOnlyIfVisible: true, > 보일때만 재생<br />
+                });<br />
+                <br />
+                player button 👇<br />
+                i class="xi-play<br />
+                $('.movie02 i:nth-child(2)').on('click', function () {<br />
+                $('#bgndVideo').YTPPlay(); > YTPPause / YTPUnmute<br />
+                })<br />
+            </div>
+        </li>
+        <li>
+            <a href="./doc/fullpage01.html" target="_blank">fullpage 01</a>
+            <p>portfolio에 유용한 fullpage 만들기</p>
+            <em>2022.06.16</em>
+            <pre>
+                link rel="stylesheet" href="../css/fullpage.min.css"
+                script src="../js/fullpage.min.js"
+        </pre>
+            <div class="strong">
+                $(function () {<br />
+                $('#portfolio').fullpage({<br />
+                anchors: ['p01', 'p02', 'p03', 'p04', 'p05'], > a에 해시태그<br />
+                afterLoad: function (origin, destination, direction, trigger) {<br />
+                // console.log(origin, destination.index, direction, <br />trigger)<br />
+                $('.section').eq(destination.index).addClass('on').siblings().removeClass('on')<br />
+                $('nav li').eq(destination.index).addClass('on').siblings().removeClass('on')<br />
+                },<br />
+                });<br />
+                <br />
+                $('.cover_toggle, #cover a').on('click', function () {<br />
+                $('.cover_toggle').toggleClass('on');<br />
+                $('#cover').toggleClass('on');<br />
+                });<br />
+                <br />
+                $('#cover').on('wheel scroll', function (e) {<br />
+                e.stopPropagation();<br />
+                }) > #cover를 켠 상태로 스크롤 되지 않도록 함<br />
+                })
+            </div>
+        </li>
+    </ul>
 </body>
 
 </html>
