@@ -13,6 +13,7 @@
             font-size: 13px;
             font-weight: 600;
             margin: 0 0 30px 0;
+            display: inline-block;
         }
 
         em {
@@ -369,6 +370,55 @@
                 }) > #cover를 켠 상태로 스크롤 되지 않도록 함<br />
                 })
             </div>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h2>Tab</h2>
+    <ul>
+        <li>
+            <a href="./doc/tab01.html" target="_blank">tab 01</a>
+            <p>tab 만들기</p>
+            <em>2022.06.17</em>
+            <pre>
+                .tab_content의 첫번째 li에 .on
+        </pre>
+            <div class="strong">
+                $(function () {<br />
+                $('.tab_menu>li>a').on('click', function (e) {<br />
+                e.preventDefault();<br />
+                // console.log($(this).parent().index());<br />
+                var idx = $(this).parent().index();<br />
+                $('.tab_content>li').removeClass('on');<br />
+                $('.tab_content>li').eq(idx).addClass('on');<br />
+                $('.tab_menu>li').removeClass('on');<br />
+                $(this).parent().addClass('on');<br />
+                })<br />
+                })
+            </div>
+        </li>
+        <li>
+            <a href="./doc/tab02.html" target="_blank">tab 02</a>
+            <p>tab에 slick slide 적용하기</p>
+            <em>2022.06.17</em>
+            <pre>
+                visibility: hidden; visible;
+                공간은 그대로 차지하면서 숨기거나 보여줌
+        </pre>
+        </li>
+        <li>
+            <a href="./doc/tab03.html" target="_blank">tab 03</a>
+            <p>tab에 map 만들기</p>
+            <em>2022.06.17</em>
+            <pre>
+                .tab_content에 background로 지도 불러오기
+                .tab_content>li::before 에 content로 아이콘 만들기
+                각 li를 선택해 inset으로 위치 지정 > 반응형에서는 %로
+
+                @keyframes ~를 만들어 transform: rotateY(720deg);
+                .tab_content>li.on에 animation 지정
+        </pre>
         </li>
     </ul>
 </body>
