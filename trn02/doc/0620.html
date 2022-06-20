@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAFF practice 01</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.mb.YTPlayer.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/0620.css">
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="topBanner">
+            <div class="inner">
+                <h2>JEWELLERY COLLECTION EVENT</h2>
+                <p>
+                    모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다.
+                    <a href="">MORE</a>
+                </p>
+                <i class="xi-close"></i>
+            </div>
+        </div>
+
+        <header id="header">
+            <div class="container">
+                <h1>
+                    <a href="/">
+                        <img src="../img/grafflogo.png" alt="">
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="">High Jewlery</a></li>
+                        <li><a href="">Jewlery Collection</a></li>
+                        <li><a href="">Collection &amp; Bridal</a></li>
+                        <li><a href="">Wedding Jewlery</a></li>
+                        <li><a href="">Special Solitaire</a></li>
+                    </ul>
+                </nav>
+                <div id="searchForm">
+                    <form action="javascript:searchAction()">
+                        <input type="text" placeholder="Please enter your search term.">
+                        <button>
+                            <i class="xi-search"></i>
+                        </button>
+                    </form>
+
+                    <script>
+                        function searchAction() {
+                            var searchValue = $('#searchForm input').val();
+                            if (searchValue.length < 3) {
+                                alert('Please enter at least 3 characters.')
+                            } else {
+                                alert(searchValue)
+                            }
+
+                            $('#searchForm input').val('');
+                            $('#searchForm input').focus();
+                        }
+                    </script>
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+            <div class="mainVisual">
+                <div class="mainSlider">
+                    <figure class="slide01">
+                        <div class="slideInner">
+                            <h2>01 JEWELLERY COLLECTION</h2>
+                            <p>The signature collection of Graff House's modern yet classic designs offers a great
+                                combination of cuts, stones and colors.</p>
+                            <a href="">more</a>
+                        </div>
+                    </figure>
+                    <figure class="slide02">
+                        <div class="slideInner">
+                            <h2>02 JEWELLERY COLLECTION</h2>
+                            <p>The signature collection of Graff House's modern yet classic designs offers a great
+                                combination of cuts, stones and colors.</p>
+                            <a href="">more view</a>
+                        </div>
+                    </figure>
+                    <figure class="slide03">
+                        <div class="slideInner">
+                            <h2>03 JEWELLERY COLLECTION</h2>
+                            <p>The signature collection of Graff House's modern yet classic designs offers a great
+                                combination of cuts, stones and colors.</p>
+                            <a href="">more</a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+
+        </footer>
+    </div>
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/0620.js"></script>
+</body>
+
+</html>
