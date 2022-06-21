@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANEIGE</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .laneige {
+            position: relative;
+            padding: 150px 0;
+        }
+
+        .movie_bg {
+            position: absolute;
+            inset: 0 auto auto 0;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .case {
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .container figure {
+            position: relative;
+            flex: 1;
+        }
+
+        .container figure:hover::after {
+            animation: waterdrop 1s;
+        }
+
+        .container figure::after {
+            position: absolute;
+            inset: 5% auto auto 25%;
+            content: "";
+            opacity: 0;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .container figure img {
+            transform-origin: center bottom;
+        }
+
+        .container figure:hover img {
+            animation: laneige 2s;
+            transform-origin: center bottom;
+        }
+
+        @keyframes laneige {
+            0% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(-15deg);
+            }
+
+            100% {
+                transform: rotate(0);
+            }
+        }
+
+        @keyframes waterdrop {
+            0% {
+                inset: 30% auto auto 25%;
+                opacity: 0;
+            }
+
+            35% {
+                inset: 25% auto auto 30%;
+                opacity: 0.2;
+            }
+
+            50% {
+                inset: 20% auto auto 25%;
+                opacity: 0.8;
+            }
+
+            75% {
+                inset: 15% auto auto 30%;
+                opacity: 0.2;
+            }
+
+            100% {
+                inset: 10% auto auto 25%;
+                opacity: 0.8;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <section class="laneige">
+        <div class="movie_bg">
+            <video src="../img/laneige_bg.mp4" autoplay muted playsinline></video>
+        </div>
+        <div class="case">
+            <div class="container">
+                <figure>
+                    <img src="../img/laneige01.png" alt="">
+                </figure>
+                <figure>
+                    <img src="../img/laneige02.png" alt="">
+                </figure>
+                <figure>
+                    <img src="../img/laneige03.png" alt="">
+                </figure>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
