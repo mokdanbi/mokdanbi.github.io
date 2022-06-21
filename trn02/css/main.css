@@ -225,7 +225,7 @@
 }
 
 .mainVisual .mainSlider .slick-dots li.slick-active button {
-    background: #333;
+    background: #369;
     color: #fff;
 }
 
@@ -257,4 +257,218 @@
 
 .mainArrow i:nth-child(2) {
     margin: 0 0 0 700px;
+}
+
+
+/* css 사용 순서 : position (z-index) > display > margin/padding > font */
+
+.mainContent {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    /* em : font size의 몇 배, rem : 최상위 요소 font size의 몇 배,
+    vh : Viewport height %, vw : Viewport weigth % (모바일에서 주로 사용) */
+}
+
+.mainContent .container {
+    gap: 30px;
+}
+
+.mainContent .container figure {
+    flex: 1;
+}
+
+.mainContent .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent .container a {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+.mainContent2 {
+    padding: 100px 0;
+    text-align: center;
+    background: #f9f9f9;
+    /* border-top: 1px solid #ddd; */
+}
+
+.mainContent2 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent2 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent2 .container {
+    gap: 30px;
+}
+
+.mainContent2 .container figure {
+    flex: 1;
+}
+
+.mainContent2 .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent2 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent2 .container a {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+.mainContent3 {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent3 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent3 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent3 .container {
+    gap: 30px;
+}
+
+.mainContent3 .container figure {
+    flex: 1;
+}
+
+.mainContent3 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent3 .container a {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+}
+
+.mainContent3 figure .box {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    transition: border-radius 0.5s, transform 0.5s;
+}
+
+.mainContent3 figure:hover .box {
+    border-radius: 50%;
+    transform: rotate(-15deg);
+}
+
+.mainContent3 figure img {
+    transition: transform 0.5s;
+}
+
+.mainContent3 figure:hover img {
+    transform: scale(1.2);
+}
+
+.fixedBg {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual03.jpg) no-repeat fixed center center/cover;
+    /* background-attachment: fixed; */
+    filter: grayscale(1);
+}
+
+.fixedBg h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fixedBg p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.fixedBg i {
+    padding: 5px;
+    background: #333;
+    vertical-align: -10%;
+    border-radius: 50%;
+}
+
+
+.fixedBg2 {
+    padding: 100px 0;
+    margin: 0 0 100vh 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual03.jpg) no-repeat fixed center center/cover;
+}
+
+.fixedBg2 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fixedBg2 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.fixedBg2 i {
+    padding: 5px;
+    background: #333;
+    vertical-align: -10%;
+    border-radius: 50%;
 }
