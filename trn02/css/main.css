@@ -703,6 +703,12 @@
     padding: 10px 15px;
 }
 
+.tab_content .notice li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
 .tab_content .notice a {
     display: flex;
     justify-content: space-between;
@@ -713,6 +719,11 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-size: 14px;
+}
+
+.tab_content .notice span {
+    font-size: 12px;
 }
 
 
