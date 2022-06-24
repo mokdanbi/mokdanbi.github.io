@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laneige 연습</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/jquery.mb.YTPlayer.min.css">
+    <link rel="stylesheet" href="../css/0624.css">
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="topBanner">
+            <div class="inner">
+                <h2>HUG for Universal Goodness</h2>
+                <p>
+                    글로벌 다양한 고객의 아름다움과 지속 가능한 지구를 감싸 안는 라네즈의 지속 가능한 약속
+                    <a href="">#LANEIGE HUG</a>
+                </p>
+                <i class="xi-close"></i>
+            </div>
+        </div>
+
+        <header id="header">
+            <div class="container">
+                <h1>
+                    <a href="">
+                        <img src="../img/laneige-logo.svg" alt="">
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="">브랜드</a></li>
+                        <li><a href="">미츠 아트</a></li>
+                        <li><a href="">베스트 &amp; 신상품</a></li>
+                        <li><a href="">스킨케어</a></li>
+                        <li><a href="">메이크업</a></li>
+                        <li><a href="">옴므</a></li>
+                        <li><a href="">비스포크</a></li>
+                        <li><a href="">이벤트</a></li>
+                    </ul>
+                </nav>
+                <div id="searchForm">
+                    <form action="javascript:searchAction()">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <button>
+                            <i class="xi-search"></i>
+                        </button>
+                    </form>
+
+                    <script>
+                        function searchAction() {
+                            var searchValue = $('#searchForm input').val();
+                            if (searchValue.length < 2) {
+                                alert('2글자 이상 입력해주세요.')
+                            } else {
+                                alert(searchValue)
+                            }
+
+                            $('#searchForm input').val('');
+                            $('#searchForm input').focus();
+                        }
+                    </script>
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+            <section class="mainVisual">
+                <div class="mainSlider">
+                    <figure class="itm01">
+                        <div class="inner">
+                            <h2>
+                                ALL NEW 워터뱅크 블루 히알루로닉
+                            </h2>
+                            <p>
+                                1/2000 사이즈의 초소형 블루 히알루론산이<br />피부 깊은 곳부터. 빈틈없이. 건강한 피부로<br />풀 리페어 보습
+                            </p>
+                            <a href="">more</a>
+                        </div>
+                    </figure>
+                    <figure class="itm02">
+                        <div class="inner">
+                            <h2>
+                                Laneige X Artist Novo Neo Cushion_Matte
+                            </h2>
+                            <p>
+                                아티스트 Novo와의 콜라보레이션으로<br />행복과 희망의 가치를 담은 네오 컬렉션을 만나보세요!
+                            </p>
+                            <a href="">more</a>
+                        </div>
+                    </figure>
+                    <figure class="itm03">
+                        <div class="inner">
+                            <h2>
+                                비스포크 네오, UP TO 150 SHADES
+                            </h2>
+                            <p>
+                                내 피부톤에 딱 맞는 오직 나만을 위한<br />비스포크 네오를 만들어 드립니다.
+                            </p>
+                            <a href="">more</a>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+
+        </footer>
+    </div>
+
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="../js/jquery.scrollme.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/0624.js"></script>
+</body>
+
+</html>
