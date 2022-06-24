@@ -304,7 +304,7 @@
 
 .mainContent .container a {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 10px 30px;
     background: #333;
     color: #fff;
     font-size: 15px;
@@ -351,7 +351,7 @@
 
 .mainContent2 .container a {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 8px 20px;
     background: #333;
     color: #fff;
     font-size: 15px;
@@ -392,7 +392,7 @@
 
 .mainContent3 .container a {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 8px 20px;
     background: #333;
     color: #fff;
     font-size: 15px;
@@ -540,7 +540,7 @@
 
 
 .scrollMe {
-    padding: 200px 0;
+    padding: 200px 0 100px 0;
 }
 
 .scrollMe .container {
@@ -571,8 +571,8 @@
     display: block;
     width: 1px;
     height: 50px;
-    background: #f00;
-    margin: 10px auto;
+    background: #369;
+    margin: 20px auto;
 }
 
 .product p {
@@ -626,7 +626,7 @@
 .product .productSlider .slick-dots li button {
     border: none;
     outline: none;
-    background: #f00;
+    background: #369;
     color: #fff;
     border-radius: 50%;
     width: 20px;
@@ -690,7 +690,7 @@
 }
 
 .serviceTab .tab_menu li.on {
-    background: #f00;
+    background: #369;
     color: #fff;
 }
 
@@ -777,3 +777,62 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+
+#footer {
+    background: #333;
+    color: #fff;
+    line-height: 80px;
+    font-size: 15px;
+}
+
+#footer .top {
+    border-bottom: 1px solid #666;
+    /* 배경과 비슷한 색에서 조금만 밝게 하면 얇은 선 처럼 보인다 */
+}
+
+#footer .top dt,
+#footer .top dd {
+    display: inline-block;
+}
+
+#footer .top dt::before,
+#footer .top dd~dd::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 11px;
+    background: #ddd;
+}
+
+#footer .top dt {
+    font-weight: 700;
+}
+
+#footer .top i {
+    font-size: 25px;
+}
+
+#footer .container {
+    justify-content: space-between;
+}
+
+#footer .bottom address {
+    font-style: normal;
+}
+
+#footer .bottom select {
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #666;
+}
+
+#footer .bottom option {
+    background: #333;
+}
+

@@ -97,6 +97,16 @@ $(function(){
         } else {
             $('.toTop').fadeOut(1000)
         }
+    });
+
+
+    $('#fl').on('change', function(){
+        console.log($(this), $(this).val())
+        var lnk = $(this).val();
+        if(lnk) {
+            window.open(lnk);
+        }
+        // 값이 있을 때 링크를 열어라   리액트 : lnk && window.open(lnk);
     })
 
 })
