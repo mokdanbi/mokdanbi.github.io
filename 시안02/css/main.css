@@ -104,7 +104,7 @@ img {
 
 .mainVisual .slogan p {
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 
@@ -123,12 +123,36 @@ img {
     margin: 0 30px 0 0;
 }
 
+.mainBusiness .bnLeft_left figure {
+    position: relative;
+}
+
+.mainBusiness .bnLeft_left figure b {
+    position: absolute;
+    inset: -8px 0 0 -4px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+}
+
 .mainBusiness .bnLeft_left figure:nth-child(1) {
     margin: 0 0 30px 0;
 }
 
 .mainBusiness .bnLeft_right {
     margin: 0 30px 0 0;
+}
+
+.mainBusiness .bnLeft_right figure {
+    position: relative;
+}
+
+.mainBusiness .bnLeft_right figure b {
+    position: absolute;
+    inset: auto -4px -4px auto;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
 }
 
 .mainBusiness .bnLeft_right figure:nth-child(1) {
@@ -225,6 +249,12 @@ img {
     font-weight: 200;
     padding: 13px 40px 15px;
     border: 1px solid #333;
+}
+
+.mainFuture .moreView:hover a{
+    background: #333;
+    color: #fff;
+    transition: 0.3s;
 }
 
 
@@ -363,4 +393,199 @@ img {
     transform: translateX(-50%);
     font-size: 185px;
     font-weight: 800;
+}
+
+.mainFixed a:hover {
+    background: #fff;
+    color: #333;
+    transition: 0.3s;
+}
+
+
+
+
+
+.mainSocial {
+    position: relative;
+    padding: 200px 0 100px;
+}
+
+.mainSocial .inner {
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+    text-align: right;
+}
+
+.mainSocial .socialTitle h2 {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.mainSocial .socialTitle p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.mainSocial .socialTitle::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #000;
+    margin: 0 0 30px auto;
+}
+
+.mainSocial .container {
+    display: flex;
+    width: calc((100% - 1200px) / 2 + 1200px);
+    margin: 0 0 0 auto;
+}
+
+.mainSocial .socialLeft {
+    width: 510px;
+    overflow: hidden;
+}
+
+.mainSocial .socialRight {
+    width: 70%;
+    overflow: hidden;
+}
+
+.mainSocial .socialRight .rightSlider {
+    width: 109%;
+}
+
+.mainSocial .socialRight figure {
+    padding: 100px 80px 0 0;
+}
+
+.mainSocial .socialArrow i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%,0);
+    font-size: 120px;
+    color: #f3f3f3;
+}
+
+.mainSocial .socialArrow i:nth-child(1) {
+    margin: 0 0 0 -750px;
+}
+
+.mainSocial .socialArrow i:nth-child(2) {
+    margin: 0 0 0 750px;
+    opacity: 60%;
+}
+
+
+#footer {
+    background: #333;
+    color: #fff;
+}
+
+#footer .top {
+    line-height: 100px;
+    border-bottom: 1px solid #666;
+}
+
+#footer .top .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .top h1 img:nth-child(1) {
+        width: 40px;
+}
+
+#footer .top h1 img:nth-child(2) {
+    width: 275px;
+    padding: 0 0 0 15px;
+}
+
+#footer .top dl {
+    margin-right: -200px;
+}
+
+#footer .top dd {
+    display: inline-block;
+}
+
+#footer .top dd~dd::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+}
+
+#footer .top select {
+    font-size: 14px;
+    background: transparent;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+
+#footer .top option {
+    background: #333;
+}
+
+
+
+#footer .bottom .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .bottom .copyright {
+    padding: 30px 0 0 0;
+    font-size: 14px;
+}
+
+#footer .bottom dl {
+    margin: 0 0 37px 0;
+}
+
+#footer .bottom dd {
+    display: inline-block;
+}
+
+#footer .bottom dd~dd::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+}
+
+#footer .bottom address {
+    font-style: normal;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+#footer .bottom address a~a::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+}
+
+#footer .bottom .sns {
+    line-height: 150px;
+    font-size: 36px;
+}
+
+#footer .bottom .sns a:nth-child(1) {
+    font-size: 32px;
 }
