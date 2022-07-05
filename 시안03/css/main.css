@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Time For Salad Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Time For Salad Regular'), url('timeforsalad.woff') format('woff');
+    }
+
+* { outline: 1px solid #f00; }
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+#header {
+    line-height: 100px;
+}
+
+#header .container {
+    justify-content: space-between;
+}
+
+#header h1 {
+    width: 80px;
+}
+
+#header nav>ul {
+    display: flex;
+    gap: 40px;
+    font-family: 'Time For Salad Regular';
+}
+
+#header .mbtn {
+    width: 80px;
+    text-align: right;
+}
