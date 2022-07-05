@@ -1,9 +1,5 @@
-@font-face {
-    font-family: 'Time For Salad Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Time For Salad Regular'), url('timeforsalad.woff') format('woff');
-    }
+@import url('http://fonts.cdnfonts.com/css/time-for-salad');
+
 
 * { outline: 1px solid #f00; }
 
@@ -30,10 +26,20 @@
 #header nav>ul {
     display: flex;
     gap: 40px;
-    font-family: 'Time For Salad Regular';
+    font-family: 'Time For Salad', sans-serif;
+    font-size: 24px;
 }
 
 #header .mbtn {
     width: 80px;
     text-align: right;
+}
+
+#header .mbtn i {
+    font-size: 23px;
+    padding: 5px;
+    background: #17633d;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
 }
