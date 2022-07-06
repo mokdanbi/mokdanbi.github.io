@@ -1,4 +1,8 @@
-* { outline: 1px solid #f00; }
+* {
+    outline: 1px solid #f00;
+    --mc: #17633d;
+    --bg: rgba(23,99,61,0.1)
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 
@@ -42,7 +46,7 @@
 #header .mbtn i {
     font-size: 21px;
     padding: 5px;
-    background: #17633d;
+    background: var(--mc);
     color: #fff;
     border-radius: 3px;
     cursor: pointer;
@@ -110,7 +114,7 @@ img {
     top: -40px;
     display: flex;
     width: 1200px;
-    background: #17633d;
+    background: var(--mc);
     border-radius: 20px;
     color: #fff;
     font-size: 21px;
@@ -132,7 +136,7 @@ img {
 
 .main_button .green_btn>li:hover a {
     background: #fff;
-    color: #17633d;
+    color: var(--mc);
 }
 
 .main_button .green_btn>li:nth-child(1):hover a {
@@ -142,3 +146,236 @@ img {
 .main_button .green_btn>li:nth-child(3):hover a {
     border-radius: 0 20px 20px 0;
 }
+
+
+
+.main_menu {
+    position: relative;
+    padding: 100px 0 0 0;
+}
+
+.main_menu .menu_arrows i {
+    position: absolute;
+    inset: 500px 200px auto auto;
+    padding: 10px;
+    border: 1px solid #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main_menu .menu_arrows i:nth-child(1) {
+    margin: 0 58px 0 0;
+}
+
+.main_menu .menu_title {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: 'Bowlby One', cursive;
+    font-size: 30px;
+}
+
+.main_menu .menu_title span {
+    display: block;
+    font-size: 39px;
+}
+
+.main_menu .menu_title:nth-child(2) span {
+    font-size: 45px;
+}
+
+.main_menu .title_new {
+    margin: 0 0 0 -700px;
+}
+
+.main_menu .title_hot {
+    margin: 0 0 0 700px;
+}
+
+
+
+
+.main_menu img {
+    width: 250px;
+}
+
+.main_menu .container {
+    display: flex;
+}
+
+.main_menu .container figure:hover img {
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+.main_menu .new_menu {
+    flex: 1;
+    border-right: 1px solid;
+    border-image: linear-gradient(to top, #fff 10%, #65977e, #fff 90%);
+    border-image-slice: 1;
+}
+
+.main_menu .new_menu figure:nth-child(1) {
+    margin: 0 0 50px 0;
+}
+
+.main_menu .hot_menu {
+    flex: 2;
+    width: 800px;
+}
+
+.main_menu .hot_menu img {
+    margin-left: 75px;
+}
+
+.main_menu .hot_menu .menu_top {
+    display: flex;
+}
+
+.main_menu .menu_top .slick-slide {
+    margin: 0 0 50px 0;
+}
+
+.main_menu .hot_menu .menu_bottom {
+    display: flex;
+}
+
+.main_menu .menu_bottom .slick-slide {
+    margin: 0 0 100px 0;
+}
+
+.main_menu figure {
+    text-align: center;
+}
+
+.main_menu b {
+    display: block;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+}
+
+.main_menu strong {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--mc);
+}
+
+
+
+
+.main_vegan .vegan_slider figure {
+    display: flex;
+}
+
+.main_vegan .vegan_slider .vegan_img {
+    text-align: right;
+    background: var(--bg);
+    border-radius: 0 50% 50% 0;
+}
+
+@keyframes vegan_move {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main_vegan .vegan_slider img {
+    width: 600px;
+    animation: vegan_move 60s infinite linear;
+}
+
+.main_vegan .vegan_slider .vegan_bg {
+    width: calc((100% - 1200px) / 2);
+    background: var(--bg);
+}
+
+.main_vegan .vegan_slider .vegan_text {
+    padding: 70px 0 0 180px;
+}
+
+.main_vegan .vegan_slider .vegan_text h2 {
+    font-family: 'Bowlby One', cursive;
+    font-size: 30px;
+    margin: 0 0 60px 70px;
+}
+
+.main_vegan .vegan_slider .vegan_text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--mc);
+    margin: 0 0 10px 0;
+}
+
+.main_vegan .vegan_slider .vegan_text p {
+    font-size: 18px;
+    margin: 0 0 50px 0;
+    line-height: 1.2;
+}
+
+.main_vegan .vegan_slider .vegan_text h4 {
+    display: block;
+    font-weight: 700;
+    color: var(--mc);
+    margin: 0 0 10px 0;
+}
+
+.main_vegan .vegan_slider .vegan_text em {
+    display: block;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    line-height: 1.2;
+}
+
+.main_vegan .vegan_slider .slick-dots li {
+    position: absolute;
+    inset: 50% 0 0 52%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--bg);
+}
+
+.main_vegan .vegan_slider .slick-dots li:nth-child(1) {
+    margin: -30px 0 0 0;
+}
+.main_vegan .vegan_slider .slick-dots li:nth-child(2) {
+    margin: 30px 0 0 0;
+}
+
+.main_vegan .vegan_slider li.slick-active {
+    background: var(--mc);
+}
+
+.main_vegan .vegan_slider .slick-dots button {
+    display: none;
+}
+
+
+
+.main_farm .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.main_farm .salady_kitchen img {
+    margin: 0 0 10px 0;
+}
+
+.main_farm figure h2 {
+    font-family: 'Bowlby One', cursive;
+    font-size: 30px;
+}
+
+.main_farm .salady_farm h2 {
+    position: absolute;
+    inset: 562px 0 0 0;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+}
+
+
