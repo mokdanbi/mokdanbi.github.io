@@ -1,7 +1,9 @@
 * { outline: 1px solid #f00; }
 
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+
 .container {
-    display: flex;
     width: 1200px;
     margin: 0 auto;
 }
@@ -13,6 +15,7 @@
 }
 
 #header .container {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -24,7 +27,11 @@
     display: flex;
     gap: 40px;
     font-family: 'Bowlby One', cursive;
-    font-size: 24px;
+    font-size: 21px;
+}
+
+#header nav>ul a {
+    display: block;
 }
 
 #header .mbtn {
@@ -33,10 +40,105 @@
 }
 
 #header .mbtn i {
-    font-size: 23px;
+    font-size: 21px;
     padding: 5px;
     background: #17633d;
     color: #fff;
     border-radius: 3px;
     cursor: pointer;
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+.main_slider figure {
+    position: relative;
+    height: 600px;
+}
+
+.main_slider .main01 {
+    background: url(../img/main02.jpg) no-repeat center center/cover;
+}
+
+.main_slider .main02 {
+    background: url(../img/main01.jpg) no-repeat center center/cover;
+}
+
+.main_slider .slogan {
+    width: 1200px;
+    color: #fff;
+}
+
+.main_slider .main01 .slogan {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%,-50%);
+}
+
+.main_slider .main02 .slogan {
+    position: absolute;
+    top: 50%;
+    left: calc((100% - 1200px) / 2);
+    transform: translateY(-50%);
+    text-align: end;
+    text-shadow: 0 0 0.5;
+}
+
+.main_slider .slogan h2 {
+    font-family: 'Bowlby One', cursive;
+    font-style: oblique;
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    margin: 0 0 10px 0;
+    padding-right: 5px;
+}
+
+.main_slider .slogan p {
+    font-size: 20px;
+}
+
+
+.main_visual .main_button {
+    position: relative;
+}
+
+.main_button .green_btn {
+    position: absolute;
+    top: -40px;
+    display: flex;
+    width: 1200px;
+    background: #17633d;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 21px;
+}
+
+.main_button .green_btn>li {
+    flex: 1;
+    text-align: center;
+}
+
+.main_button .green_btn>li~li {
+    border-left: 1px solid #1d7b4c;
+}
+
+.main_button .green_btn>li>a {
+    display: block;
+    line-height: 80px; 
+}
+
+.main_button .green_btn>li:hover a {
+    background: #fff;
+    color: #17633d;
+}
+
+.main_button .green_btn>li:nth-child(1):hover a {
+    border-radius: 20px 0 0 20px;
+}
+
+.main_button .green_btn>li:nth-child(3):hover a {
+    border-radius: 0 20px 20px 0;
 }
