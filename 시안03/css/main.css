@@ -118,6 +118,7 @@ img {
     border-radius: 20px;
     color: #fff;
     font-size: 21px;
+    z-index: 999;
 }
 
 .main_button .green_btn>li {
@@ -131,7 +132,7 @@ img {
 
 .main_button .green_btn>li>a {
     display: block;
-    line-height: 80px; 
+    line-height: 80px;
 }
 
 .main_button .green_btn>li:hover a {
@@ -288,7 +289,7 @@ img {
 .main_vegan .vegan_slider .vegan_bg {
     width: calc((100% - 1200px) / 2);
     background: var(--bg);
-}
+} 
 
 .main_vegan .vegan_slider .vegan_text {
     padding: 70px 0 0 180px;
@@ -337,6 +338,7 @@ img {
     height: 35px;
     border-radius: 50%;
     background: var(--bg);
+    cursor: pointer;
 }
 
 .main_vegan .vegan_slider .slick-dots li:nth-child(1) {
@@ -364,6 +366,19 @@ img {
 
 .main_farm .salady_kitchen img {
     margin: 0 0 10px 0;
+    filter: brightness(1.5);
+}
+
+.main_farm .salady_kitchen img:hover {
+    filter: brightness(1);
+}
+
+.main_farm .salady_farm img {
+    filter: brightness(1.2);
+}
+
+.main_farm .salady_farm img:hover {
+    filter: brightness(1)
 }
 
 .main_farm figure h2 {
@@ -378,4 +393,138 @@ img {
     transform-origin: left bottom;
 }
 
+/* .main_farm .salady_kitchen p {
+    position: absolute;
+    top: 155px;
+    left: 150px;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.3;
+}
 
+.main_farm .salady_farm p {
+    position: absolute;
+    top: 280px;
+    left: 35px;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.3;
+} */
+
+
+
+.main_banner {
+    width: 100%;
+    background: url(../img/salady_banner.jpg) no-repeat center left/cover;
+    text-align: center;
+    line-height: 250px;
+    color: #fff;
+    font-family: 'Bowlby One', cursive;
+    font-size: 35px;
+}
+
+
+
+.main_infomation {
+    padding: 100px 0;
+}
+
+.main_infomation h2 {
+    font-family: 'Bowlby One', cursive;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+.main_infomation ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_infomation ul>li img {
+    width: 120px;
+    margin: 0 0 30px 0;
+}
+
+.main_infomation ul>li p {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+}
+
+.main_infomation ul>li>a {
+    display: block;
+    padding: 30px 65px;
+    border: 3px solid var(--bg);
+}
+
+.main_infomation ul>li:hover a {
+    border: none;
+    box-shadow: 1px 1px 5px 5px var(--bg) inset;
+}
+
+
+
+.main_instagram {
+    position: relative;
+    padding: 100px 0;
+    background: var(--bg);
+}
+
+.main_instagram h2 {
+    position: absolute;
+    top: 33px;
+    left: 250px;
+    font-family: 'Bowlby One', cursive;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: right;
+    transform: rotate(-90deg);
+    transform-origin: right bottom;
+}
+
+.main_instagram .container {
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    gap: 30px;
+    justify-content: end;
+}
+
+.main_instagram .insta03 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    overflow: hidden;
+}
+
+.main_instagram .insta03 img {
+    min-width: 200%;
+    height: 100%;
+}
+
+
+
+#footer {
+    background: var(--mc);
+}
+
+#footer .ft_top .container {
+    display: flex;
+    line-height: 100px;
+    justify-content: space-between;
+}
+
+
+#footer .ft_top h1 {
+    width: 50px;
+}
+
+#footer .ft_top dl {
+    display: flex;
+}
+
+#footer .ft_top .top_left {
+    display: flex;
+}
