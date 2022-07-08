@@ -556,15 +556,3 @@ img {
     font-size: 14px;
     font-weight: 500;
 }
-
-.to_top {
-    position: fixed;
-    inset: auto 80px 80px auto;
-}
-
-.to_top i {
-    font-size: 50px;
-    opacity: 0.8;
-    color: var(--mc);
-    cursor: pointer;
-}

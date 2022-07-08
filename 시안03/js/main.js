@@ -48,4 +48,19 @@ $(function() {
         dots: true,
         autoplaySpeed: 5000,
     });
+
+
+    $('.to_top').on('click', function (){
+        $('html,body').animate({scrollTop:0}, 200)  // 기본 400
+    });
+
+    $(window).on('scroll',function(){
+        var sct = $(window).scrollTop();
+        if (sct > 500) {
+            $('.to_top').fadeIn(300)
+        } else {
+            $('.to_top').fadeOut(1000)
+        }
+    });
+
 })
