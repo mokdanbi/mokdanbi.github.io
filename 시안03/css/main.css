@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
 * {
     /* outline: 1px solid #f00; */
     --mc: #17633d;
     --bg: rgba(23, 99, 61, 0.1)
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
-
 
 .container {
     width: 1200px;
