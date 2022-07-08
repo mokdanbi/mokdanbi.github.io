@@ -1,7 +1,7 @@
 * {
     /* outline: 1px solid #f00; */
     --mc: #17633d;
-    --bg: rgba(23,99,61,0.1)
+    --bg: rgba(23, 99, 61, 0.1)
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
@@ -79,7 +79,7 @@ img {
 .main_slider .main01 .slogan {
     position: absolute;
     inset: 50% auto auto 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .main_slider .main02 .slogan {
@@ -171,7 +171,7 @@ img {
 .main_menu .menu_title {
     position: absolute;
     inset: 50% auto auto 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Bowlby One', cursive;
     font-size: 30px;
@@ -289,7 +289,7 @@ img {
 .main_vegan .vegan_slider .vegan_bg {
     width: calc((100% - 1200px) / 2);
     background: var(--bg);
-} 
+}
 
 .main_vegan .vegan_slider .vegan_text {
     padding: 70px 0 0 180px;
@@ -344,6 +344,7 @@ img {
 .main_vegan .vegan_slider .slick-dots li:nth-child(1) {
     margin: -30px 0 0 0;
 }
+
 .main_vegan .vegan_slider .slick-dots li:nth-child(2) {
     margin: 30px 0 0 0;
 }
@@ -491,6 +492,10 @@ img {
     grid-template-columns: 340px 340px 340px;
     gap: 30px;
     justify-content: end;
+}
+
+.main_instagram .container>div:hover a {
+    filter: brightness(0.8);
 }
 
 .main_instagram .insta03 {

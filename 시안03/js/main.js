@@ -1,6 +1,6 @@
 $(function() {
     $('.main_slider').slick({
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         pauseOnHover: false,
         pauseOnFocus: false,
@@ -10,7 +10,7 @@ $(function() {
 
 
     $('.menu_top').slick({
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         pauseOnHover: false,
         pauseOnFocus: false,
@@ -19,7 +19,7 @@ $(function() {
     });
     
     $('.menu_bottom').slick({
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         pauseOnHover: false,
         pauseOnFocus: false,
