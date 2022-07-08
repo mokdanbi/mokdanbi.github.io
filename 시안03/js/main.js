@@ -6,6 +6,7 @@ $(function() {
         pauseOnFocus: false,
         autoplaySpeed: 5000,
         speed: 2000,
+        fade: true
     });
 
 
