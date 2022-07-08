@@ -51,15 +51,15 @@ $(function() {
 
 
     $('.to_top').on('click', function (){
-        $('html,body').animate({scrollTop:0}, 200)  // 기본 400
+        $('html,body').animate({scrollTop:0}, 300)  // 기본 400
     });
 
     $(window).on('scroll',function(){
         var sct = $(window).scrollTop();
         if (sct > 500) {
-            $('.to_top').fadeIn(300)
+            $('.to_top').fadeIn(500)
         } else {
-            $('.to_top').fadeOut(1000)
+            $('.to_top').fadeOut(500)
         }
     });
 
