@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hince mok.</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/jquery.mb.YTPlayer.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Wrap">
+        <header id="header">
+            <div class="hd_area">
+                <div class="hd_nav">
+                    <h1>
+                        <a href="">
+                            <img src="./img/logotype_w.svg" alt="">
+                        </a>
+                    </h1>
+                    <nav>
+                        <ul>
+                            <li><a href=""><i class="xi-search"></i></a></li>
+                            <li><a href=""><i class="xi-cart-o"></i></a></li>
+                            <li><a href=""><i class="xi-user-o"></i></a></li>
+                            <li><a href=""><i class="xi-bars mbtn"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="mbtn_menu">
+                <ul>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">COLLECTION</a></li>
+                    <li><a href="">SHOP</a></li>
+                    <li><a href="">STORE</a></li>
+                    <li><a href="">COLLECTIVE</a></li>
+                    <li><a href="">COMMUNITY</a></li>
+                </ul>
+            </div>
+        </header>
+        <main id="main">
+            <section class="main_visual">
+                <div class="main_video">
+                    <video src="./img/main_bg.mp4" autoplay muted playsinline></video>
+                </div>
+                <a href="#wheelDown" class="wheel">
+                    <span>scroll icon</span>
+                </a>
+            </section>
+
+            <section class="main_new" id="wheelDown">
+
+            </section>
+        </main>
+
+        <footer id="footer">
+
+        </footer>
+    </div>
+
+
+    <script>
+        document.querySelector('.mbtn').addEventListener('click', function () {
+            document.querySelector('.mbtn_menu').classList.toggle('on');
+            this.classList.toggle('on');
+        })
+    </script>
+
+    <script src="./assets/js/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
