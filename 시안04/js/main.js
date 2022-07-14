@@ -43,4 +43,46 @@ $(function(){
         autoplaySpeed: 4000,
     });
     
+    $('.main_loved .loved_arrows i:nth-child(1)').on('click',function(){
+        $('.main_loved .container').slick('slickPrev')
+    });
+
+    $('.main_loved .loved_arrows i:nth-child(2)').on('click',function(){
+        $('.main_loved .container').slick('slickNext')
+    });
+
+
+
+    $('.insta_slide').slick({
+        autoplay: true,
+        arrows: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        slidesToShow: 5,
+        centerMode: true,
+        autoplaySpeed: 5000,
+    });
+
+
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 970) {
+          $(".hd_nav ul>li>a").css("color", "#98625f");
+        }
+        else{
+          $(".hd_nav ul>li>a").css("color", "#fff");   
+        }
+      });
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 970) {
+          $(".hd_nav h1 img").attr("src","../img/logotype.svg");
+        }
+        else{
+            $(".hd_nav h1 img").attr("src","../img/logotype_w.svg");
+        }
+      });
 });
+
