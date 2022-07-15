@@ -78,11 +78,12 @@ $(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 970) {
-          $(".hd_nav h1 img").attr("src","../img/logotype.svg");
+          $(".hd_nav h1 img").attr("src","../img/logotype.png");
         }
         else{
-            $(".hd_nav h1 img").attr("src","../img/logotype_w.svg");
+            $(".hd_nav h1 img").attr("src","../img/logotype_w.png");
         }
       });
 });
+
 
