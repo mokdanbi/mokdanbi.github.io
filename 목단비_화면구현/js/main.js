@@ -8,10 +8,10 @@ $(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 970) {
-          $("#logo").attr("src","../img/logotype.png");
+          $("#logo").attr("src", "../img/logotype.png");
         }
         else{
-            $("#logo").attr("src","../img/logotype_w.png");
+            $("#logo").attr("src", "../img/logotype_w.png");
         }
       });
 
