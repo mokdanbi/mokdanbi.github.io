@@ -4,6 +4,16 @@ $(function(){
         $('.mbtn_menu').show('on')
     });
 
+
+
+    $('.searchclick').on('click', function(e){
+        e.preventDefault();
+        // a 이벤트를 막음
+        $('.searchBox').toggleClass('on');
+    })
+
+
+
     $('.new_slide').slick({
         autoplay: true,
         arrows: false,

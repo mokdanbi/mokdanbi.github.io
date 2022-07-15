@@ -3,9 +3,15 @@
     --mc: #98625f;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 h2 {
     font-family: 'DM Serif Text', serif;
 }
+
 
 
 #header .hd_area {
@@ -78,6 +84,85 @@ h2 {
     margin: 0 0 150px 0;
     border-bottom: none;
 }
+
+
+
+.searchBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    z-index: 1000;
+    display: none;
+}
+
+.searchBox.on {
+    display: block;
+}
+
+#searchForm {
+    text-align: center;
+}
+
+#searchForm form {
+    margin: 115px 0 40px 0;
+}
+
+#searchForm input[type="text"] {
+    outline: none;
+    /* 선택했을 때 외곽선 두껍게 X */
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px 0;
+    color: var(--mc);
+    background: transparent;
+    text-align: center;
+}
+
+#searchForm input[type="text"]::placeholder {
+    color: #999;
+}
+
+#searchForm input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+
+#searchForm button {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+#searchForm ul {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 10px 0;
+    justify-content: center;
+}
+
+#searchForm ul>li {
+    padding: 8px 20px 10px;
+    background: #f8cbbf;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#searchForm ul>li:hover {
+    background: var(--mc);
+}
+
+
+
+
+
+
 
 
 
@@ -321,6 +406,7 @@ h2 {
     transform: translate(-50%, -50%);
     font-size: 120px;
     color: #e5d1cb;
+    cursor: pointer;
 }
 
 .main_loved .loved_arrows i:nth-child(1) {
@@ -356,7 +442,7 @@ h2 {
     font-size: 36px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    z-index: 999;
+    z-index: 998;
     animation: titlemove 10s infinite;
 }
 
@@ -385,7 +471,7 @@ h2 {
 }
 
 .main_collection .col_left {
-    z-index: 999;
+    z-index: 997;
 }
 
 .main_collection .col_left img {
@@ -414,7 +500,7 @@ h2 {
 }
 
 .main_collection .col_right {
-    z-index: 999;
+    z-index: 997;
 }
 
 .main_collection .col_right img {
@@ -497,7 +583,7 @@ h2 {
 .main_store .left_img {
     position: absolute;
     width: 500px;
-    z-index: 998;
+    z-index: 995;
 }
 
 .main_store .store_left .left_line {
@@ -509,7 +595,7 @@ h2 {
     background: transparent;
     border: 1px solid #e1886d;
     border-radius: 250px 250px 0 0;
-    z-index: 999;
+    z-index: 996;
 }
 
 .store_right {

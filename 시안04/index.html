@@ -29,7 +29,7 @@
                     </h1>
                     <nav>
                         <ul>
-                            <li><a href=""><i class="xi-search"></i></a></li>
+                            <li class="searchclick"><a href=""><i class="xi-search"></i></a></li>
                             <li><a href=""><i class="xi-cart-o"></i></a></li>
                             <li><a href=""><i class="xi-user-o"></i></a></li>
                         </ul>
@@ -58,6 +58,41 @@
                     <li><a href="">C O M M U N I T Y</a></li>
                 </ul>
             </div>
+            <div class="searchBox">
+                <div id="searchForm">
+                    <form action="javascript:searchAction()">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button>
+                            <i class="xi-search"></i>
+                        </button>
+                    </form>
+                    <ul>
+                        <li><a href="">워터 리퀴드 글로우</a></li>
+                        <li><a href="">무드인핸서</a></li>
+                        <li><a href="">시그니처 브로우</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">뉴 뎁스 아이섀도우</a></li>
+                        <li><a href="">파운데이션</a></li>
+                    </ul>
+                </div>
+                <script>
+                    function searchAction() {
+                        var searchValue = $('#searchForm input').val();
+                        // console.log(searchValue)
+                        if (searchValue.length < 2) {
+                            alert('2글자 이상 입력해주세요.')
+                        } else {
+                            alert(searchValue)
+                        }
+
+                        $('#searchForm input').val('');
+                        // 검색 후에 초기화
+                        $('#searchForm input').focus();
+                        // 검색 후에도 계속 입력상태로 유지
+                    }
+                </script>
+            </div>
         </header>
 
         <main id="main">
@@ -65,12 +100,12 @@
                 <div class="main_video">
                     <video src="./img/main_bg.mp4" autoplay muted loop playsinline></video>
                 </div>
-                <a href="#wheel" class="wheel">
+                <a href="#wheelscroll" class="wheel">
                     <span>scroll</span>
                 </a>
             </section>
 
-            <section class="main_new" id="wheel">
+            <section class="main_new" id="wheelscroll">
                 <div class="new_slide">
                     <figure>
                         <a href="">
@@ -396,23 +431,23 @@
                     </dd>
                 </dl>
                 <ul>
-                    <li><a href="">
+                    <li><a href="https://www.instagram.com/hince_official/" target="_blank">
                             <i class="xi-instagram"></i>
                         </a></li>
-                    <li><a href="">
+                    <li><a href="https://pf.kakao.com/_Xwxhvj" target="_blank">
                             <i class="xi-kakaotalk"></i>
                         </a></li>
-                    <li><a href="">
+                    <li><a href="https://twitter.com/hince_official/" target="_blank">
                             <i class="xi-twitter"></i>
                         </a></li>
                 </ul>
             </div>
             <div class="ft_bottom">
-                <b>Customer Center : <span>1644 - 7161</span> (10:30-17:30 / 토,일 휴무)</b>
+                <b>Customer Center : <a href="tel:1644 - 7161"><span>1644 - 7161</span></a> (10:30-17:30 / 토,일 휴무)</b>
                 <p>ⓒ 2022 HINCE CO.LTD All rights reserved.</p>
             </div>
             <div class="ft_logo">
-                <a href="">
+                <a href="/">
                     <img src="./img/symbol_w.png" alt="">
                 </a>
             </div>
