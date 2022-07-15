@@ -102,6 +102,26 @@ $(function(){
         }
       });
 
+
+
+    $(window).on('scroll',function(){
+        var sct = $(window).scrollTop();
+        if (sct > 500) {
+            $('.toTop').fadeIn(500)
+        } else {
+            $('.toTop').fadeOut(500)
+        }
+    });
+
+    $(".toTop").on('click', function(){
+        $('html,body').animate({
+            scrollTop:0
+        }, 200)
+    });
+
+
+
+
 });
 
 

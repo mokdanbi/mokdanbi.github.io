@@ -759,3 +759,20 @@ h2 {
     transform: translateX(-50%);
     width: 2%;
 }
+
+
+.toTop {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+}
+
+.toTop i {
+    padding: 10px;
+    background: var(--mc);
+    opacity: 0.8;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 1001;
+    cursor: pointer;
+}
