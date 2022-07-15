@@ -4,6 +4,17 @@ $(function(){
         $('.mbtn_menu').show('on')
     });
 
+    
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 970) {
+          $(".hd_nav h1 img").attr("src","../img/logotype.png");
+        }
+        else{
+            $(".hd_nav h1 img").attr("src","../img/logotype_w.png");
+        }
+      });
+
 
 
     $('.searchclick').on('click', function(e){
@@ -85,15 +96,6 @@ $(function(){
         }
       });
 
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if (scroll > 970) {
-          $(".hd_nav h1 img").attr("src","../img/logotype.png");
-        }
-        else{
-            $(".hd_nav h1 img").attr("src","../img/logotype_w.png");
-        }
-      });
 });
 
 
