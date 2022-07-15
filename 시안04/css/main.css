@@ -158,6 +158,12 @@ h2 {
     background: var(--mc);
 }
 
+.searchClose {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+}
+
 
 
 

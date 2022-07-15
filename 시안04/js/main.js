@@ -20,7 +20,13 @@ $(function(){
     $('.searchclick').on('click', function(e){
         e.preventDefault();
         // a 이벤트를 막음
-        $('.searchBox').toggleClass('on');
+        $('.searchBox').show('on');
+    })
+
+    
+    $('.searchClose').on('click', function(e){
+        e.preventDefault();
+        $('.searchBox').hide('on');
     })
 
 
