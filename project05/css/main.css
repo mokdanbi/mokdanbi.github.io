@@ -1,0 +1,45 @@
+* {
+    /* outline: 1px solid #f00; */
+}
+
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#header .header_top {
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#header .header_top>ul {
+    display: flex;
+    gap: 20px;
+}
+
+#header .header_top>ul>li {
+    font-size: 40px;
+}
+
+
+
+#header .header_bottom {
+    line-height: 80px;
+}
+
+#header .header_bottom>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .header_bottom>ul>li {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 24px;
+}
