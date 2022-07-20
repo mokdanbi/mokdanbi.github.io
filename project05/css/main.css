@@ -1,5 +1,5 @@
 * {
-    /* outline: 1px solid #f00; */
+    outline: 1px solid #f00;
 }
 
 h2 {
@@ -205,7 +205,7 @@ h2 {
 
 .best_seller {
     padding: 100px 0;
-    background: #f1f1f1;
+    background: #f6f6f8;
 }
 
 .best_seller h2 {
@@ -272,3 +272,172 @@ h2 {
 .best_seller .best_right ul>li.on a {
     color: #333;
 }
+
+
+
+
+.object_ex {
+    padding: 100px 0;
+}
+
+.object_ex h2 {
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.object_ex .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.object_ex .ex_img:nth-child(2) {
+    text-align: right;
+}
+
+.object_ex .ex_img {
+    flex: 1;
+}
+
+.object_ex .ex_img img {
+    border-radius: 250px 250px 0 0;
+}
+
+.object_ex .ex_title {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    margin: auto 0;
+}
+
+.object_ex .ex_title img {
+    width: 400px;
+    margin: 0 0 60px 0;
+}
+
+.object_ex .ex_title h3 {
+    font-size: 30px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+
+.object_ex .ex_title .h3_nth3 {
+    font-family: 'Noto Sans KR';
+}
+
+.object_ex .ex_title p {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.object_ex .ex_title em {
+    font-size: 12px;
+    font-weight: 500;
+    color: #f00;
+}
+
+.object_ex .ex_title:nth-child(2) .ex_bg {
+    position: absolute;
+    top: 280px;
+    left: 300px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #cce7c4;
+    opacity: 0.3;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.object_ex .ex_title:nth-child(1) .ex_bg {
+    position: absolute;
+    top: 280px;
+    left: 80px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #f9f3c8;
+    opacity: 0.3;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+
+.main_fixed {
+    background: url(../img/banner.jpg) no-repeat fixed left center/cover;
+    height: 300px;
+}
+
+.main_fixed .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main_fixed p {
+    font-size: 18px;
+    text-align: right;
+    padding-top: 118px;
+    margin: 0 0 10px 0;
+}
+
+.main_fixed h3 {
+    text-align: right;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+
+.object_store {
+    padding: 100px 0;
+}
+
+.object_store .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.object_store .store_title {
+    flex: 1;
+    text-align: center;
+}
+
+.object_store .store_title h2 {
+    margin: 0 0 30px 0;
+}
+
+.object_store .store_title ul>li {
+    padding: 10px 0;
+}
+
+.object_store .store_map {
+    position: relative;
+    flex: 1;
+}
+
+.object_store .store_map h3 {
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 144px;
+    font-weight: 600;
+    color: #f2f0e8;
+    writing-mode: vertical-rl;
+    z-index: -1;
+}
+/* 
+
+.object_store .gnb>ul>li a {
+    display: block;
+}
+
+.object_store .gnb>ul ul {
+    display: none;
+} */
