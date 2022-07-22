@@ -35,50 +35,49 @@
                     </ul>
                 </div>
             </div>
-            <div class="header_fix">
-                <nav class="header_bottom">
-                    <ul>
-                        <li><a href="">NEW</a></li>
-                        <li><a href="">BEST</a></li>
-                        <li><a href="">STYLE</a></li>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">STATIONERY</a></li>
-                        <li><a href="">BOOKS</a></li>
-                        <li><a href="">RECYCLE</a></li>
-                        <li><a href="">EXHIBITION</a></li>
-                        <li><a href="">OBJECT</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="searchBox">
-                <div id="searchForm">
-                    <form action="javascript:searchAction()">
-                        <input type="text" placeholder="Search here">
-                        <button>
-                            <i class="xi-heart"></i>
-                        </button>
-                    </form>
-                </div>
-
-                <script>
-                    function searchAction() {
-                        var searchValue = $('#searchForm input').val();
-                        // console.log(searchValue)
-                        if (searchValue.length < 2) {
-                            alert('2글자 이상 입력해주세요.')
-                        } else {
-                            alert(searchValue)
-                        }
-
-                        $('#searchForm input').val('');
-                        // 검색 후에 초기화
-                        $('#searchForm input').focus();
-                        // 검색 후에도 계속 입력상태로 유지
-                    }
-                </script>
-            </div>
         </header>
+        <div class="header_fix">
+            <nav class="header_bottom">
+                <ul>
+                    <li><a href="">NEW</a></li>
+                    <li><a href="">BEST</a></li>
+                    <li><a href="">STYLE</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">STATIONERY</a></li>
+                    <li><a href="">BOOKS</a></li>
+                    <li><a href="">RECYCLE</a></li>
+                    <li><a href="">EXHIBITION</a></li>
+                    <li><a href="">OBJECT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="searchBox">
+            <div id="searchForm">
+                <form action="javascript:searchAction()">
+                    <input type="text" placeholder="Search here">
+                    <button>
+                        <i class="xi-heart"></i>
+                    </button>
+                </form>
+            </div>
 
+            <script>
+                function searchAction() {
+                    var searchValue = $('#searchForm input').val();
+                    // console.log(searchValue)
+                    if (searchValue.length < 2) {
+                        alert('2글자 이상 입력해주세요.')
+                    } else {
+                        alert(searchValue)
+                    }
+
+                    $('#searchForm input').val('');
+                    // 검색 후에 초기화
+                    $('#searchForm input').focus();
+                    // 검색 후에도 계속 입력상태로 유지
+                }
+            </script>
+        </div>
         <main id="main">
             <section class="main_visual">
                 <div class="main_slider">

@@ -1,5 +1,5 @@
 * {
-    /* outline: 1px solid #f00; */
+    outline: 1px solid #f00;
 }
 
 h2 {
@@ -33,18 +33,25 @@ h2 {
     font-size: 40px;
 }
 
-#header .header_bottom {
-    line-height: 80px; 
+.header_fix {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+.header_bottom {
+    line-height: 80px;
     width: 1200px;
     margin: 0 auto;
 }
 
-#header .header_bottom>ul {
+.header_bottom>ul {
     display: flex;
     justify-content: space-between;
 }
 
-#header .header_bottom>ul>li {
+.header_bottom>ul>li {
     font-family: 'Kanit', sans-serif;
     font-size: 20px;
     font-weight: 700;
