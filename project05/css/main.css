@@ -8,6 +8,11 @@ h2 {
     font-weight: 700;
 }
 
+.mbtn {
+    display: none;
+}
+
+
 #header {
     width: 100%;
 }

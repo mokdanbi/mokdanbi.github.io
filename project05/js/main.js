@@ -14,7 +14,7 @@ $(function(){
         slidesToShow: 1,
         centerMode: true,
         infinite: true,
-        variableWidth: true
+        variableWidth: true,
     });
 
 
@@ -24,7 +24,15 @@ $(function(){
         pauseOnHover: false,
         pauseOnFocus: false,
         slidesToShow: 3,
-        asNavFor: '.title_slide'
+        asNavFor: '.title_slide',
+        responsive: [
+            { breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 2,
+            }}
+        ]
     });
 
     $('.title_slide').slick({
@@ -125,4 +133,22 @@ for (var i = 0; i < positions.length; i ++) {
         title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
         image : markerImage // 마커 이미지 
     });
+
+
+
+
+
+
+
+
+    // 반응형
+
+    $('.mbtn').on('click', function(){
+        $('.header_bottom').toggleClass('on')
+    });
+
+    $(window).on('resize', function(){
+        $('.header_bottom').removeClass('on');
+    });
+
 }
