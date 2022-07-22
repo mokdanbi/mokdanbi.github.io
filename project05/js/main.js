@@ -108,7 +108,7 @@ var positions = [
 ];
 
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = "../img/marker.png"; 
+var imageSrc = '../img/marker.png';
     
 for (var i = 0; i < positions.length; i ++) {
     
