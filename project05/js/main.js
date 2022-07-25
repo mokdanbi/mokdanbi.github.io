@@ -1,5 +1,6 @@
 $(function(){
 
+
     $('.searchclick').on('click', function(e){
         e.preventDefault();
         $('.searchBox').slideToggle('on');
@@ -24,7 +25,8 @@ $(function(){
         pauseOnHover: false,
         pauseOnFocus: false,
         slidesToShow: 3,
-        asNavFor: '.title_slide',
+        //centerMode: true,
+        // asNavFor: '.title_slide',
         responsive: [
             { breakpoint: 768,
               settings: {
@@ -41,6 +43,12 @@ $(function(){
         draggable: false,
         pauseOnHover: false,
         pauseOnFocus: false,
+        responsive: [
+            { breakpoint: 768,
+              settings: {
+                initialSlide: 0,
+            }}
+        ]
     });
 
 
@@ -50,6 +58,14 @@ $(function(){
 
     $('.new_arrival .new_arrows i:nth-child(2)').on('click', function(){
         $('.new_slide').slick('slickNext')
+    });
+
+    $('.new_arrival .new_arrows i:nth-child(1)').on('click', function(){
+        $('.title_slide').slick('slickPrev')
+    });
+
+    $('.new_arrival .new_arrows i:nth-child(2)').on('click', function(){
+        $('.title_slide').slick('slickNext')
     });
 
 
@@ -141,14 +157,27 @@ for (var i = 0; i < positions.length; i ++) {
 
 
 
+
     // 반응형
 
-    $('.mbtn').on('click', function(){
+    $('.mbtn i').on('click', function(){
         $('.header_bottom').toggleClass('on')
     });
 
     $(window).on('resize', function(){
         $('.header_bottom').removeClass('on');
     });
+
+        
+    const gtttt = () => {
+       
+            if($(window).width() < 768) {
+                location.reload(); 
+            }        
+        
+    } 
+    $(window).resize(function() {
+    setTimeout( gtttt, 0);
+});
 
 }

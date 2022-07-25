@@ -53,9 +53,9 @@
     .header_fix .header_bottom {
         position: fixed;
         top: 0;
-        /* left: 0; */
-        left: -100%;
-        width: calc(100% - 230px);
+        left: 0;
+        /* left: -100%; */
+        width: calc(100% - 90px);
         height: 100vh;
         background: #fff;
         z-index: 999;
@@ -98,7 +98,7 @@
 
     #searchForm {
         text-align: center;
-        margin: 0 0 20px 0;
+        margin: 10px 0;
     }
 
     #searchForm input[type="text"] {
@@ -124,8 +124,6 @@
         font-size: 32px;
         cursor: pointer;
     }
-
-
 
 
     .main_slider figure {
@@ -267,6 +265,7 @@
         font-size: 40px;
         color: #ddd;
         cursor: pointer;
+        padding: 0;
     }
 
     .new_arrival .new_arrows i:hover {
@@ -504,11 +503,11 @@
         flex: 1;
         text-align: center;
         margin: auto 0;
-        padding: 0 0 0 30px;
+        padding: 0 10px 0 30px;
     }
 
     .object_ex .ex_title:nth-child(2) {
-        padding: 0 30px 0 0;
+        padding: 0 30px 0 10px;
     }
 
     .object_ex .ex_title img {
@@ -594,7 +593,7 @@
 
 
     .object_store {
-        padding: 100px 0;
+        padding: 100px 0 60px 0;
     }
 
     .object_store .container {
@@ -606,6 +605,7 @@
     .object_store .store_title {
         flex: 1;
         text-align: center;
+        margin: 0 0 30px 0;
     }
 
     .object_store .store_title h2 {
@@ -613,24 +613,37 @@
     }
 
     .object_store .store_title ul>li {
-        padding: 8px 0;
+        padding: 6px 0;
+    }
+
+    .object_store .store_title ul>li>a {
+        font-size: 14px;
     }
 
     .object_store .store_map {
         position: relative;
+        width: auto;
         flex: 1;
     }
 
+    #map {
+        margin: 0 auto;
+        transform: scale(0.8) translateY(-60px);
+    }
+    
+
     .object_store .store_map h3 {
-        position: static;
-        bottom: 0;
+        position: absolute;
         right: 0;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline;
         font-family: 'Kanit', sans-serif;
-        font-size: 60px;
+        font-size: 70px;
         font-weight: 600;
         color: #9dbad1;
         writing-mode: inherit;
-        z-index: -1;
     }
 
     .store_list ul>li~li a::before {
@@ -639,11 +652,11 @@
         width: 280px;
         height: 1px;
         background: #dbdbdb;
-        margin: 0 auto 13px auto;
+        margin: 0 auto 8px auto;
     }
 
     .store_list ul>li ul>li {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .store_list ul>li ul>li:nth-child(1) {
@@ -652,6 +665,7 @@
 
     .store_list>ul>li .store_info {
         display: none;
+        padding-top: 10px;
     }
 
     .store_list>ul>li .store_info.on {
@@ -668,12 +682,13 @@
     #footer .container {
         display: flex;
         width: auto;
+        padding: 0 30px;
         margin: 0 auto;
     }
 
     #footer .ft_top {
         border-bottom: 1px solid #444;
-        line-height: 70px;
+        line-height: 2;
     }
 
     #footer .ft_top .container {
@@ -682,13 +697,13 @@
 
     #footer .ft_top dl img {
         width: 80px;
-        margin: 0 40px 0 0;
+        margin: 10px 40px 10px 0;
     }
 
     #footer .ft_top dl {
-        display: flex;
-        gap: 30px;
-        font-size: 14px;
+        display: block;
+        font-size: 12px;
+        padding: 20px 0;
     }
 
     #footer .ft_top dl>dt {
@@ -697,6 +712,7 @@
 
     #footer .ft_top .sns {
         font-size: 30px;
+        margin: 10px 0 0 0;
     }
 
 
@@ -707,6 +723,10 @@
 
     #footer .ft_bottom .container {
         justify-content: space-between;
+    }
+
+    .ft_bottom .ft_left {
+        padding-right: 20px;
     }
 
     .ft_bottom .ft_left span {
@@ -750,7 +770,7 @@
 
     #footer .ft_bottom .ft_right {
         display: flex;
-        gap: 50px;
+        gap: 20px;
     }
 
     .ft_bottom .ft_right dl>dt {

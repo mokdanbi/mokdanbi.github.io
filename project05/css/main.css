@@ -1,5 +1,5 @@
 * {
-    outline: 1px solid #f00;
+    /* outline: 1px solid #f00; */
 }
 
 h2 {
@@ -234,27 +234,33 @@ h2 {
     color: #f00;
 }
 
+.new_arrival .new_title .title_slide {
+    margin: 0 0 50px 0;
+}
+
 .new_arrival .new_arrows i {
-    position: absolute;
+    /* position: absolute;
     bottom: 50px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     font-size: 40px;
     color: #ddd;
     cursor: pointer;
+    padding: 0 10px;
 }
 
 .new_arrival .new_arrows i:hover {
     color: #333;
 }
 
+/* 
 .new_arrival .new_arrows i:nth-child(1) {
     margin: 0 0 0 -30px;
 }
 
 .new_arrival .new_arrows i:nth-child(2) {
     margin: 0 0 0 30px;
-}
+} */
 
 
 
@@ -577,6 +583,11 @@ h2 {
 .object_store .store_map {
     position: relative;
     flex: 1;
+}
+
+#map {
+    max-width: 510px;
+    
 }
 
 .object_store .store_map h3 {
