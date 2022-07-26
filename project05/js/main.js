@@ -9,7 +9,7 @@ $(function(){
 
 
     $('.main_slider').slick({
-        // autoplay: true,
+        autoplay: true,
         dots: true,
         arrows: false,
         slidesToShow: 1,
@@ -89,6 +89,24 @@ $(function(){
     });
 
 
+    // 반응형
+
+    $('.mbtn').on('click', function(){
+        $('.header_bottom').toggleClass('on');
+    });
+
+    $(window).on('resize', function(){
+        $('.header_bottom').removeClass('on');
+    }); 
+
+        
+    const gochim = () => {
+        if($(window).width() < 768) {
+                location.reload(); 
+            }} 
+    $(window).resize(function() {
+    setTimeout( gochim, 0);});
+
 });
 
 
@@ -149,35 +167,5 @@ for (var i = 0; i < positions.length; i ++) {
         title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
         image : markerImage // 마커 이미지 
     });
-
-
-
-
-
-
-
-
-
-    // 반응형
-
-    $('.mbtn i').on('click', function(){
-        $('.header_bottom').toggleClass('on')
-    });
-
-    $(window).on('resize', function(){
-        $('.header_bottom').removeClass('on');
-    });
-
-        
-    const gtttt = () => {
-       
-            if($(window).width() < 768) {
-                location.reload(); 
-            }        
-        
-    } 
-    $(window).resize(function() {
-    setTimeout( gtttt, 0);
-});
 
 }
