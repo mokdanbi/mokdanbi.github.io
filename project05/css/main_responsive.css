@@ -58,6 +58,7 @@
         left: -100%;
         width: calc(100% - 120px);
         height: 100vh;
+        line-height: 65px;
         background: #fff;
         z-index: 999;
         transition: 0.5s;
@@ -74,7 +75,7 @@
 
     .header_bottom>ul>li {
         font-family: 'Kanit', sans-serif;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 700;
         padding-left: 50px;
     }
