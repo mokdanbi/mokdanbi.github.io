@@ -114,16 +114,8 @@ $(function(){
         $('.header_bottom').removeClass('on');
     }); 
 
-        
-    const gochim = () => {
-        if($(window).width() < 768) {
-                location.reload(); 
-            }} 
-    $(window).resize(function() {
-    setTimeout( gochim, 0);});
 
 });
-
 
 
 

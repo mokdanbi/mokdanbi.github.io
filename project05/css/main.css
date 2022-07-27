@@ -263,6 +263,11 @@ h2 {
 } */
 
 
+.slide02 {
+    display: none;
+}
+
+
 
 .new_brand {
     padding: 0 0 100px 0;

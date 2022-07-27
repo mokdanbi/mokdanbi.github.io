@@ -201,7 +201,7 @@
     }
 
     .new_arrival .new_slide figure img {
-        width: 80%;
+        width: 65%;
         margin: 0 auto;
     }
 
@@ -250,14 +250,14 @@
     }
 
     .new_arrival .new_title p {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 300;
         margin: 0 0 20px 0;
     }
 
     .new_arrival .new_title em {
         display: block;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 700;
         color: #f00;
         margin: 0 0 20px 0;
@@ -284,6 +284,16 @@
 
     .new_arrival .new_arrows i:nth-child(2) {
         margin: 0 0 0 5px;
+    }
+
+
+
+    .slide01 {
+        display: none;
+    }
+
+    .slide02 {
+        display: block;
     }
 
 
