@@ -344,10 +344,17 @@
         background: #333;
     }
 
+    .brand01 {
+        display: none;
+    }
+
+    .brand02 {
+        display: block;
+    }
+
     .new_brand .brand_right {
         width: 60%;
         margin: 0 auto 20px auto;
-        border-radius: 30px;
     }
 
     .new_brand .brand_right a:hover img {
@@ -357,6 +364,8 @@
     .new_brand .brand_right img {
         border-radius: 30px;
     }
+
+
 
 
 
