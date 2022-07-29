@@ -80,6 +80,10 @@
         padding-left: 50px;
     }
 
+    .header_bottom>ul>li>a {
+        display: block;
+    }
+
     .header_bottom>ul>li>a:hover {
         color: #ddd;
     }
