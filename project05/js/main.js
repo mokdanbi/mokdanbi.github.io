@@ -1,7 +1,7 @@
-$(function(){
+$(function () {
 
 
-    $('.searchclick').on('click', function(e){
+    $('.searchclick').on('click', function (e) {
         e.preventDefault();
         $('.searchBox').slideToggle('on');
     })
@@ -27,14 +27,14 @@ $(function(){
         slidesToShow: 3,
         //centerMode: true,
         // asNavFor: '.title_slide',
-        responsive: [
-            { breakpoint: 768,
-              settings: {
+        responsive: [{
+            breakpoint: 768,
+            settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 initialSlide: 2,
-            }}
-        ]
+            }
+        }]
     });
 
     $('.title_slide').slick({
@@ -43,35 +43,35 @@ $(function(){
         draggable: false,
         pauseOnHover: false,
         pauseOnFocus: false,
-        responsive: [
-            { breakpoint: 768,
-              settings: {
+        responsive: [{
+            breakpoint: 768,
+            settings: {
                 initialSlide: 0,
-            }}
-        ]
+            }
+        }]
     });
 
 
-    $('.new_arrival .new_arrows i:nth-child(1)').on('click', function(){
+    $('.new_arrival .new_arrows i:nth-child(1)').on('click', function () {
         $('.new_slide').slick('slickPrev')
     });
 
-    $('.new_arrival .new_arrows i:nth-child(2)').on('click', function(){
+    $('.new_arrival .new_arrows i:nth-child(2)').on('click', function () {
         $('.new_slide').slick('slickNext')
     });
 
-    $('.new_arrival .new_arrows i:nth-child(1)').on('click', function(){
+    $('.new_arrival .new_arrows i:nth-child(1)').on('click', function () {
         $('.title_slide').slick('slickPrev')
     });
 
-    $('.new_arrival .new_arrows i:nth-child(2)').on('click', function(){
+    $('.new_arrival .new_arrows i:nth-child(2)').on('click', function () {
         $('.title_slide').slick('slickNext')
     });
 
 
 
 
-    $('.right_tap li').on('click',function(event){
+    $('.right_tap li').on('click', function (event) {
         event.preventDefault();
         // console.log($(this), $(this).index(), event.target, event.currentTarget);
         $('.right_tap li').removeClass('on');
@@ -82,37 +82,39 @@ $(function(){
     });
 
 
-    $('.store_list>ul>li>a').on('click',function(event){
+    $('.store_list>ul>li>a').on('click', function (event) {
         event.preventDefault();
         $('.store_list>ul>li>ul').stop().slideUp();
         $(this).next().stop().slideToggle();
     });
 
-    $(window).scroll(function(){
-        if ($(this).scrollTop()>500) {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
             $('#top_btn').fadeIn();
         } else {
             $('#top_btn').fadeOut();
         }
     });
 
-    $('#top_btn').on('click', function(){
+    $('#top_btn').on('click', function () {
         $('html,body').animate({
-            scrollTop : 0
+            scrollTop: 0
         }, 400);
         return false;
-    })
+    });
+
+    AOS.init();
 
 
     // 반응형
 
-    $('.mbtn').on('click', function(){
+    $('.mbtn').on('click', function () {
         $('.header_bottom').toggleClass('on');
     });
 
-    $(window).on('resize', function(){
+    $(window).on('resize', function () {
         $('.header_bottom').removeClass('on');
-    }); 
+    });
 
 
 });
@@ -121,21 +123,20 @@ $(function(){
 
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
-    mapOption = { 
+    mapOption = {
         center: new kakao.maps.LatLng(35.680343986753506, 127.68768992375809), // 지도의 중심좌표
         level: 13 // 지도의 확대 레벨
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
- 
+
 // 마커를 표시할 위치와 title 객체 배열입니다 
-var positions = [
-    {
-        title: '부산점', 
+var positions = [{
+        title: '부산점',
         latlng: new kakao.maps.LatLng(35.15532102489087, 129.06444471394866)
     },
     {
-        title: '전주', 
+        title: '전주',
         latlng: new kakao.maps.LatLng(35.82029813419778, 127.14263040590055)
     },
     {
@@ -158,21 +159,21 @@ var positions = [
 
 // 마커 이미지의 이미지 주소입니다
 var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-    
-for (var i = 0; i < positions.length; i ++) {
-    
+
+for (var i = 0; i < positions.length; i++) {
+
     // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(24, 35); 
-    
+    var imageSize = new kakao.maps.Size(24, 35);
+
     // 마커 이미지를 생성합니다    
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-    
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
         position: positions[i].latlng, // 마커를 표시할 위치
-        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image : markerImage // 마커 이미지 
+        title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image: markerImage // 마커 이미지 
     });
 
 }

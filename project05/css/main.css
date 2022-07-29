@@ -125,14 +125,14 @@ h2 {
 
 .main_slider .slide_title b {
     display: block;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0 0 10px 0;
 }
 
 .main_slider .slide_title p {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .main_slider .slick-dots {
@@ -380,7 +380,7 @@ h2 {
     font-family: 'Kanit', sans-serif;
     font-size: 26px;
     font-weight: 600;
-    color: #ddd;
+    color: #aaa;
     margin: auto 0;
 }
 
