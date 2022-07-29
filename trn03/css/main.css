@@ -97,19 +97,18 @@ body {
     margin: 0 0 0 2rem;
 }
 
-#searchForm input[name='text'] {
+#searchForm input[type="text"] {
     outline: none;
     border: none;
     border-bottom: 1px solid #333;
-
 }
 
 #searchForm input[name='search']:focus::placeholder {
-    color: #f00;
+    color: #369;
 }
 
 #searchForm input[name='search']::placeholder {
-    color: #f6f6;
+    color: #ddd;
 }
 
 #searchForm button {
@@ -118,3 +117,130 @@ body {
     background: transparent;
     font-size: 2rem;
 }
+
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .main_slider figure {
+    height: 60rem;
+}
+
+.main_slider .itm01 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.main_slider .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.main_slider .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.main_slider .itm04 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .slogan {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.main_visual .slogan h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow: 0 0 3px #000;
+    margin: 0 0 10px 0;
+    text-indent: -2px;
+}
+
+.main_visual .slogan p {
+    font-size: 1.5rem;
+    text-shadow: 0 0 3px #000;
+}
+
+.main_slider .slick-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_slider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 0.4rem;
+    background: #333;
+    border-radius: 0.2rem;
+    margin: 0 0.2rem;
+}
+
+
+.main_slider .slick-dots li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+}
+
+.main_slider .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 2s;
+}
+
+.main_slider .slick-dots button {
+    display: none;
+}
+
+
+
+
+
+/* 줄 긋기
+
+h5 {
+    display: flex;
+    align-items: center;
+}
+
+h5::after {
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: #f00;
+    margin: 0 0 0 20px;
+}
+
+h6 {
+    display: flex;
+    align-items: center;
+}
+
+h6::before {
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: #f00;
+    margin: 0 20px 0 0;
+}
+
+h6::after {
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: #f00;
+    margin: 0 0 0 20px;
+} */

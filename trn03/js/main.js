@@ -1,11 +1,17 @@
-$(function(){
-    $('.TopBanner i').on('click', function(){
+$(function () {
+    $('.TopBanner i').on('click', function () {
         $('.TopBanner').slideUp();
     });
     // hide 사라짐
     // slideUp 위로 닫히면서 사라짐
 
 
+    $('.main_slider').slick({
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
 
 
 });
@@ -13,13 +19,16 @@ $(function(){
 
 
 
-    
-    // $('.pop button').on('click', function(){
-    //     $(this).parent().hide();
-    // });
-    // 팝업창 하나씩 닫힘
 
-    // $('.pop button').on('click', function(){
-    //     $('.pop').hide();
-    // });
-    // 팝업창 한꺼번에 닫힘
+
+
+
+// $('.pop button').on('click', function(){
+//     $(this).parent().hide();
+// });
+// 팝업창 하나씩 닫힘
+
+// $('.pop button').on('click', function(){
+//     $('.pop').hide();
+// });
+// 팝업창 한꺼번에 닫힘
