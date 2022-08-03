@@ -169,6 +169,11 @@ textarea {
     top: 0;
 }
 
+.row {
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .row:after,
 .row:before {
     content: "";
