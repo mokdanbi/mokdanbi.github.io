@@ -1,0 +1,187 @@
+* {
+    /* outline: 1px solid #f00; */
+}
+
+.container {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: 'DM Serif Display', serif;
+}
+
+
+#header {}
+
+#header .top_banner {
+    line-height: 35px;
+    background: #a2d4ff;
+    color: #fff;
+}
+
+.top_banner .container {
+    position: relative;
+}
+
+.top_banner a {
+    font-size: 13px;
+    margin: 0 auto;
+}
+
+.top_banner i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#header .banner .container {
+    justify-content: space-between;
+    line-height: 100px;
+}
+
+.banner h1 {
+    width: 100px;
+}
+
+.banner ul {
+    display: flex;
+    gap: 40px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+}
+
+
+
+
+
+#main {}
+
+#main .main_visual {
+    position: relative;
+}
+
+.main_slider figure {
+    width: 1170px;
+    height: 600px;
+}
+
+
+
+.main_menu {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main_menu ul {
+    display: flex;
+    width: 1170px;
+    background: #fff;
+    margin: 0 auto;
+    line-height: 80px;
+}
+
+.main_menu ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main_menu ul li~li {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main_menu ul li a {
+    display: block;
+}
+
+.main_menu ul li:hover {
+    background: #a2d4ff;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+
+.main_service {
+    padding: 140px 0 100px;
+    text-align: center;
+}
+
+.main_service h2 {
+    margin: 0 0 10px 0;
+}
+
+.main_service p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.main_service .container {
+    gap: 20px;
+}
+
+.main_service figure {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+
+.main_service figure .sv_hover img {
+    width: 100px;
+}
+
+.main_service figure .sv_hover {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    line-height: 200px;
+    background: #fff;
+    transition: left 0.5s;
+}
+
+.main_service figure:hover .sv_hover {
+    left: 0;
+}
+
+.main_service figure .sv_box {
+    transition: all 0.5s;
+}
+
+.main_service figure:hover .sv_box {
+    transform: translateX(150px);
+}
+
+
+
+
+.main_button {
+    background: #3f7cb0;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.main_button .container {
+    gap: 30px;
+}
+
+.main_button .button {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.main_button .button .bt_img img {
+    width: 100px;
+}
