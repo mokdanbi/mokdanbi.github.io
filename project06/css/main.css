@@ -325,7 +325,7 @@ h2 {
     font-size: 33px;
     padding: 4px;
     background: #a2d4ff;
-    opacity: 0.5;
+    opacity: 0.3;
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
@@ -347,11 +347,266 @@ h2 {
 
 
 
-.main_fixed {
-    background: url(../img/members.jpg) no-repeat fixed center center/cover;
-    height: 300px;
+
+.main_news {
+    position: relative;
+    padding: 100px 0;
 }
 
-.main_zz {
-    height: 100vh;
+.main_news .news_left {
+    flex: 1;
+    margin: auto 0;
+    /* text-align: center; */
+}
+
+.main_news .news_left h2 {
+    margin: 0 0 50px 0;
+}
+
+.main_news .news_left h3 {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+}
+
+.main_news .news_left p {
+    font-size: 17px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.25;
+    margin: 0 0 40px 0;
+}
+
+.main_news .news_left a {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 18px;
+    border: 1px solid #333;
+}
+
+.main_news .news_left a:hover {
+    color: #fff;
+    background: #333;
+}
+
+.main_news .news_left span {
+    color: #3f7cb0;
+}
+
+.main_news .news_right {
+    flex: 1;
+}
+
+.main_news .news_right img {
+    margin: 0 0 10px 0;
+}
+
+.main_news .news_right b {
+    display: inline-block;
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: #5f98ca;
+    animation: newsMove 5s infinite;
+}
+
+@keyframes newsMove {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(41%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.main_news .news_bg {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    background:#a2d4ff;
+    opacity: 0.3;
+    width: 46%;
+    height: 65%;
+    z-index: -1;
+}
+
+
+
+
+.main_fixed {
+    position: relative;
+    background: url(../img/members.jpg) no-repeat fixed center center/cover;
+    height: 400px;
+    color: #fff;
+}
+
+.main_fixed .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1170px;
+}
+
+.main_fixed h2 {
+    font-size: 60px;
+    margin: 0 0 30px 0;
+}
+
+.main_fixed p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+
+
+.main_review {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.main_review .container {
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.main_review figure {
+    border: 1px solid #f1f1f1;
+}
+
+.main_review figure:hover {
+    box-shadow: 1px 1px 1px #ddd;
+    transition: 0.3s;
+}
+
+.main_review figure img {
+    width: 100%;
+}
+
+.main_review figure a {
+    display: block;
+}
+
+.main_review h2 {
+    margin: 0 0 10px 0;
+}
+
+.main_review p {
+    margin: 0 0 30px 0;
+}
+
+.main_review .review_txt {
+    padding: 30px 0;
+}
+
+.main_review h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.main_review em  {
+    font-size: 15px;
+    font-weight: 600;
+    color: #3f7cb0;
+}
+
+.review_more a {
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    color: #ddd;
+    padding: 0 5px 10px 5px;
+    margin: 0 0 10px 0;
+}
+
+.review_more i {
+    padding: 0 0 0 10px;
+}
+
+.review_more a:hover {
+    color: #3f7cb0;
+    border-bottom: 1px solid #3f7cb0;
+}
+
+
+
+
+#footer {
+    color: #fff;
+}
+
+#footer .container {
+    justify-content: space-between;
+}
+
+#footer .ft_top {
+    line-height: 80px;
+    background: #12436d;
+    border-bottom: 1px solid #1e527f
+}
+
+.ft_top dl {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.ft_top dl>dt {
+    font-weight: 500;
+}
+
+.ft_top dl>dd a {
+    padding: 0 0 0 15px;
+}
+
+.ft_top dl>dd::before {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: #fff;
+}
+
+.ft_top .ft_sns {
+    font-size: 30px;
+}
+
+.ft_top .ft_sns a {
+    padding-left: 5px;
+}
+
+#footer .ft_bottom {
+    background: #12436d;
+    padding: 25px 0;
+}
+
+.ft_bottom .container {
+    margin: auto;
+}
+
+.ft_bottom .ft_txt {
+    margin: auto 0;
+    line-height: 1.25;
+    font-size: 15px;
+}
+
+.ft_bottom .ft_txt p {
+    margin: 0 0 10px 0;
+}
+
+.ft_bottom .ft_txt strong {
+    font-weight: 500;
+}
+
+.ft_bottom .ft_mark img {
+    height: 70px;
+    padding-left: 10px;
 }
