@@ -7,52 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>basic 01 - 상세페이지</title>
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/basic.css">
     <style>
-        .t_b {
-            color: #0d6efd;
-        }
-
-        .container {
-            display: flex;
-            width: 1170px;
-            margin: 0 auto;
-            gap: 30px;
-        }
-
-        .inner {
-            width: 1170px;
-            margin: 0 auto;
-        }
-
-        .about {
-            padding: 100px 0;
-            letter-spacing: -0.025em;
-            font-size: 15px;
-        }
-
         .about img {
             width: 100%;
-        }
-
-        .about h2 {
-            font-size: 30px;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .about h2::after {
-            content: "";
-            display: block;
-            width: 30px;
-            height: 3px;
-            background: #0d6efd;
-            margin: 15px auto;
-        }
-
-        .about>p {
-            margin: 0 0 50px 0;
-            font-weight: 300;
-            text-align: center;
+            height: 400px;
+            object-fit: fill;
         }
 
         .about .container {
@@ -77,6 +37,10 @@
             overflow: hidden;
         }
 
+        .about .inner {
+            width: 1170px;
+        }
+
         .about h3 {
             position: relative;
             font-size: 23px;
@@ -92,53 +56,20 @@
             left: 0;
             width: 3px;
             height: 20px;
-            background: #0d6efd;
-        }
-
-        .table {
-            width: 100%;
-            border-top: 3px solid #0d6efd;
-            border-spacing: 0;
-            border-collapse: collapse;
-        }
-
-        .table td {
-            padding: 15px 15px;
-            border-left: 1px solid #ddd;
-        }
-
-        .table th {
-            padding: 15px 15px;
-            text-align: left;
-            background: #f7f7f7;
-            font-weight: 400;
-        }
-
-        .table tr {
-            border-bottom: 1px solid #ddd;
-        }
-
-        .table caption {
-            text-align: right;
-            caption-side: bottom;
-            margin: 10px 0 0 0;
-        }
-
-        .responsive-table {
-            width: 100%;
+            background: var(--mc);
         }
     </style>
 </head>
 
 <body>
-    <section class="about">
-        <h2><span class="t_b">CEO's</span> GREETINGS</h2>
+    <section class="about basicSection">
+        <h2><span class="mainColor">CEO's</span> GREETINGS</h2>
         <p>새로운 미래를 열어가는 루피테마</p>
         <div class="container">
             <div class="des">
                 <p class="tit">
-                    웹서비스의 <span class="t_b">새로운 미래를</span><br />
-                    <span class="t_b">루피테마</span>가 만들어 가겠습니다.
+                    웹서비스의 <span class="mainColor">새로운 미래를</span><br />
+                    <span class="mainColor">루피테마</span>가 만들어 가겠습니다.
                 </p>
 
                 <p>
@@ -168,7 +99,7 @@
             <h3>주요현황</h3>
             <div class="responsive-table">
                 <table class="table">
-                    <caption>* caption</caption>
+                    <caption>* description</caption>
                     <colgroup>
                         <col style="width:20%" />
                         <col style="width:30%" />
@@ -189,14 +120,8 @@
                             <td>놀고 먹기</td>
                         </tr>
                     </tbody>
-
                 </table>
-
             </div>
-
-
-
-
         </div>
     </section>
 </body>
