@@ -6,7 +6,10 @@ $(function () {
 
 
     $('.main_slider').slick({
+        autoplay: true,
         arrows: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
         slidesToShow: 1,
         centerMode: true,
         variableWidth: true,

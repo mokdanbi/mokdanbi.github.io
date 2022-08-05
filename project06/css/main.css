@@ -48,13 +48,56 @@ h2 {
     width: 100px;
 }
 
-.banner ul {
+.banner .gnb>ul {
     display: flex;
-    gap: 40px;
+    gap: 50px;
+}
+
+.banner .gnb>ul>li>a {
+    display: block;
     font-family: 'DM Serif Display', serif;
     font-size: 22px;
 }
 
+
+#header .gnb>ul>li {
+    position: relative;
+    /* 좌표의 위치, width, height의 기준 */
+}
+
+
+#header .gnb>ul ul {
+    display: none;
+    /* hover 전 적용 */
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    z-index: 999;
+    width: 160px;
+    line-height: 35px;
+    transform: translateX(-50%);
+    text-align: center;
+    background: #fff;
+    font-size: 14px;
+    padding: 0 0 5px 0;
+    transition: 0.5s;
+}
+
+#header .gnb>ul>li:hover ul {
+    display: block;
+}
+
+#header .gnb>ul>li ul>li~li {
+    border-top: 1px solid #edf6fd;
+}
+
+#header .gnb>ul>li ul>li>a {
+    display: block;
+}
+
+#header .gnb>ul>li ul>li:hover a {
+    color: #2d7dc4;
+}
 
 
 
@@ -360,28 +403,28 @@ h2 {
 }
 
 .main_news .news_left h2 {
-    margin: 0 0 50px 0;
+    margin: 0 0 30px 0;
 }
 
 .main_news .news_left h3 {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 1.25;
-    margin: 0 0 20px 0;
+    line-height: 1.4;
+    margin: 0 0 10px 0;
 }
 
 .main_news .news_left p {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
     text-align: justify;
     line-height: 1.25;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
 }
 
 .main_news .news_left a {
     display: inline-block;
     font-size: 12px;
-    padding: 5px 18px;
+    padding: 8px 30px;
     border: 1px solid #333;
 }
 
@@ -407,7 +450,7 @@ h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
     color: #5f98ca;
-    animation: newsMove 5s infinite;
+    animation: newsMove 8s infinite;
 }
 
 @keyframes newsMove {
@@ -440,7 +483,7 @@ h2 {
 
 .main_fixed {
     position: relative;
-    background: url(../img/members.jpg) no-repeat fixed center center/cover;
+    background: url(../img/members.jpg) no-repeat fixed left center/cover;
     height: 400px;
     color: #fff;
 }
@@ -455,13 +498,15 @@ h2 {
 
 .main_fixed h2 {
     font-size: 60px;
-    margin: 0 0 30px 0;
+    letter-spacing: -0.01em;
+    margin: 0 0 15px 0;
+    line-height: 0.65;
 }
 
 .main_fixed p {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 1.25;
+    line-height: 1.3;
 }
 
 
@@ -481,7 +526,7 @@ h2 {
 }
 
 .main_review figure:hover {
-    box-shadow: 1px 1px 1px #ddd;
+    box-shadow: 2px 2px 3px #ddd;
     transition: 0.3s;
 }
 
@@ -498,6 +543,8 @@ h2 {
 }
 
 .main_review p {
+    font-size: 14px;
+    font-weight: 300;
     margin: 0 0 30px 0;
 }
 
@@ -506,14 +553,13 @@ h2 {
 }
 
 .main_review h3 {
-    font-size: 18px;
     font-weight: 500;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
 }
 
 .main_review em  {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 300;
     color: #3f7cb0;
 }
 
@@ -572,7 +618,7 @@ h2 {
     content: "";
     width: 1px;
     height: 12px;
-    background: #fff;
+    background: #1e527f;
 }
 
 .ft_top .ft_sns {
@@ -585,7 +631,7 @@ h2 {
 
 #footer .ft_bottom {
     background: #12436d;
-    padding: 25px 0;
+    padding: 20px 0;
 }
 
 .ft_bottom .container {
@@ -595,11 +641,12 @@ h2 {
 .ft_bottom .ft_txt {
     margin: auto 0;
     line-height: 1.25;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .ft_bottom .ft_txt p {
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
+    font-weight: 300;
 }
 
 .ft_bottom .ft_txt strong {
@@ -607,6 +654,6 @@ h2 {
 }
 
 .ft_bottom .ft_mark img {
-    height: 70px;
+    height: 60px;
     padding-left: 10px;
 }
