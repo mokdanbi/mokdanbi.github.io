@@ -2,15 +2,15 @@ const Section01 = () => {
   return (
     <section className="about basicSection">
       <h2>
-        <span className="t_b">CEO's</span> GREETINGS
+        <span className="mainColor">CEO's</span> GREETINGS
       </h2>
       <p>새로운 미래를 열어가는 루피테마</p>
       <div className="container">
         <div className="des">
           <p className="tit">
-            웹서비스의 <span className="t_b">새로운 미래를</span>
+            웹서비스의 <span className="mainColor">새로운 미래를</span>
             <br />
-            <span className="t_b">루피테마</span>가 만들어 가겠습니다.
+            <span className="mainColor">루피테마</span>가 만들어 가겠습니다.
           </p>
 
           <p>

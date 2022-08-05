@@ -72,6 +72,75 @@
 }
 
 
+/* Section 04 */
+
+.About02 .inner>div {
+    padding: 0 15px;
+}
+
+.About02 .top {
+    float: left;
+    width: 100%;
+    margin: 0 0 50px 0;
+}
+
+.About02 .left {
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.About02 .tit {
+    line-height: 1.45;
+    margin: 0 0 40px 0;
+}
+
+.About02 .left::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 150px;
+    background: var(--mc);
+}
+
+.About02 .right {
+    float: left;
+    width: 50%;
+}
+
+.About02 .right .tit {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.About02 .right p {
+    line-height: 1.45;
+    margin: 0 0 30px 0;
+}
+
+
+
+.About02 h3 {
+    position: relative;
+    font-size: 23px;
+    font-weight: 500;
+    padding: 0 0 0 10px;
+    margin: 0 0 30px 0;
+}
+
+.About02 h3::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 3px;
+    height: 20px;
+    background: var(--mc);
+}
+
+
+
 /* Section 02 */
 
 .Business .container img {
