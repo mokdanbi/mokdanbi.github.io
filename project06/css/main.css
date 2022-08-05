@@ -471,7 +471,7 @@ h2 {
     position: absolute;
     top: 5%;
     right: 0;
-    background:#a2d4ff;
+    background: #a2d4ff;
     opacity: 0.3;
     width: 46%;
     height: 65%;
@@ -492,7 +492,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 1170px;
 }
 
@@ -557,7 +557,7 @@ h2 {
     margin: 0 0 5px 0;
 }
 
-.main_review em  {
+.main_review em {
     font-size: 13px;
     font-weight: 300;
     color: #3f7cb0;
@@ -590,16 +590,33 @@ h2 {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+}
 
+.scroll_btn p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 7px;
+    letter-spacing: 0.1em;
+    background: #1e527f;
+    color: #fff;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 7px 0 0 0;
 }
 
 .scroll_btn i {
+    font-size: 20px;
     padding: 10px;
     background: #fff;
     color: #1e527f;
     border: 1px solid #f1f1f1;
     cursor: pointer;
 }
+
+.scroll_btn i:nth-child(6) {
+    border-radius: 0 0 0 7px;
+}
+
+
 
 
 

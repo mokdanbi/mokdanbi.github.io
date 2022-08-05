@@ -7,6 +7,7 @@ $(function () {
 
     $('.main_slider').slick({
         autoplay: true,
+        speed: 1000,
         arrows: false,
         pauseOnHover: false,
         pauseOnFocus: false,
@@ -23,24 +24,24 @@ $(function () {
         centerMode: true,
     });
 
-    $('.mall_arrows i:nth-child(1)').on('click', function(){
+    $('.mall_arrows i:nth-child(1)').on('click', function () {
         $('.mall_slider').slick('slickPrev')
     });
 
-    $('.mall_arrows i:nth-child(2)').on('click', function(){
+    $('.mall_arrows i:nth-child(2)').on('click', function () {
         $('.mall_slider').slick('slickNext')
     });
 
 
 
-    $('.scroll_btn i:nth-child(1)').on('click', function () {
+    $('.scroll_btn i:nth-child(5)').on('click', function () {
         $('html,body').animate({
             scrollTop: 0
         }, 600);
         return false;
     });
 
-    $('.scroll_btn i:nth-child(2)').on('click', function () {
+    $('.scroll_btn i:nth-child(6)').on('click', function () {
         $('html,body').animate({
             scrollTop: 4000
         }, 600);
