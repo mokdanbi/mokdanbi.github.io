@@ -1,5 +1,6 @@
 * {
     /* outline: 1px solid #f00; */
+    --mc: #005caa;
 }
 
 .container {
@@ -13,12 +14,16 @@ h2 {
     font-family: 'DM Serif Display', serif;
 }
 
+h2 span {
+    color: var(--mc);
+}
 
 
 
-#header .top_banner {
+
+.header .top_banner {
     line-height: 35px;
-    background: #a2d4ff;
+    background: var(--mc);
     color: #fff;
 }
 
@@ -39,7 +44,7 @@ h2 {
     cursor: pointer;
 }
 
-#header .banner .container {
+.header .banner .container {
     justify-content: space-between;
     line-height: 100px;
 }
@@ -60,13 +65,13 @@ h2 {
 }
 
 
-#header .gnb>ul>li {
+.header .gnb>ul>li {
     position: relative;
     /* 좌표의 위치, width, height의 기준 */
 }
 
 
-#header .gnb>ul ul {
+.header .gnb>ul ul {
     display: none;
     /* hover 전 적용 */
     position: absolute;
@@ -83,26 +88,26 @@ h2 {
     transition: 0.5s;
 }
 
-#header .gnb>ul>li:hover ul {
+.header .gnb>ul>li:hover ul {
     display: block;
 }
 
-#header .gnb>ul>li ul>li~li {
+.header .gnb>ul>li ul>li~li {
     border-top: 1px solid #edf6fd;
 }
 
-#header .gnb>ul>li ul>li>a {
+.header .gnb>ul>li ul>li>a {
     display: block;
 }
 
-#header .gnb>ul>li ul>li:hover a {
-    color: #2d7dc4;
+.header .gnb>ul>li ul>li:hover a {
+    color: var(--mc);
 }
 
 
 
 
-#main .main_visual {
+.main_visual {
     position: relative;
 }
 
@@ -145,7 +150,7 @@ h2 {
 }
 
 .main_menu ul li:hover {
-    background: #a2d4ff;
+    background: #005caa;
     color: #fff;
     transition: 0.3s;
 }
@@ -208,7 +213,7 @@ h2 {
 
 
 .main_button {
-    background: #3f7cb0;
+    background: #2b6ca5;
     padding: 100px 0;
     color: #fff;
 }
@@ -310,8 +315,8 @@ h2 {
 }
 
 .mall_view a:hover {
-    color: #3f7cb0;
-    border-bottom: 1px solid #3f7cb0;
+    color: var(--mc);
+    border-bottom: 1px solid var(--mc);
 }
 
 .mall_slider figure {
@@ -350,12 +355,13 @@ h2 {
     display: inline-block;
     font-size: 12px;
     padding: 5px 18px;
-    border: 1px solid #333;
+    color: var(--mc);
+    border: 1px solid var(--mc);
 }
 
 .mall_slider a:hover {
     color: #fff;
-    background: #333;
+    background: var(--mc);
 }
 
 .mall_slider figure.slick-center img {
@@ -367,7 +373,7 @@ h2 {
 .mall_arrows i {
     font-size: 33px;
     padding: 4px;
-    background: #a2d4ff;
+    background: var(--mc);
     opacity: 0.3;
     color: #fff;
     border-radius: 8px;
@@ -399,7 +405,6 @@ h2 {
 .main_news .news_left {
     flex: 1;
     margin: auto 0;
-    /* text-align: center; */
 }
 
 .main_news .news_left h2 {
@@ -425,16 +430,17 @@ h2 {
     display: inline-block;
     font-size: 12px;
     padding: 8px 30px;
-    border: 1px solid #333;
+    color: var(--mc);
+    border: 1px solid var(--mc);
 }
 
 .main_news .news_left a:hover {
     color: #fff;
-    background: #333;
+    background: var(--mc);
 }
 
 .main_news .news_left span {
-    color: #3f7cb0;
+    color: var(--mc);
 }
 
 .main_news .news_right {
@@ -449,7 +455,8 @@ h2 {
     display: inline-block;
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
-    color: #5f98ca;
+    color: var(--mc);
+    opacity: 0.3;
     animation: newsMove 8s infinite;
 }
 
@@ -560,7 +567,7 @@ h2 {
 .main_review em {
     font-size: 13px;
     font-weight: 300;
-    color: #3f7cb0;
+    color: var(--mc);
 }
 
 .review_more a {
@@ -577,30 +584,44 @@ h2 {
 }
 
 .review_more a:hover {
-    color: #3f7cb0;
-    border-bottom: 1px solid #3f7cb0;
+    color: var(--mc);
+    border-bottom: 1px solid var(--mc);
 }
 
 
 
 .scroll_btn {
     position: fixed;
-    display: flex;
-    flex-direction: column;
     top: 50%;
     transform: translateY(-50%);
+    right: -42px;
+    transition: right 0.5s;
+}
+
+.scroll_btn.on {
     right: 0;
 }
 
+.scroll_btn .quick_menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .scroll_btn p {
+    position: absolute;
+    /* display: block; */
+    top: 0;
+    right: 100%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     font-family: 'DM Serif Display', serif;
-    font-size: 7px;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    letter-spacing: -0.5em;
     background: #1e527f;
     color: #fff;
-    text-align: center;
-    padding: 7px 0;
-    border-radius: 7px 0 0 0;
+    padding: 6px 6px 12px 6px;
+    border-radius: 6px 0 0 6px;
+    cursor: pointer;
 }
 
 .scroll_btn i {
@@ -621,15 +642,15 @@ h2 {
 
 
 
-#footer {
+.footer {
     color: #fff;
 }
 
-#footer .container {
+.footer .container {
     justify-content: space-between;
 }
 
-#footer .ft_top {
+.footer .ft_top {
     line-height: 80px;
     background: #12436d;
     border-bottom: 1px solid #1e527f
@@ -666,7 +687,7 @@ h2 {
     padding-left: 5px;
 }
 
-#footer .ft_bottom {
+.footer .ft_bottom {
     background: #12436d;
     padding: 20px 0;
 }

@@ -34,17 +34,21 @@ $(function () {
 
 
 
-    $('.scroll_btn i:nth-child(5)').on('click', function () {
+    $('.scroll_btn i:nth-child(4)').on('click', function () {
         $('html,body').animate({
             scrollTop: 0
         }, 600);
         return false;
     });
 
-    $('.scroll_btn i:nth-child(6)').on('click', function () {
+    $('.scroll_btn i:nth-child(5)').on('click', function () {
         $('html,body').animate({
             scrollTop: 4000
         }, 600);
         return false;
     });
+
+    $('.scroll_btn p').on('click', function(){
+        $('.scroll_btn').toggleClass('on');
+    })
 });
