@@ -1,34 +1,48 @@
 $(function () {
-    $('.TopBanner i').on('click', function () {
-        $('.TopBanner').slideUp();
-    });
-    // hide 사라짐
-    // slideUp 위로 닫히면서 사라짐
 
+    var closeBanner = () => {
+        $('.TopBanner').toggleClass('on');
+        //$('.TopBanner').slideToggle();
+        //document.querySelector('.TopBanner').classList.toggle('on')
+    }
+    $('.TopBanner i').on('click', closeBanner);
 
-    $('.main_slider').slick({
+    $('.MainSlider').slick({
         arrows: false,
         dots: true,
         autoplay: true,
         autoplaySpeed: 2000,
     });
 
+    $('.ProductSlider').slick({
+        arrows: false,
+        slidesToShow: 5,
+        responsive: [
+            {
+                breakpoint: 1230,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }
+        ]
+    });
 
-});
+    //e.currentTarget
 
+    function toggleClass() {
+        $('.pop li').toggleClass('on');
+        $('.Footer .popup').toggleClass('on');
+    }
 
+    $('.pop li').on('click', toggleClass);
+    $('.popup i').on('click', toggleClass);
 
+    function mopen() {
+        $(this).toggleClass('on');
+        $('.Gnb').toggleClass('on');
+    }
 
+    $('.mopen').on('click', mopen)
 
-
-
-
-// $('.pop button').on('click', function(){
-//     $(this).parent().hide();
-// });
-// 팝업창 하나씩 닫힘
-
-// $('.pop button').on('click', function(){
-//     $('.pop').hide();
-// });
-// 팝업창 한꺼번에 닫힘
+})
