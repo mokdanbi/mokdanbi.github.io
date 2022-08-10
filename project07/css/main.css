@@ -1,0 +1,176 @@
+* {
+    /* outline: 1px solid #00f; */
+    --mc: #f7f4ec;
+    --pc: #d8312d;
+}
+
+/* font-family: 'Paytone One', sans-serif; */
+
+body {
+    background: var(--mc);
+    /* overflow-x: hidden; */
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 35px;
+    font-family: 'Paytone One', sans-serif;
+    margin: 0 0 50px 0;
+}
+
+
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Header h1 {
+    margin: 0 0 0 60px;
+}
+
+.Header h1 a {
+    display: block;
+}
+
+.Header h1 img {
+    width: 160px;
+}
+
+.Header nav ul {
+    display: flex;
+    gap: 40px;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 24px;
+}
+
+.Header nav ul>li>a {
+    display: block;
+}
+
+.Header .Account {
+    width: 160px;
+    margin: 0 60px 0 0;
+}
+
+.Header .Account ul {
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+    font-size: 32px;
+}
+
+
+
+.MainCategory {
+    padding: 150px 0;
+    text-align: center;
+}
+
+/* .MainCategory h2 {
+    font-size: 35px;
+    font-family: 'Paytone One', sans-serif;
+    margin: 0 0 50px 0;
+} */
+
+.MainCategory ul {
+    display: flex;
+    gap: 20px;
+}
+
+.MainCategory ul li {
+    flex: 1;
+    font-size: 30px;
+    font-family: 'Paytone One', sans-serif;
+    line-height: 130px;
+    border: 5px solid #333;
+    border-radius: 45px;
+}
+
+.MainCategory ul li a {
+    display: block;
+}
+
+.MainCategory .cateTop {
+    margin: 0 0 20px 0;
+}
+
+
+
+.MainBest {
+    overflow-x: hidden;
+    padding: 0 0 150px 0;
+}
+
+.MainBest .bestInner {
+    display: flex;
+    transform: translateX(calc((100% - 1200px) / 2));
+}
+
+.MainBest .BestTxt {
+    width: 380px;
+}
+
+.MainBest .BestImg {
+    width: 1400px;
+}
+
+.MainBest .BestImg figure {
+    padding: 0 30px;
+}
+
+.MainBest .TxtSlide figure h2 {
+    padding: 100px 0 0 0;
+}
+
+.MainBest .TxtSlide figure h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.MainBest .TxtSlide figure em {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.MainBest .TxtSlide figure strong {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+    padding: 8px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.MainBest .TxtSlide figure strong .heart {
+    color: var(--pc);
+}
+
+.MainBest .TxtSlide figure p {
+    font-weight: 300;
+    line-height: 1.45;
+    margin: 0 50px 50px 0;
+}
+
+.MainBest .TxtSlide figure b {
+    font-weight: 500;
+    padding: 2px 0 0 0;
+    margin: 0 0 30px 0;
+    border-top: 3px solid #333;
+}
