@@ -124,11 +124,16 @@ h2 {
 }
 
 .MainBest .BestImg {
-    width: 1400px;
+    width: 1350px;
 }
 
 .MainBest .BestImg figure {
     padding: 0 30px;
+}
+
+.MainBest .BestImg figure img {
+    border: 5px solid #333;
+    width: 380px;
 }
 
 .MainBest .TxtSlide figure h2 {
@@ -173,4 +178,110 @@ h2 {
     padding: 2px 0 0 0;
     margin: 0 0 30px 0;
     border-top: 3px solid #333;
+}
+
+
+
+.MainNew {
+    padding: 0 0 150px 0;
+    text-align: center;
+}
+
+.MainNew figure~figure {
+    padding-left: 30px;
+}
+
+.MainNew figure img {
+    border: 5px solid #333;
+}
+
+
+
+.MainFixed {
+    background: url(../img/bg.jpg) no-repeat fixed center center/cover;
+}
+
+.MainFixed h2 {
+    color: #fff;
+    text-align: center;
+    padding-top: 150px;
+    margin: 0 0 10px 0;
+}
+
+.MainFixed p {
+    font-size: 21px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.MainFixed .podoPoint {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
+.MainFixed .ptBox {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    background: var(--mc);
+    border-radius: 50%;
+}
+
+.MainFixed .ptBox::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    transform: rotate(35deg);
+    width: 15px;
+    height: 30px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.MainFixed .ptBox::after {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 26px;
+    transform: rotate(25deg);
+    width: 15px;
+    height: 30px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.MainFixed .ptBox strong {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: block; */
+    font-family: 'Paytone One', sans-serif;
+    font-size: 65px;
+    color: #000;
+}
+
+.MainFixed .ptBox .ptTxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.MainFixed .ptBox .ptTxt em {
+    line-height: 1.3;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+
+
+*{
+	box-sizing: border-box;
 }
