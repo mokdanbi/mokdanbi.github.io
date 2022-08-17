@@ -344,7 +344,118 @@ span {
 
 
 
+
+
 .MainBrand {
     padding: 150px 0;
+    width: 100%;
+}
+
+.brandTitle h2 {
     text-align: center;
+    margin: 0 0 50px 0;
+}
+
+
+.MainBrand .brandTap {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.MainBrand .brandTap img {
+    display: block;
+}
+
+.MainBrand .brandTap>ul {
+    width: 1200px;
+}
+
+.MainBrand .brandTap>ul>li {
+    position: relative;
+    float: left;
+    width: 183.333px;
+    height: 480px;
+    overflow: hidden;
+}
+
+
+.MainBrand .brandTap>ul>li img {
+    position: absolute;
+    top: 0;
+    left: -418px;
+    cursor: pointer;
+}
+
+.MainBrand .brandTap>ul>li.on {
+    width: 650px;
+    border: 5px solid #333;
+}
+
+.MainBrand .brandTap>ul>li.on img {
+    top: 0;
+    left: 0;
+}
+
+.MainBrand .brandTap>ul>.brand01 {
+    background: url(../img/brand01.jpg) no-repeat center center/cover;
+}
+
+.MainBrand .brandTap>ul>.brand02 {
+    background: url(../img/brand02.jpg) no-repeat center center/cover;
+}
+
+.MainBrand .brandTap>ul>.brand03 {
+    background: url(../img/brand03.jpg) no-repeat center center/cover;
+}
+
+.MainBrand .brandTap>ul>.brand04 {
+    background: url(../img/brand04.jpg) no-repeat center center/cover;
+}
+
+.MainBrand .brandTap>ul>li .brandOverlay {
+    width: 650px;
+    height: 480px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.MainBrand>.brandTap>ul>li.on .brandOverlay {
+    display: none;
+}
+
+.brandTap .brandText {
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.MainBrand>.brandTap>ul>li.on .brandText {
+    display: block;
+    width: 550px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.MainBrand>.brandTap>ul>li.on .brandText>h3 {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: #fff;
+    line-height: 30px;
+    padding-bottom: 18px;
+}
+
+.MainBrand>.brandTap>ul>li.on .brandText>p {
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: -0.05em;
+    color: #fff;
+    line-height: 18px;
 }

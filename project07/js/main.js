@@ -23,9 +23,17 @@ $(function () {
 
     $('.bestArrows i:nth-child(1)').on('click', function () {
         $('.TxtSlide').slick('slickPrev');
-    })
+    });
 
     $('.bestArrows i:nth-child(2)').on('click', function () {
         $('.TxtSlide').slick('slickNext');
-    })
+    });
+
+
+
+    
+    $(".MainBrand>.brandTap>ul>li").click(function(){
+        $(".MainBrand>.brandTap>ul>li").removeClass("on");
+        $(this).addClass("on");
+    });
 })
