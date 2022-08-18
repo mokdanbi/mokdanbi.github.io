@@ -1,0 +1,995 @@
+@media (max-width: 768px) {
+
+    .container {
+        display: flex;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .inner {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 26px;
+        font-family: 'Paytone One', sans-serif;
+    }
+
+    span {
+        color: var(--pc);
+    }
+
+
+
+
+    .Header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: left;
+        line-height: 100px;
+        border-bottom: 1px solid #ddd;
+        background: var(--mc);
+        z-index: 999;
+    }
+
+    .Header h1 {
+        padding: 0 0 0 30px;
+        margin: 0;
+    }
+
+    .Header h1 a {
+        display: block;
+    }
+
+    .Header h1 img {
+        width: 140px;
+    }
+
+    .Header nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: calc(100% - 80px);
+        height: 100vh;
+        background: var(--mc);
+        z-index: 999;
+        display: block;
+        transition: 0.5s;
+    }
+
+    .Header nav.on {
+        left: 0;
+    }
+
+    .Header nav>ul {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0 0 0;
+        gap: 0;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 24px;
+    }
+
+    .Header nav ul>li {
+        padding: 0 0 0 50px;
+    }
+
+    .Header nav ul>li~li {
+        border-top: 1px solid #ddd;
+    }
+
+
+    .Header nav ul>li>a {
+        display: block;
+    }
+
+
+
+
+    /* mbtn */
+    .mbtn {
+        position: relative;
+        display: block;
+        margin: auto 30px auto 20px;
+        /* position: fixed; */
+        /* top: 30px; */
+        /* right: 30px; */
+        width: 30px;
+        height: 30px;
+        /* background: #ddd; */
+        /* font-size: 0; */
+        /* z-index: 999; */
+    }
+
+    .mbtn::before,
+    .mbtn::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        height: 2px;
+        background: #333;
+        transition: 0.5s;
+    }
+
+    .mbtn::before {
+        top: 7px;
+    }
+
+    .mbtn::after {
+        bottom: 7px;
+    }
+
+    .mbtn.on::before {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    .mbtn.on::after {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    .mbtn button {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .mbtn button::before,
+    .mbtn button::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        height: 2px;
+        background: #333;
+        top: calc(50% - 1px);
+        transition: 0.5s;
+    }
+
+    .mbtn.on button::before {
+        transform: rotate(45deg);
+    }
+
+    .mbtn.on button::after {
+        transform: rotate(-45deg);
+    }
+
+
+
+    /* 다단메뉴 */
+    nav>ul ul a {
+        display: block;
+        line-height: 40px;
+    }
+
+    nav>ul ul>li {
+        font-size: 14px;
+        font-family: 'Noto Sans KR';
+        text-align: center;
+    }
+
+    nav>ul ul>li:hover {
+        background: #333;
+        color: #fff;
+    }
+
+    nav>ul ul>.first:hover a::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 20px;
+        height: 20px;
+        border: 3px solid #333;
+        background: #333;
+    }
+
+
+    nav>ul>li {
+        position: relative;
+    }
+
+    nav>ul>li ul {
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        width: 150px;
+        border: 3px solid #333;
+    }
+
+    nav>ul>li:hover ul {
+        display: block;
+    }
+
+    nav>ul>li ul li {
+        position: relative;
+        background: #fff;
+        border-bottom: 1px solid #333;
+    }
+
+    nav>ul>li ul::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 20px;
+        height: 20px;
+        border: 3px solid #333;
+        background: #fff;
+    }
+
+
+
+
+
+    .Header .Account {
+        width: auto;
+        margin: 0 0 0 auto;
+    }
+
+    .Header .Account ul {
+        display: flex;
+        gap: 20px;
+        justify-content: right;
+        font-size: 28px;
+    }
+
+
+
+
+    /* search box */
+
+    .searchBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        height: 40%;
+        background: rgba(247, 244, 236, 0.9);
+        border: 5px solid #333;
+        border-radius: 50px;
+        z-index: 999;
+        display: none;
+    }
+
+    .searchBox.on {
+        display: block;
+    }
+
+    .searchForm {
+        text-align: center;
+    }
+
+    .searchForm form {
+        margin: 60px 0 40px 0;
+    }
+
+    .searchForm input[type="text"] {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #333;
+        padding: 5px 0;
+        color: #333;
+        background: transparent;
+        text-align: center;
+    }
+
+    .searchForm input[type="text"]::placeholder {
+        color: #999;
+    }
+
+    .searchForm input[type="text"]:focus::placeholder {
+        opacity: 0;
+    }
+
+    .searchForm button {
+        background: transparent;
+        outline: none;
+        border: none;
+        font-size: 21px;
+        cursor: pointer;
+    }
+
+    .searchForm ul {
+        display: flex;
+        gap: 10px;
+        margin: 0 0 10px 0;
+        justify-content: center;
+    }
+
+    .searchForm ul>li {
+        padding: 5px 20px;
+        background: #fffbe2;
+        color: #333;
+        border-radius: 20px;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .searchForm ul>li:hover {
+        background: var(--pc);
+        color: #fff;
+    }
+
+    .searchClose {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+    }
+
+
+
+
+
+    .MainCategory {
+        padding: 100px 0 90px 0;
+        text-align: center;
+    }
+
+    .MainCategory h2 {
+        margin: 0 0 30px 0;
+    }
+
+    .MainCategory .inner {
+        width: 80%;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .MainCategory .inner>div {
+        flex: 1;
+    }
+
+    .MainCategory ul {
+        display: block;
+        justify-content: center;
+    }
+
+    .MainCategory ul li {
+        width: 100%;
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 10px 0;
+        font-family: 'Paytone One', sans-serif;
+        line-height: 1;
+        border: 5px solid #333;
+        border-radius: 20px;
+        margin: 0 0 10px 0;
+    }
+
+    .MainCategory .cateTop ul li:hover {
+        animation: none;
+    }
+
+    .MainCategory .cateBottom ul li:hover {
+        animation: none;
+    }
+
+    .MainCategory ul li a {
+        display: block;
+    }
+
+    .MainCategory .cateTop {
+        margin: 0;
+    }
+
+
+
+
+    .MainBest {
+        /* overflow-x: hidden; */
+        padding: 0 0 100px 0;
+    }
+
+
+    .MainBest .bestTitle {
+        display: block;
+        font-size: 26px;
+        font-family: 'Paytone One', sans-serif;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .MainBest .bestInner {
+        display: flex;
+        flex-direction: column-reverse;
+        transform: translateX(0);
+    }
+
+    .MainBest .BestTxt {
+        width: auto;
+        padding: 30px 0 0 0;
+        text-align: center;
+    }
+
+    .BestTxt .bestArrows i {
+        display: none;
+    }
+
+
+
+    .MainBest .TxtSlide {
+        margin: 0 0 0 0;
+    }
+
+    .MainBest .TxtSlide figure h2 {
+        display: none;
+    }
+
+    .MainBest .TxtSlide figure a {
+        display: block;
+        margin: 0 0 15px 0;
+    }
+
+    .MainBest .TxtSlide figure h3 {
+        display: inline;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .MainBest .TxtSlide figure em {
+        display: inline;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 0 0 0 5px;
+        margin: 0;
+    }
+
+    .MainBest .TxtSlide figure strong {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+        padding: 8px 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+    }
+
+    .MainBest .TxtSlide figure p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.45;
+        margin: 0 0 20px 0;
+    }
+
+    .MainBest .TxtSlide figure b {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 5px 0 0 0;
+        margin: 0;
+        border-top: 3px solid #333;
+    }
+
+
+    .MainBest .BestWine {
+        position: relative;
+    }
+
+    .MainBest .BestWine .bestArrows {
+        display: block;
+    }
+
+    .MainBest .BestWine .bestArrows i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .MainBest .BestWine .bestArrows i:nth-child(1) {
+        margin: 0 0 0 -30%;
+    }
+
+    .MainBest .BestWine .bestArrows i:nth-child(2) {
+        margin: 0 0 0 30%;
+    }
+
+    .MainBest .BestImg {
+        width: auto;
+    }
+
+    .MainBest .BestImg figure:nth-child(7) {
+        display: none;
+    }
+
+    .MainBest .BestImg figure:nth-child(8) {
+        display: none;
+    }
+
+    .MainBest .BestImg figure a {
+        width: auto;
+    }
+
+    .MainBest .BestImg figure img {
+        width: 80%;
+        margin: 0 auto;
+        border: 5px solid #333;
+
+    }
+
+
+
+
+
+
+
+    .MainNew {
+        padding: 0 0 100px 0;
+        text-align: center;
+    }
+
+    .MainNew h2 {
+        margin: 0 0 30px 0;
+    }
+
+    .MainNew .container {
+        width: 80%;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .MainNew figure {
+        position: relative;
+        overflow: hidden;
+        border: 5px solid #333;
+    }
+
+    .MainNew .newBox {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        border-top: 5px solid #333;
+        padding: 10px 0;
+        transform: translateX(-50%);
+        background: var(--mc);
+        transition: 0.5s;
+    }
+
+    .MainNew .newBox p {
+        height: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0 0 5px 0;
+    }
+
+    .MainNew .newBox strong {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--pc);
+    }
+
+    .MainNew figure a:hover .newBox {
+        bottom: 0;
+    }
+
+    .MainNew figure a:hover img {
+        transform: translateY(-30px);
+        transition: 0.5s 0.2s;
+    }
+
+    .MainNew figure a img {
+        transform: translateY(-30px);
+    }
+
+
+
+    .MainFixed {
+        background: url(../img/bg.jpg) no-repeat center center/cover;
+    }
+
+    .MainFixed h2 {
+        color: #fff;
+        text-align: center;
+        padding-top: 100px;
+        margin: 0 0 10px 0;
+    }
+
+    .MainFixed p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .MainFixed .podoPoint {
+        display: block;
+        padding-bottom: 100px;
+    }
+
+    .MainFixed .ptBox {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: var(--mc);
+        border-radius: 50%;
+        margin: 0 auto 20px auto;
+    }
+
+    .MainFixed .ptBox::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        transform: rotate(35deg);
+        width: 15px;
+        height: 30px;
+        background: #000;
+        border-radius: 2px;
+    }
+
+    .MainFixed .ptBox::after {
+        content: "";
+        position: absolute;
+        top: 64px;
+        left: 26px;
+        transform: rotate(25deg);
+        width: 15px;
+        height: 30px;
+        background: #000;
+        border-radius: 2px;
+    }
+
+    .MainFixed .ptBox strong {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* display: block; */
+        font-family: 'Paytone One', sans-serif;
+        font-size: 60px;
+        color: #000;
+    }
+
+    .MainFixed .ptBox .ptTxt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .MainFixed .ptBox .ptTxt em {
+        line-height: 1.3;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+
+
+
+    .MainBrand {
+        padding: 100px 0;
+        width: 100%;
+    }
+
+    .brandTitle h2 {
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+
+    .MainBrand .brandTap {
+        width: auto;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .MainBrand .brandTap img {
+        display: block;
+        /* width: auto; */
+    }
+
+    .MainBrand .brandTap>ul {
+        width: auto;
+    }
+
+    .MainBrand .brandTap>ul>li {
+        position: relative;
+        float: none;
+        width: auto;
+        height: 100px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .MainBrand .brandTap>ul>li.on {
+        width: auto;
+        height: 250px;
+        border-left: none;
+        border-top: 5px solid var(--mc);
+        border-bottom: 5px solid var(--mc);
+    }
+
+    .MainBrand .brandTap>ul>.brand01 {
+        background: url(../img/brand01.jpg) no-repeat center center/cover;
+    }
+
+    .MainBrand .brandTap>ul>.brand02 {
+        background: url(../img/brand02.jpg) no-repeat center center/cover;
+    }
+
+    .MainBrand .brandTap>ul>.brand03 {
+        background: url(../img/brand03.jpg) no-repeat center center/cover;
+    }
+
+    .MainBrand .brandTap>ul>.brand04 {
+        background: url(../img/brand04.jpg) no-repeat center center/cover;
+    }
+
+    .MainBrand .brandTap>ul>li .brandOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .MainBrand .brandTap>ul>li .brandOverlay b {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 20px;
+        font-weight: 700;
+        opacity: 0.5;
+    }
+
+    .MainBrand .brandTap>ul>li .brandOverlay b>i {
+        transform: rotate(90deg);
+    }
+
+    .MainBrand>.brandTap>ul>li.on .brandOverlay {
+        display: none;
+    }
+
+    .brandTap .brandText {
+        display: none;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+    }
+
+    .brandTap>ul>li.on .brandText {
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .brandTap>ul>li.on .brandText h3 {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        color: #fff;
+        margin: 0 0 10px 0;
+    }
+
+    .brandTap>ul>li.on .brandText p {
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: -0.05em;
+        color: #fff;
+        line-height: 1.25;
+    }
+
+    .brandText br{
+	    display:none !important;
+    }
+
+
+
+    .MainInsta {
+        
+        padding: 0 0 100px 0;
+    }
+
+    .MainInsta h2 {
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .MainInsta .slider figure {
+        padding: 0;
+    }
+
+    .MainInsta .slider figure img {
+        width: 80%;
+        margin: 0 auto;
+        border: 5px solid #333;
+    }
+
+    .scrollBtn {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .scrollBtn i {
+        background: #231815;
+        color: #fff;
+        padding: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+
+
+
+    .Footer {
+        width: auto;
+        color: #fff;
+        background: #333;
+    }
+
+    .Footer .ftTop {
+        display: block;
+        line-height: 1;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .ftTop .topLeft {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 6;
+        justify-content: center;
+    }
+
+    .ftTop .topLeft a {
+        padding: 5px 10px;
+        border: 2px solid #fff;
+        border-radius: 15px;
+    }
+
+    .ftTop .topLeft a:hover {
+        background: #333;
+    }
+
+    .ftTop .topLeft .ftCall a:hover .inBox {
+        display: none;
+    }
+
+    .ftTop .topLeft .ftBank a:hover .inBox {
+        display: none;
+    }
+
+    /* .ftTop .topLeft .ftCall a:focus .inBox {
+        display: block;
+    }
+
+    .ftTop .topLeft .ftBank a:focus .inBox {
+        display: block;
+    } */
+
+    .ftTop .topLeft .inBox {
+        display: none;
+        position: absolute;
+        top: -120%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        padding: 10px 0;
+        text-align: center;
+        color: #333;
+        background: #fff;
+        border: 2px solid #333;
+        border-radius: 20px;
+        line-height: 1.2;
+    }
+
+    .ftTop .topLeft .inBox h3 {
+        display: inline-block;
+        font-weight: 600;
+        padding: 0 5px 5px 5px;
+        margin: 0 0 5px 0;
+        border-bottom: 2px solid #333;
+    }
+
+    .ftTop .topLeft .inBox b {
+        display: block;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    .ftTop .topLeft .inBox strong {
+        display: block;
+        font-weight: 700;
+        font-size: 13px;
+    }
+
+    .ftTop .topLeft .inBox em {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+
+    .ftTop .topCenter {
+        line-height: 4;
+        border-top: 1px solid #444;
+        border-bottom: 1px solid #444;
+    }
+
+    .ftTop .topCenter dl {
+        display: flex;
+        font-size: 12px;
+        gap: 10px;
+        white-space: nowrap;
+        justify-content: center;
+    }
+
+    .ftTop .topCenter dl>dd~dd::before {
+        content: "\00B7";
+        padding-right: 10px;
+    }
+
+    .ftTop .topRight {
+        font-size: 26px;
+        width: auto;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .Footer .ftBottom {
+        text-align: center;
+        padding: 0 0 0 0;
+        line-height: 1.45;
+    }
+
+    .Footer .ftBottom dl {
+        justify-content: center;
+        display: block;
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    .Footer .ftBottom dl:nth-child(1) {
+        margin: 0;
+    }
+
+    .Footer .ftBottom dl:nth-child(2) {
+        margin: 0;
+    }
+
+    .Footer .ftBottom dl>dd~dd::before {
+        display: none;
+    }
+
+    .ftBottom strong {
+        display: block;
+        font-size: 12px;
+        line-height: 4;
+    }
+
+
+}

@@ -1,5 +1,6 @@
 $(function () {
 
+
     $('.MainSlider').slick({
         arrows: false,
         autoplay: true,
@@ -13,17 +14,24 @@ $(function () {
         fade: true,
         draggable: false,
         infinite: false,
-        asNavFor: '.BestImg'
-        // slidesToShow: 1,
+        asNavFor: '.BestImg',
     });
 
     $('.BestImg').slick({
         arrows: false,
         slidesToShow: 3,
         infinite: false,
-        asNavFor: '.TxtSlide'
+        asNavFor: '.TxtSlide',
         // draggable: false,
         // centerMode: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // fade: true,
+            }
+        }]
     });
 
     $('.bestArrows i:nth-child(1)').on('click', function () {
@@ -36,7 +44,6 @@ $(function () {
 
 
 
-
     $(".MainBrand>.brandTap>ul>li").click(function () {
         $(".MainBrand>.brandTap>ul>li").removeClass("on");
         $(this).addClass("on");
@@ -46,6 +53,15 @@ $(function () {
     const S = $('.MainInsta .slider').slick({
         slidesToShow: 5,
         arrows: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                autoplay: true,
+            }
+        }]
     });
 
     $('.MainInsta').on('mousemove', e => {
@@ -55,13 +71,13 @@ $(function () {
     });
 
 
-    $('.searchclick').on('click', function(e){
+    $('.searchclick').on('click', function (e) {
         e.preventDefault();
         $('.searchBox').show('on');
     })
 
-    
-    $('.searchClose').on('click', function(e){
+
+    $('.searchClose').on('click', function (e) {
         e.preventDefault();
         $('.searchBox').hide('on');
     })
@@ -81,7 +97,33 @@ $(function () {
         return false;
     });
 
+
+    $('.ftTop .topLeft .ftCall a').on('click', function (e) {
+        e.preventDefault();
+        $('.ftTop .topLeft .ftCall .inBox').toggle('on');
+    });
+
+    $('.ftTop .topLeft .ftBank a').on('click', function (e) {
+        e.preventDefault();
+        $('.ftTop .topLeft .ftBank .inBox').toggle('on');
+    });
+
+
+
+    $('.mbtn').on('click', function () {
+        $('.Header nav').toggleClass('on');
+    });
+
+    $(window).on('resize', function () {
+        $('.Header nav').removeClass('on');
+    });
+
+
+    
+
+
 });
+
 
 
 function searchAction() {

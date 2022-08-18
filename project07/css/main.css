@@ -152,7 +152,10 @@ nav>ul>li ul::before {
     font-size: 32px;
 }
 
-
+/* mbtn */
+.mbtn {
+    display: none;
+}
 
 
 
@@ -307,6 +310,10 @@ nav>ul>li ul::before {
     padding: 0 0 150px 0;
 }
 
+.MainBest .bestTitle {
+    display: none;
+}
+
 .MainBest .bestInner {
     display: flex;
     transform: translateX(calc((100% - 1200px) / 2));
@@ -376,6 +383,10 @@ nav>ul>li ul::before {
 }
 
 
+
+.MainBest .BestWine .bestArrows {
+    display: none;
+}
 
 .MainBest .BestImg {
     width: 1230px;
