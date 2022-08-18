@@ -33,11 +33,16 @@ span {
 
 
 
+
 .Header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     line-height: 100px;
     border-bottom: 1px solid #ddd;
+    background: var(--mc);
+    z-index: 999;
 }
 
 .Header h1 {
@@ -52,7 +57,7 @@ span {
     width: 160px;
 }
 
-.Header nav ul {
+.Header nav>ul {
     display: flex;
     gap: 40px;
     font-family: 'Paytone One', sans-serif;
@@ -62,6 +67,78 @@ span {
 .Header nav ul>li>a {
     display: block;
 }
+
+
+/* 다단메뉴 */
+nav>ul ul a {
+    display: block;
+    line-height: 40px;
+}
+
+nav>ul ul>li {
+    font-size: 14px;
+    font-family: 'Noto Sans KR';
+    text-align: center;
+}
+
+nav>ul ul>li:hover {
+    background: #333;
+    color: #fff;
+}
+
+nav>ul ul>.first:hover a::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    background: #333;
+}
+
+
+nav>ul>li {
+    position: relative;
+}
+
+nav>ul>li ul {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 150px;
+    border: 3px solid #333;
+}
+
+nav>ul>li:hover ul {
+    display: block;
+}
+
+nav>ul>li ul li {
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #333;
+}
+
+nav>ul>li ul::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    background: #fff;
+}
+
+
+
+
 
 .Header .Account {
     width: 160px;
@@ -74,6 +151,93 @@ span {
     justify-content: right;
     font-size: 32px;
 }
+
+
+
+
+
+/* search box */
+
+.searchBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    background: rgba(247, 244, 236, 0.9);
+    border: 5px solid #333;
+    border-radius: 50px;
+    z-index: 999;
+    display: none;
+}
+
+.searchBox.on {
+    display: block;
+}
+
+.searchForm {
+    text-align: center;
+}
+
+.searchForm form {
+    margin: 60px 0 40px 0;
+}
+
+.searchForm input[type="text"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px 0;
+    color: #333;
+    background: transparent;
+    text-align: center;
+}
+
+.searchForm input[type="text"]::placeholder {
+    color: #999;
+}
+
+.searchForm input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+
+.searchForm button {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.searchForm ul {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 10px 0;
+    justify-content: center;
+}
+
+.searchForm ul>li {
+    padding: 5px 20px;
+    background: #fffbe2;
+    color: #333;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.searchForm ul>li:hover {
+    background: var(--pc);
+    color: #fff;
+}
+
+.searchClose {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+
+
 
 
 
@@ -98,6 +262,34 @@ span {
     line-height: 130px;
     border: 5px solid #333;
     border-radius: 45px;
+}
+
+.MainCategory .cateTop ul li:hover {
+    animation: catetop 1.2s infinite linear;
+}
+
+.MainCategory .cateBottom ul li:hover {
+    animation: catebottom 1.2s infinite linear;
+}
+
+@keyframes catetop {
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(0,-10px);
+        box-shadow: 0 0 20px #333;
+    }
+}
+
+@keyframes catebottom {
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(0,10px);
+        box-shadow: 0 0 20px #333;
+    }
 }
 
 .MainCategory ul li a {
@@ -191,7 +383,6 @@ span {
 
 .MainBest .BestImg figure a {
     width: 400px;
-    /* margin-right: 30px; */
 }
 
 .MainBest .BestImg figure img {
@@ -378,24 +569,12 @@ span {
     width: 183.333px;
     height: 480px;
     overflow: hidden;
-}
-
-
-.MainBrand .brandTap>ul>li img {
-    position: absolute;
-    top: 0;
-    left: -418px;
     cursor: pointer;
 }
 
 .MainBrand .brandTap>ul>li.on {
     width: 650px;
-    border: 5px solid #333;
-}
-
-.MainBrand .brandTap>ul>li.on img {
-    top: 0;
-    left: 0;
+    border-left: 5px solid #333;
 }
 
 .MainBrand .brandTap>ul>.brand01 {
@@ -415,13 +594,24 @@ span {
 }
 
 .MainBrand .brandTap>ul>li .brandOverlay {
-    width: 650px;
-    height: 480px;
-    background: rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 0;
     left: 0;
+    width: 650px;
+    height: 480px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
     cursor: pointer;
+}
+
+.MainBrand .brandTap>ul>li .brandOverlay b {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.5;
 }
 
 .MainBrand>.brandTap>ul>li.on .brandOverlay {
@@ -430,32 +620,199 @@ span {
 
 .brandTap .brandText {
     display: none;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
 }
 
-.MainBrand>.brandTap>ul>li.on .brandText {
-    display: block;
-    width: 550px;
+.brandTap>ul>li.on .brandText {
     position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
-.MainBrand>.brandTap>ul>li.on .brandText>h3 {
-    font-size: 30px;
+.brandTap>ul>li.on .brandText h3 {
+    font-size: 22px;
     font-weight: 500;
     letter-spacing: -0.05em;
     color: #fff;
-    line-height: 30px;
-    padding-bottom: 18px;
+    margin: 0 0 10px 0;
 }
 
-.MainBrand>.brandTap>ul>li.on .brandText>p {
-    font-size: 18px;
-    font-weight: 100;
+.brandTap>ul>li.on .brandText p {
+    font-size: 14px;
+    font-weight: 300;
     letter-spacing: -0.05em;
     color: #fff;
-    line-height: 18px;
+    line-height: 1.4;
 }
+
+
+
+.MainInsta {
+    padding: 0 0 150px 0;
+}
+
+.MainInsta h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.MainInsta .slider figure {
+    padding: 0 20px;
+}
+
+.MainInsta .slider figure img {
+    border: 5px solid #333;
+}
+
+.scrollBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scrollBtn i {
+    background: #231815;
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+.Footer {
+    color: #fff;
+    background: #333;
+}
+
+.Footer .ftTop {
+    display: flex;
+    line-height: 100px;
+    margin: 0 60px;
+    justify-content: space-between;
+}
+
+.ftTop .topLeft {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ftTop .topLeft a {
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.ftTop .topLeft a:hover {
+    background: var(--pc);
+}
+
+.ftTop .topLeft .ftCall a:hover .inBox {
+    display: block;
+}
+
+.ftTop .topLeft .ftBank a:hover .inBox {
+    display: block;
+}
+
+.ftTop .topLeft .inBox {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 201.52px;
+    padding: 10px 0;
+    text-align: center;
+    color: #333;
+    background: #fff;
+    border-radius: 20px;
+    line-height: 1.2;
+}
+
+.ftTop .topLeft .inBox h3 {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0 5px 5px 5px;
+    margin: 0 0 5px 0;
+    border-bottom: 2px solid #333;
+}
+
+.ftTop .topLeft .inBox b {
+    display: block;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.ftTop .topLeft .inBox strong {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.ftTop .topLeft .inBox em {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.ftTop .topCenter dl {
+    display: flex;
+    font-size: 14px;
+    gap: 15px;
+}
+
+.ftTop .topCenter dl>dd~dd::before {
+    content: "\00B7";
+    padding-right: 15px;
+}
+
+.ftTop .topRight {
+    font-size: 32px;
+    width: 201.52px;
+    text-align: right;
+}
+
+.Footer .ftBottom {
+    text-align: center;
+    padding: 0 0 50px 0;
+}
+
+.Footer .ftBottom dl {
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.Footer .ftBottom dl:nth-child(1) {
+    margin: 0 0 6px 0;
+}
+
+.Footer .ftBottom dl:nth-child(2) {
+    margin: 0 0 20px 0;
+}
+
+.Footer .ftBottom dl>dd~dd::before {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 10px;
+    background: rgb(155, 155, 155);
+    margin-right: 15px;
+}
+
+.ftBottom strong {
+    font-size: 12px;
+}
+
+

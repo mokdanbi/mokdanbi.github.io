@@ -28,21 +28,79 @@
                 </a>
             </h1>
             <nav>
-                <ul>
-                    <li><a href="#!">WINE</a></li>
-                    <li><a href="#!">GROCERY</a></li>
-                    <li><a href="#!">GOODS</a></li>
-                    <li><a href="#!">CONTRACT</a></li>
-                    <li><a href="#!">STORE</a></li>
-                    <li><a href="#!">FAQ</a></li>
+                <ul class="hdNav">
+                    <li>
+                        <a href="#!">WINE</a>
+                        <ul>
+                            <li class="first"><a href="#!">색상별</a></li>
+                            <li><a href="#!">국가별</a></li>
+                            <li><a href="#!">내츄럴와인</a></li>
+                            <li><a href="#!">스파클링</a></li>
+                            <li><a href="#!">주정강화</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">GROCERY</a>
+                        <ul>
+                            <li class="first"><a href="#!">치즈 / 견과</a></li>
+                            <li><a href="#!">스낵 / 파스타</a></li>
+                            <li><a href="#!">소스 / 잼 / 꿀</a></li>
+                            <li><a href="#!">햄 / 올리브 / 절임</a></li>
+                            <li><a href="#!">음료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">GOODS</a>
+                        <ul>
+                            <li class="first"><a href="#!">와인잔 / 디캔터</a></li>
+                            <li><a href="#!">코스터 / 키링</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">CONTRACT</a>
+                        <ul>
+                            <li class="first"><a href="#!">창업비용</a></li>
+                            <li><a href="#!">창업문의</a></li>
+                            <li><a href="#!">개설과정</a></li>
+                            <li><a href="#!">인테리어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">STORE</a>
+                    </li>
+                    <li>
+                        <a href="#!">FAQ</a>
+                    </li>
                 </ul>
             </nav>
             <div class="Account">
                 <ul>
-                    <li><a href="#!"><i class="xi-search"></i></a></li>
+                    <li class="searchclick"><a href="#!"><i class="xi-search"></i></a></li>
                     <li><a href="#!"><i class="xi-basket"></i></a></li>
                     <li><a href="#!"><i class="xi-profile-o"></i></a></li>
                 </ul>
+            </div>
+            <div class="searchBox">
+                <div class="searchForm">
+                    <form action="javascript:searchAction()">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button>
+                            <i class="xi-search"></i>
+                        </button>
+                    </form>
+                    <ul>
+                        <li><a href="#!">크라임스 쉬라즈</a></li>
+                        <li><a href="#!">스윗 로제</a></li>
+                        <li><a href="#!">베를린 리슬링</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!">콥케 화이트 포트</a></li>
+                        <li><a href="#!">모스카토</a></li>
+                    </ul>
+                </div>
+                <div class="searchClose">
+                    <a href=""><i class="xi-close"></i></a>
+                </div>
             </div>
         </header>
 
@@ -63,7 +121,7 @@
             </section>
 
             <section class="MainCategory">
-                <h2>" What type of wine do you want ? "</h2>
+                <h2>" What type of <span>wine</span> do you want ? "</h2>
                 <div class="inner">
                     <div class="cateTop">
                         <ul>
@@ -158,9 +216,10 @@
                                     <i class="xi-heart-o"></i>
                                     <i class="xi-heart-o"></i>
                                     <i class="xi-heart-o"></i>
-                                    <i class="xi-heart-o"></i>
-                                    <span><i class="xi-heart"></i></span>
-                                    DRY
+                                    <i="xi-heart-o">
+                                        </i=>
+                                        <span><i class="xi-heart"></i></span>
+                                        DRY
                                 </strong>
                                 <p>
                                     코코아, 블랙페어 등의 모나스트렐과<br />쉬라의 대표적 풍미를 가진<br />부드러운 숙성미의 와인
@@ -319,54 +378,157 @@
 
             <section class="MainBrand">
                 <div class="brandTitle">
-                    <h2>Brand PODO</h3>
+                    <h2>Brand Contract</h3>
                 </div>
                 <div class="brandTap">
                     <ul>
                         <li class="brand01 on">
-                            <img src="./img/brand01.jpg" alt="">
-                            <div class="brandOverlay"></div>
+                            <div class="brandOverlay">
+                                <b>Click <i class="xi-arrows-h"></i></b>
+                            </div>
                             <div class="brandText">
                                 <h3>브랜딩된 와인 &amp; 그로서리샵, 포도</h3>
                                 <p>매년 유명 국내 디자이너와의 콜라보레이션을 통해
-                                    접근하기 어려운 와인에 대한 진입 장벽을
+                                    접근하기 어려운 와인에 대한 진입 장벽을<br />
                                     위트 있게 풀어 소비자들에게 친근하게 다가갑니다.</p>
                             </div>
                         </li>
                         <li class="brand02">
-                            <img src="./img/brand02.jpg" alt="">
-                            <div class="brandOverlay"></div>
+                            <div class="brandOverlay">
+                                <b>Click <i class="xi-arrows-h"></i></b>
+                            </div>
                             <div class="brandText">
                                 <h3>최소한 인력으로 매장 운영 극대화</h3>
-                                <p>판매에 초점을 맞춘 매장 특성과 자체적인 발주관리 시스템으로 재고관리에 큰 어려움이 없고 타업종 대비 굉장히 적은 인력으로 운영이 가능합니다.</p>
+                                <p>판매에 초점을 맞춘 매장 특성과 자체적인 발주관리 시스템으로 재고관리에 큰 어려움이 없고<br />타업종 대비 굉장히 적은 인력으로 운영이 가능합니다.
+                                </p>
                             </div>
                         </li>
                         <li class="brand03">
-                            <img src="./img/brand03.jpg" alt="">
-                            <div class="brandOverlay"></div>
+                            <div class="brandOverlay">
+                                <b>Click <i class="xi-arrows-h"></i></b>
+                            </div>
                             <div class="brandText">
                                 <h3>합리적인 인테리어 비용</h3>
-                                <p>최소한의 인테리어 비용으로 트렌디하면서도 기존 매장 환경에 최적화된 인테리어를 제안합니다. 고객 만족도와 비용 절감을 위해 본사와 다년간 협력해온 최고의
+                                <p>최소한의 인테리어 비용으로 트렌디하면서도 기존 매장 환경에 최적화된 인테리어를 제안합니다.<br />고객 만족도와 비용 절감을 위해 본사와 다년간
+                                    협력해온 최고의
                                     인테리어 팀과 함께 합니다.</p>
                             </div>
                         </li>
                         <li class="brand04">
-                            <img src="./img/brand04.jpg" alt="">
-                            <div class="brandOverlay"></div>
+                            <div class="brandOverlay">
+                                <b>Click <i class="xi-arrows-h"></i></b>
+                            </div>
                             <div class="brandText">
                                 <h3>고부담을 줄여주는 적은 손실</h3>
-                                <p>와인이라는 상품의 특성상 다년간 보관/판매가 가능하여 관리 측면이나 비용적인 측면에서 손실 및 폐기 발생률이 현저히 적습니다.</p>
+                                <p>와인이라는 상품의 특성상 다년간 보관/판매가 가능하여 관리 측면이나 비용적인 측면에서<br />손실 및 폐기 발생률이 현저히 적습니다.</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
 
-
+            <section class="MainInsta">
+                <h2><span>#PODO</span> Photo Zone</h2>
+                <div class="slider">
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns01.png" alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns02.png" alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns03.png" alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns04.png" alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns05.png" alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns06.png" alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns07.png" alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#!">
+                            <img src="./img/sns08.png" alt="">
+                        </a>
+                    </figure>
+                </div>
+            </section>
+            <div class="scrollBtn">
+                <i class="xi-caret-up"></i>
+                <i class="xi-caret-down"></i>
+            </div>
         </main>
 
-        <footer class="footer">
-
+        <footer class="Footer">
+            <div class="ftTop">
+                <div class="topLeft">
+                    <div class="ftCall">
+                        <a href="tel:051-818-9350">
+                            Call Center
+                            <div class="inBox">
+                                <h3>Customer Center</h3>
+                                <b>051-818-9350</b>
+                                <em>AM 11:00 - PM 11:00</em>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ftBank">
+                        <a href="#!">
+                            Bank Info
+                            <div class="inBox">
+                                <h3>Bank Info</h3>
+                                <strong>KB(국민) 123-456-78-91011</strong>
+                                <strong>NH(농협) 123-456-78-91011</strong>
+                                <em>예금주 : 포도</em>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="topCenter">
+                    <dl>
+                        <dd><a href="">About</a></dd>
+                        <dd><a href="">Privacy policy</a></dd>
+                        <dd><a href="">Agreement</a></dd>
+                        <dd><a href="">Guide</a></dd>
+                        <dd><a href="">Delivery</a></dd>
+                    </dl>
+                </div>
+                <div class="topRight">
+                    <a href="https://www.instagram.com/podo_busan/" target="_blank"><i class="xi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="ftBottom">
+                <dl>
+                    <dd>법인명 : (주)도토리</dd>
+                    <dd>대표 : 정우현</dd>
+                    <dd>주소 : 부산광역시 부산진구 동천로 108번길 11 창원빌딩 301호</dd>
+                </dl>
+                <dl>
+                    <dd>사업자등록번호 : 535-81-01940</dd>
+                    <dd><a href="tel:1522-7392">대표전화 : 1522-7392</a></dd>
+                    <dd><a href="mailto:nanadream16@daum.net">이메일 : nanadream16@daum.net</a></dd>
+                </dl>
+                <strong>&copy; 2022 포도 PODO All rights reserved.</strong>
+            </div>
         </footer>
     </div>
 </body>
