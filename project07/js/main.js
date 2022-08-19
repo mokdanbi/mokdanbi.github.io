@@ -25,7 +25,7 @@ $(function () {
         // draggable: false,
         // centerMode: true,
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 769,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -54,7 +54,7 @@ $(function () {
         slidesToShow: 5,
         arrows: false,
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 769,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -73,13 +73,13 @@ $(function () {
 
     $('.searchclick').on('click', function (e) {
         e.preventDefault();
-        $('.searchBox').show('on');
+        $('.searchBox').slideToggle('on');
     })
 
 
     $('.searchClose').on('click', function (e) {
         e.preventDefault();
-        $('.searchBox').hide('on');
+        $('.searchBox').slideUp('on');
     })
 
 
@@ -99,27 +99,37 @@ $(function () {
 
 
     $('.ftTop .topLeft .ftCall a').on('click', function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         $('.ftTop .topLeft .ftCall .inBox').toggle('on');
+        $('.ftTop .topLeft .ftBank .inBox').hide('on');
     });
 
     $('.ftTop .topLeft .ftBank a').on('click', function (e) {
         e.preventDefault();
         $('.ftTop .topLeft .ftBank .inBox').toggle('on');
+        $('.ftTop .topLeft .ftCall .inBox').hide('on');
     });
 
 
+    // 반응형 메뉴
 
-    $('.mbtn').on('click', function () {
-        $('.Header nav').toggleClass('on');
+    $('.Gnb>ul>li>a').on('click', function (e) {
+        if ($('.Gnb').hasClass('on')) {
+            e.preventDefault();
+            $(this).next().stop().slideToggle();
+            $(this).parent().siblings().find('ul').stop().slideUp();
+        }
     });
 
     $(window).on('resize', function () {
-        $('.Header nav').removeClass('on');
+        $('.Gnb').removeClass('on');
+        $('.Gnb>ul ul').removeAttr('style');
     });
 
-
-    
+    $('.mbtn').on('click', function () {
+        $('.Gnb').toggleClass('on');
+        $('.Gnb>ul>li>a').next().stop().slideUp();
+    });
 
 
 });
