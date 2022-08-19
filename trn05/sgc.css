@@ -20,13 +20,13 @@ body {
     content: "\e905";
     font-family: xeicon;
     position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 20px;
     padding: 10px;
     background: #f7f7f7;
     border-radius: 50%;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .Header {
@@ -106,13 +106,13 @@ body {
 
 .mainVisual .wheel {
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
-    width: 30px;
-    height: 55px;
+    width: 40px;
+    height: 60px;
     border: 3px solid rgba(255, 255, 255, 0.75);
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 0;
 }
 
@@ -123,10 +123,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
-    height: 12px;
+    height: 10px;
     background: rgba(255, 255, 255, 0.75);
-    border-radius: 2px;
-    animation: wheel 0.8s infinite;
+    animation: wheel 0.5s infinite;
 }
 
 @keyframes wheel {
@@ -139,38 +138,6 @@ body {
     text-align: center;
 }
 
-.productSlider .slide_menu {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    line-height: 50px;
-    font-size: 0;
-}
-
-.productSlider .slide_menu img {
-    height: 20px;
-    vertical-align: top;
-}
-
-.productSlider .slide_menu li {
-    position: relative;
-}
-
-.productSlider .slide_menu li::after {
-    content: "";
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 3px;
-    background: #f00;
-}
-
-.productSlider .slide_menu li.on::after {
-    width: 100%;
-    transition: 0.5s;
-}
 
 .productSlider h2 {
     font-size: 40px;
@@ -206,18 +173,13 @@ body {
 
 .productSlider .container .bottom {
     height: 250px;
-    background: #00f;
+    background: #369;
 }
-
 
 
 .productSlider .basicSlider figure {
     position: relative;
     height: 250px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
 }
 
 .productSlider .basicSlider .sl {
@@ -229,62 +191,12 @@ body {
     width: 100%;
 }
 
-.productSlider .basicSlider .sl h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-}
-
 .productSlider .left_slider figure {
     height: 500px;
 }
 
 .productSlider .left .itm01 {
-    background-image: url(./assets/images/main_story_v0101.png);
-}
-
-.productSlider .left .itm02 {
-    background-image: url(./assets/images/main_story_v0201.png);
-}
-
-.productSlider .left .itm03 {
-    background-image: url(./assets/images/main_story_v0301.png);
-}
-
-.productSlider .left .itm04 {
-    background-image: url(./assets/images/main_story_v0401.png);
-}
-
-.productSlider .top .itm01 {
-    background-image: url(./assets/images/main_story_v0102.png);
-}
-
-.productSlider .top .itm02 {
-    background-image: url(./assets/images/main_story_v0202.png);
-}
-
-.productSlider .top .itm03 {
-    background-image: url(./assets/images/main_story_v0302.png);
-}
-
-.productSlider .top .itm04 {
-    background-image: url(./assets/images/main_story_v0402.png);
-}
-
-.productSlider .bottom .itm01 {
-    background-image: url(./assets/images/main_story_v0103.png);
-}
-
-.productSlider .bottom .itm02 {
-    background-image: url(./assets/images/main_story_v0203.png);
-}
-
-.productSlider .bottom .itm03 {
-    background-image: url(./assets/images/main_story_v0303.png);
-}
-
-.productSlider .bottom .itm04 {
-    background-image: url(./assets/images/main_story_v0403.png);
+    background: url(./assets/images/main_story_v0101.png);
 }
 
 
@@ -333,7 +245,6 @@ body {
     text-align: right;
     white-space: nowrap;
 }
-
 
 .allOpen {
     position: relative;

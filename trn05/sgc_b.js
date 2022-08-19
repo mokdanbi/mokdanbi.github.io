@@ -1,13 +1,13 @@
 $(function () {
 
-    var TXT = ['HOME', '01', '02', '03', '04', 'lee,s portfolio']
+    var TXT = ['HOME', '01', '02', '03', '04', 'lee,s portfolio', 'copyright']
     //fullpage 
     $('.main').fullpage({
-        anchors: ['page01', 'page02', 'page03', 'page04', 'page05', 'page06'],
+        anchors: ['page01', 'page02', 'page03', 'page04', 'page05', 'page06', 'page07'],
         //navigation: true,
         css3: false,
         afterLoad: function (page, num) {
-            setTimeout(() => {
+            setTimeout(function () {
                 $('.section').eq(num - 1).addClass('on').siblings().removeClass('on');
             });
             $('.Gnb li').eq(num - 1).addClass('on').siblings().removeClass('on');
