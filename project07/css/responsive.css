@@ -163,14 +163,8 @@
         position: relative;
         display: block;
         margin: auto 30px auto 20px;
-        /* position: fixed; */
-        /* top: 30px; */
-        /* right: 30px; */
         width: 30px;
         height: 30px;
-        /* background: #ddd; */
-        /* font-size: 0; */
-        /* z-index: 999; */
     }
 
     .mbtn::before,
@@ -813,8 +807,8 @@
 
     .scrollBtn {
         position: fixed;
-        bottom: 50px;
-        right: 50px;
+        bottom: 30px;
+        right: 30px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -823,7 +817,8 @@
     .scrollBtn i {
         background: #231815;
         color: #fff;
-        padding: 12px;
+        padding: 10px;
+        font-size: 12px;
         border-radius: 50%;
         cursor: pointer;
     }
@@ -983,7 +978,7 @@
 
     .Footer .ftBottom {
         text-align: center;
-        padding: 0 0 0 0;
+        padding: 0 0 5px 0;
         line-height: 1.45;
     }
 
