@@ -5,7 +5,8 @@
 font
 --------------------------------------
 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
 /*
@@ -28,7 +29,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans KR';
+    font-family: 'Noto Serif KR', serif;
     font-weight: normal;
     color: #333333;
     line-height: 1;

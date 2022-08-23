@@ -1,0 +1,154 @@
+* {
+    /* outline: 1px solid #f00; */
+    --mc: #0d2645;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+
+
+.Header {
+    background: var(--mc);
+    color: #fff;
+}
+
+.hdTop {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 40px;
+    border-bottom: 1px solid #29405f;
+}
+
+.hdTop .container {
+    justify-content: space-between;
+}
+
+.hdTop ul {
+    display: flex;
+}
+
+.hdTop ul>li~li {
+    padding: 0 0 0 15px;
+}
+
+.hdTop ul>li~li a::before {
+    display: inline-block;;
+    content: "";
+    width: 1px;
+    height: 11px;
+    background: #29405f;
+    margin-right: 15px;
+}
+
+.hdBottom {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 110px;
+}
+
+.hdBottom .container {
+    justify-content: space-between;
+}
+
+.hdBottom h1 {
+    width: 60px;
+}
+
+.hdBottom nav ul {
+    display: flex;
+}
+
+.hdBottom nav ul>li {
+    padding: 0 20px;
+}
+
+.hdBottom nav ul>li:last-child {
+    padding: 0 20px;
+    background: rgba(255,255,255,0.1)
+}
+
+
+
+
+
+.MainVisual .mainSlider figure {
+    height: 700px;
+}
+
+.MainVisual .mainSlider .main01 {
+    background: url(../img/main01.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .mainSlider .main02 {
+    background: url(../img/main02.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .mainSlider .main03 {
+    background: url(../img/main03.jpg) no-repeat center center/cover;
+}
+
+
+
+
+.MainAbout {
+    padding: 100px 0;
+}
+
+.aboutLeft {
+    flex: 1;
+    margin: auto 0;
+}
+
+.aboutLeft strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.aboutLeft h2 {
+    margin: 0 0 30px 0;
+}
+
+.aboutLeft p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.aboutRight {
+    flex: 1;
+}
+
+
+
+
+.MainRooms {
+    padding: 0 0 100px 0;
+    text-align: center;
+}
+
+.MainRooms h2 {
+    margin: 0 0 10px 0;
+}
+
+.MainRooms p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.MainRooms .roomSlider figure {
+    height: 700px;
+    overflow: hidden;
+}
