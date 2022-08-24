@@ -116,6 +116,15 @@ h2 {
     z-index: -1;
 }
 
+.MainAbout .blueLine {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: var(--mc);
+    top: 0;
+    right: calc((100% - 1200px) / 2);
+}
+
 .aboutSlider .swiper-pagination {
     position: absolute;
     top: 60%;
@@ -184,9 +193,19 @@ h2 {
 
 
 .MainRooms {
+    position: relative;
     padding: 0 0 100px 0;
     text-align: center;
     overflow-x: hidden;
+}
+
+.MainRooms .blueLine {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: var(--mc);
+    top: 0;
+    right: calc((100% - 1200px) / 2);
 }
 
 .MainRooms h2 {
@@ -199,11 +218,46 @@ h2 {
     margin: 0 0 30px 0;
 }
 
-
-.MainRooms .roomSlider {
-    /* transform: translateX(-100px); */
+.MainRooms .roomSlider figure {
+    width: 1200px !important;
+    height: 700px !important;
+    overflow: hidden;
 }
 
-.MainRooms .roomSlider .swiper-wrapper .swiper-slide img {
-    width: 1200px;
+
+
+
+
+
+.MainDining {
+    padding: 100px 0;
+    background: var(--mc);
+    color: #fff;
+    text-align: center;
+}
+
+.MainDining h2 {
+    margin: 0 0 10px 0;
+}
+
+.MainDining p {
+    margin: 0 0 30px 0;
+}
+
+.MainDining .dinContent {
+    width: 100%;
+}
+
+.MainDining .dinTab {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.dinContent>div {
+    display: none;
+}
+
+.dinContent>div.on {
+    display: block;
 }
