@@ -1,6 +1,7 @@
 * {
     /* outline: 1px solid #f00; */
     --mc: #0d2645;
+    --pc: #cbdbf5;
 }
 
 .container {
@@ -42,7 +43,8 @@ h2 {
 }
 
 .hdTop ul>li~li a::before {
-    display: inline-block;;
+    display: inline-block;
+    ;
     content: "";
     width: 1px;
     height: 11px;
@@ -74,7 +76,7 @@ h2 {
 
 .hdBottom nav ul>li:last-child {
     padding: 0 20px;
-    background: rgba(255,255,255,0.1)
+    background: rgba(255, 255, 255, 0.1)
 }
 
 
@@ -94,41 +96,89 @@ h2 {
 }
 
 .MainVisual .mainSlider .main03 {
-    background: url(../img/main03.jpg) no-repeat center center/cover;
+    background: url(../img/main03.jpg) no-repeat center top/cover;
 }
 
 
 
 
 .MainAbout {
+    position: relative;
+    display: flex;
     padding: 100px 0;
 }
 
-.aboutLeft {
-    flex: 1;
-    margin: auto 0;
+.MainAbout .aboutBg {
+    position: absolute;
+    bottom: 0;
+    left: -120px;
+    opacity: 0.03;
+    z-index: -1;
 }
 
-.aboutLeft strong {
+.aboutSlider .swiper-pagination {
+    position: absolute;
+    top: 60%;
+    right: 48.5%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.aboutSlider .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1px solid var(--pc);
+    opacity: 1;
+}
+
+.aboutSlider .swiper-pagination-bullet-active {
+    background: var(--pc);
+}
+
+.MainAbout .aboutTxt {
+    position: relative;
+    flex: 1;
+}
+
+.aboutTxt .innerTxt {
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 600px);
+    transform: translateY(-50%);
+}
+
+.aboutTxt strong {
     display: block;
     font-size: 26px;
     font-weight: 700;
     margin: 0 0 10px 0;
 }
 
-.aboutLeft h2 {
+.aboutTxt h2 {
     margin: 0 0 30px 0;
 }
 
-.aboutLeft p {
+.aboutTxt p {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.45;
 }
 
-.aboutRight {
+.aboutSlider {
     flex: 1;
+    overflow-x: hidden;
 }
+
+.aboutSlider figure {
+    height: 100%;
+    border-radius: 150px 0 0 0;
+    overflow: hidden;
+}
+
+.aboutSlider figure img {
+    width: 600px;
+}
+
 
 
 
@@ -136,6 +186,7 @@ h2 {
 .MainRooms {
     padding: 0 0 100px 0;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .MainRooms h2 {
@@ -148,7 +199,11 @@ h2 {
     margin: 0 0 30px 0;
 }
 
-.MainRooms .roomSlider figure {
-    height: 700px;
-    overflow: hidden;
+
+.MainRooms .roomSlider {
+    /* transform: translateX(-100px); */
+}
+
+.MainRooms .roomSlider .swiper-wrapper .swiper-slide img {
+    width: 1200px;
 }
