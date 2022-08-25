@@ -65,19 +65,64 @@ h2 {
     width: 60px;
 }
 
-.hdBottom nav ul {
+.hdBottom .gnb>ul {
     display: flex;
 }
 
-.hdBottom nav ul>li {
+.hdBottom .gnb>ul>li {
+    position: relative;
+    
+}
+
+.hdBottom .gnb>ul>li>a {
+    display: block;
     padding: 0 20px;
 }
 
-.hdBottom nav ul>li:last-child {
-    padding: 0 20px;
-    background: rgba(255, 255, 255, 0.1)
+.hdBottom .gnb>ul>li:last-child {
+    background: rgba(255, 255, 255, 0.1);
 }
 
+.hdBottom .gnb>ul>li:last-child:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+.hdBottom .gnb>ul ul {
+    display: none;
+    /* hover 전 적용 */
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    z-index: 999;
+    width: 145px;
+    line-height: 40px;
+    transform: translateX(-50%);
+    text-align: center;
+    background: var(--mc);
+    font-size: 15px;
+    font-weight: 300;
+    transition: 0.5s;
+    padding: 0 0 3px 0;
+}
+
+.hdBottom .gnb>ul>li:hover ul {
+    display: block;
+}
+
+.hdBottom .gnb>ul ul>li~li {
+    border-top: 1px solid #29405f;
+}
+
+.hdBottom .gnb>ul ul>li:hover {
+    background: #fff;
+    color: var(--mc);
+    font-weight: 600;
+}
+
+.hdBottom .gnb>ul ul>li a {
+    display: block;
+}
 
 
 
@@ -119,7 +164,7 @@ h2 {
     position: absolute;
     width: 150px;
     height: 100%;
-    background: var(--mc);
+    background: var(--pc);
     top: 0;
     right: 25%;
     z-index: -1;
@@ -231,7 +276,7 @@ h2 {
     position: absolute;
     width: 150px;
     height: 100%;
-    background: var(--mc);
+    background: var(--pc);
     top: 0;
     right: 25%;
     z-index: -1;
@@ -298,8 +343,8 @@ h2 {
 
 .MainDining {
     padding: 100px 0;
-    background: var(--mc);
-    color: #fff;
+    background: var(--pc);
+    /* color: #fff; */
     text-align: center;
 }
 
@@ -352,7 +397,6 @@ h2 {
 }
 
 .MainDining .dinTab>li .dinCover {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -360,10 +404,6 @@ h2 {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-}
-
-.MainDining .dinTab>li.on .dinCover {
-    display: none;
 }
 
 .MainDining .dinTab>li .dinCover strong {
@@ -611,6 +651,9 @@ h2 {
     opacity: 0.5;
 }
 
+.ftTop .sns i:hover {
+    opacity: 1;
+}
 
 
 .Footer .ftBottom {
