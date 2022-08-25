@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+    // mainSlider
     const mainSlider = new Swiper('.mainSlider', {
         loop: true,
         autoplay: {
@@ -8,6 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+
+    // MainAbout
     const aboutSlider = new Swiper('.aboutSlider', {
         effect: 'fade',
         slidesPerView: 1,
@@ -19,15 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    const roomSlider = new Swiper('.roomSlider', {
-        spaceBetween: 30,
-        // centeredSlides: true,
-        slidesPerView: 3,
-        loop: true,
-    });
-
-
-
+    // MainDining
     const dinTab = document.querySelectorAll('.dinTab>li');
     const dinContent = document.querySelectorAll('.dinContent>div');
 
@@ -39,4 +34,39 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     });
 
-})
+    // MainMeeting
+    const mtBtn = document.querySelectorAll('.mtBtn>div');
+    const mtSlider = document.querySelectorAll('.mtSlider>div');
+
+    mtBtn.forEach((el, idx) => {
+        el.addEventListener('click', (e) => {
+            mtSlider.forEach(el => el.classList.remove('on'));
+            mtSlider[idx].classList.add('on');
+            e.preventDefault();
+        })
+    });
+
+});
+
+$(function () {
+
+    // MainRooms
+    $('.roomSlider').slick({
+        arrows: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        slidesToShow: 3,
+        centerMode: true,
+        variableWidth: true,
+    });
+
+    $('.MainRooms .roomArrows i:nth-child(1)').on('click', function () {
+        $('.roomSlider').slick('slickPrev')
+    });
+
+    $('.MainRooms .roomArrows i:nth-child(2)').on('click', function () {
+        $('.roomSlider').slick('slickNext')
+    });
+
+});
+

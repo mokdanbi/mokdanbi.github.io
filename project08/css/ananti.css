@@ -44,7 +44,6 @@ h2 {
 
 .hdTop ul>li~li a::before {
     display: inline-block;
-    ;
     content: "";
     width: 1px;
     height: 11px;
@@ -118,11 +117,12 @@ h2 {
 
 .MainAbout .blueLine {
     position: absolute;
-    width: 200px;
+    width: 150px;
     height: 100%;
     background: var(--mc);
     top: 0;
-    right: calc((100% - 1200px) / 2);
+    right: 25%;
+    z-index: -1;
 }
 
 .aboutSlider .swiper-pagination {
@@ -195,17 +195,46 @@ h2 {
 .MainRooms {
     position: relative;
     padding: 0 0 100px 0;
-    text-align: center;
     overflow-x: hidden;
+}
+
+.MainRooms h2 {
+    text-align: center;
+}
+
+.MainRooms p {
+    text-align: center;
+}
+
+.MainRooms .roomArrows i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.MainRooms .roomArrows i:nth-child(1) {
+    margin: 0 0 0 -38.5%;
+    padding: 20px 50px 20px 15px;
+
+}
+
+.MainRooms .roomArrows i:nth-child(2) {
+    margin: 0 0 0 38.5%;
+    padding: 20px 15px 20px 50px;
 }
 
 .MainRooms .blueLine {
     position: absolute;
-    width: 200px;
+    width: 150px;
     height: 100%;
     background: var(--mc);
     top: 0;
-    right: calc((100% - 1200px) / 2);
+    right: 25%;
+    z-index: -1;
 }
 
 .MainRooms h2 {
@@ -219,11 +248,49 @@ h2 {
 }
 
 .MainRooms .roomSlider figure {
-    width: 1200px !important;
-    height: 700px !important;
-    overflow: hidden;
+    position: relative;
+    height: 700px;
+    padding: 0 50px;
+    overflow-y: hidden;
 }
 
+.MainRooms .roomSlider figure img {
+    width: 1200px;
+    height: 100%;
+}
+
+.MainRooms .roomSlider figure .roomBox {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    padding: 30px;
+    width: 20%;
+    height: 50%;
+    color: #fff;
+    background: #333;
+}
+
+.roomBox h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.roomBox ul>li {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.roomBox ul>li::before {
+    display: inline-block;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 10px 0 0;
+}
 
 
 
@@ -241,6 +308,8 @@ h2 {
 }
 
 .MainDining p {
+    font-size: 14px;
+    font-weight: 500;
     margin: 0 0 30px 0;
 }
 
@@ -260,4 +329,280 @@ h2 {
 
 .dinContent>div.on {
     display: block;
+}
+
+
+
+
+
+.MainMeeting {
+    padding: 100px 0;
+}
+
+.MainMeeting .mtTxt {
+    position: relative;
+    flex: 1;
+    margin: auto 0;
+}
+
+.mtTxt h2 {
+    margin: 0 0 10px 0;
+}
+
+.mtTxt p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+    margin: 0 0 60px 0;
+}
+
+.mtTxt strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mc);
+    margin: 0 0 10px 0;
+}
+
+.mtTxt strong::before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: var(--mc);
+    margin: 0 0 10px 0;
+}
+
+.mtTxt em {
+    display: block;
+    font-size: 12px;
+    line-height: 1.45;
+    margin: 0 0 40px 0;
+}
+
+.MainMeeting .mtSlider {
+    width: 50%;
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    overflow: hidden;
+}
+
+.mtSlider>div {
+    display: none;
+}
+
+.mtSlider>div.on {
+    display: block;
+}
+
+.MainMeeting .mtBtn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.MainMeeting .mtBtn div {
+    height: 300px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-weight: 700;
+    font-family: 'Noto Sans KR';
+    font-size: 16px;
+    color: #fff;
+    background: var(--pc);
+    line-height: 50px;
+}
+
+.MainMeeting .mtBtn div:hover {
+    background: var(--mc);
+}
+
+.MainMeeting .mtBtn .mBtn {
+    border-radius: 0 0 25px 0;
+}
+
+.MainMeeting .mtBtn .wBtn {
+    border-radius: 0 25px 0 0;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+.MainCove {
+    padding: 100px 0;
+    background: url(../img/ananticove.jpg) fixed bottom center/cover;
+    text-align: center;
+    font-family: 'Noto Sans KR';
+}
+
+.MainCove img {
+    width: 40%;
+    margin: 0 0 30px 0;
+}
+
+.MainCove p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 40px 0;
+}
+
+.MainCove .coveBtn a {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+}
+
+.MainCove .coveBtn a:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--mc);
+}
+
+
+
+.MainFacility {
+    padding: 100px 0;
+}
+
+.MainFacility h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.MainFacility p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 60px 0;
+    text-align: center;
+}
+
+.MainFacility .container {
+    gap: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.MainFacility figure {
+    flex: 1;
+    /* border: 1px solid #f1f1f1; */
+    border-radius: 0 0 50px 0;
+}
+
+.MainFacility figure:hover {
+    box-shadow: 3px 3px 5px #ddd;
+    transition: 0.3s;
+}
+
+.MainFacility figure img {
+    width: 100%;
+}
+
+.MainFacility figure a {
+    display: block;
+}
+
+.MainFacility .facTxt {
+    padding: 30px 30px;
+}
+
+.MainFacility .facTxt h3 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Noto Sans KR';
+    margin: 0 0 10px 0;
+}
+
+.MainFacility .facTxt h3 i {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.MainFacility .facTxt b {
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+
+
+.Footer {
+    background: var(--mc);
+    color: #fff;
+}
+
+.Footer .ftTop {
+    line-height: 50px;
+    border-bottom: 1px solid #29405f;
+}
+
+.Footer .ftTop .container {
+    justify-content: space-between;
+}
+
+.Footer .ftTop dl {
+    display: flex;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.ftTop dl>dd~dd a::before {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 11px;
+    background: #29405f;
+    margin: 0 15px;
+}
+
+.ftTop .sns {
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+
+
+.Footer .ftBottom {
+    padding: 20px 0;
+}
+
+.ftBottom .container {
+    justify-content: space-between;
+}
+
+.ftBottom .info {
+    font-size: 13px;
+}
+
+.ftBottom .info p {
+    margin: 0 0 5px 0;
+}
+
+.ftBottom .info dl {
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+.ftBottom .info dl>dd~dd::before {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 11px;
+    background: #29405f;
+    margin: 0 15px;
+}
+
+.ftBottom .info strong {
+    font-weight: 600;
+}
+
+.ftBottom .ftLogo {
+    width: 45px;
+    opacity: 0.5;
 }
