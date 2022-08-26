@@ -398,14 +398,14 @@ h2 {
 
 .inbox b {
     display: block;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     margin: 0 0 10px 0;
 }
 
 .inbox em {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1.45;
 }
 
@@ -497,7 +497,7 @@ h2 {
 
 .mtTxt em {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.45;
     margin: 0 0 40px 0;
 }

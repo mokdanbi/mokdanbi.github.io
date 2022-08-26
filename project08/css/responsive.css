@@ -207,6 +207,7 @@
         margin: auto 30px auto 0;
         width: 30px;
         height: 30px;
+        cursor: pointer;
     }
 
     .mopen::before,
@@ -228,16 +229,6 @@
         bottom: 6px;
     }
 
-    .mopen.on::before {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-
-    .mopen.on::after {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-
     .mopen button {
         border: none;
         outline: none;
@@ -255,15 +246,6 @@
         top: calc(50% - 1px);
         transition: 0.5s;
     }
-
-    .mopen.on button::before {
-        transform: rotate(45deg);
-    }
-
-    .mopen.on button::after {
-        transform: rotate(-45deg);
-    }
-
 
 
 
@@ -874,6 +856,31 @@
         display: none;
     }
 
+
+
+    .scrollBtn {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        border-radius: 10px 0 0 10px;
+        overflow: hidden;
+    }
+    
+    .scrollBtn i {
+        background: var(--mc);
+        color: #fff;
+        font-size: 14px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .scrollBtn i:nth-child(1) {
+        border-bottom: 1px solid var(--sc);
+    }
 
 
     .Footer {
