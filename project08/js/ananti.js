@@ -68,5 +68,26 @@ $(function () {
         $('.roomSlider').slick('slickNext')
     });
 
+
+
+    // 반응형 메뉴
+
+    $('.gnb>ul>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
+            e.preventDefault();
+            $(this).next().stop().slideToggle();
+            $(this).parent().siblings().find('ul').stop().slideUp();
+        }
+    });
+
+    $(window).on('resize', function () {
+        $('.gnb').removeClass('on');
+        $('.gnb>ul ul').removeAttr('style');
+    });
+
+    $('.mopen').on('click', function () {
+        $('.gnb').toggleClass('on');
+        $('.gnb>ul>li>a').next().stop().slideUp();
+    });
 });
 
