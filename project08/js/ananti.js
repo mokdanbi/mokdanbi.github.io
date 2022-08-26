@@ -89,5 +89,19 @@ $(function () {
         $('.gnb').toggleClass('on');
         $('.gnb>ul>li>a').next().stop().slideUp();
     });
+
+    $('.scrollBtn i:nth-child(1)').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+    $('.scrollBtn i:nth-child(2)').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 5000
+        }, 600);
+        return false;
+    });
 });
 

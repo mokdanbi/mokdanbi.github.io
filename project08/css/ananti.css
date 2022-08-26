@@ -653,6 +653,30 @@ h2 {
 }
 
 
+.scrollBtn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.scrollBtn i {
+    background: var(--mc);
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.scrollBtn i:nth-child(1) {
+    border-bottom: 1px solid var(--sc);
+}
+
+
 
 .Footer {
     background: var(--mc);
@@ -691,6 +715,7 @@ h2 {
 .ftTop .sns i:hover {
     opacity: 1;
 }
+
 
 
 .Footer .ftBottom {
