@@ -1,6 +1,20 @@
 * {
-    outline: 1px solid #f00;
+    /* outline: 1px solid #f00; */
+    --mc: #495496;
 }
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+span {
+    color: var(--mc);
+}
+
+
+
+/* header */
 
 .Header {
     width: 100%;
@@ -19,12 +33,166 @@
 
 
 
-.mainVisual {
-    width: 100%;
-    height: 100%;
+/* MainVisual */
+
+.MainVisual {
+    position: relative;
 }
 
-.mainImg {
-    width: 100%;
+.mainSlider {
+    width: 1600px;
     margin: 0 auto;
+}
+
+.mainTitle {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #999;
+    background: #fff;
+    border: 5px solid var(--mc);
+}
+
+.mainTitle::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "\e97a";
+    color: #fff;
+    font-family: xeicon;
+    font-size: 36px;
+    width: 100px;
+    height: 100px;
+    background: var(--mc);
+}
+
+
+
+
+/* MainAbout */
+.MainAbout {
+    padding: 150px 0 110px;
+}
+
+.MainAbout h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.MainAbout .container {
+    display: flex;
+}
+
+.aboutLeft {
+    flex: 1;
+}
+
+.aboutLeft .about02 {
+    transform: translate(50px, -20px)
+}
+
+.aboutLeft .about03 {
+    transform: translateY(-40px)
+}
+
+.aboutRight {
+    flex: 1;
+    padding: 0 0 0 100px;
+}
+
+.aboutRight h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 30px 0;
+}
+
+.aboutRight p {
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+
+
+
+/* MainCast */
+.MainCast {
+    padding: 150px 0;
+    background: #fcf3ca;
+}
+
+.MainCast h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.MainCast .container {
+    display: flex;
+}
+
+.castLeft {
+    flex: 1;
+}
+
+.castLeft .barro {
+    width: 100%;
+    height: 800px;
+    background: #fff;
+}
+
+.castLeft .barro figure {
+    width: 200px;
+    padding: 20px;
+    color: #fff;
+    background: #4b72b3;
+    text-align: center;
+}
+
+.castLeft .barro figure img {
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.castLeft .barro figure .title {
+    border: 3px solid #fff;
+    padding: 10px;
+}
+
+.castLeft .barro figure strong {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.castLeft .barro figure em {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.castLeft .barro figure i {
+    font-size: 26px;
+    margin: 0 0 0 10px;
+}
+
+.castLeft .barro figure b {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+
+.castRight {
+    flex: 1;
 }
