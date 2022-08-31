@@ -8,10 +8,6 @@
     margin: 0 auto;
 }
 
-span {
-    color: var(--mc);
-}
-
 
 
 /* header */
@@ -23,7 +19,6 @@ span {
 }
 
 .Header h1 {
-
     text-align: center;
 }
 
@@ -77,17 +72,21 @@ span {
     background: var(--mc);
 }
 
+.mainTitle span {
+    color: var(--mc);
+}
+
 
 
 
 /* MainAbout */
 .MainAbout {
-    padding: 150px 0 110px;
+    padding: 150px 0 100px;
 }
 
 .MainAbout h2 {
-    font-size: 30px;
-    font-weight: 700;
+    font-family: 'ELAND_Nice_M';
+    font-size: 40px;
     text-align: center;
     margin: 0 0 50px 0;
 }
@@ -110,7 +109,7 @@ span {
 
 .aboutRight {
     flex: 1;
-    padding: 0 0 0 100px;
+    transform: translateX(150px);
 }
 
 .aboutRight h3 {
@@ -125,78 +124,401 @@ span {
     line-height: 1.25;
 }
 
+.aboutTxt {
+    padding: 40px 0 0 0;
+}
 
 
 
-/* MainCast */
 .MainCast {
-    padding: 150px 0;
-    background: #fcf3ca;
+    position: relative;
+    padding: 0 0 100px;
+    /* background: #fcf3ca; */
+}
+
+.MainCast .outLeft {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+}
+
+.MainCast .outRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
 }
 
 .MainCast h2 {
-    font-size: 30px;
-    font-weight: 700;
+    font-family: 'ELAND_Nice_M';
+    font-size: 40px;
     text-align: center;
     margin: 0 0 50px 0;
 }
 
 .MainCast .container {
+    position: relative;
     display: flex;
 }
+
+.castCenter figure {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d25656;
+}
+
+.castCenter .tami {
+    font-size: 12px !important;
+}
+
+
+/* figure box setting */
+
+.MainCast figure {
+    width: 150px;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 10px #999;
+}
+
+.MainCast figure .title,
+.MainCast figure .titleTop {
+    border: 3px solid #fff;
+    padding: 5px;
+}
+
+.MainCast figure strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.MainCast figure em {
+    font-size: 14px;
+}
+
+.MainCast figure b {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 10px 0 5px;
+}
+
+.MainCast figure p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.MainCast .titleTop {
+    position: relative;
+}
+
+.MainCast .titleTop::after {
+    position: absolute;
+    content: "\e936";
+    font-family: xeicon;
+    right: 5px;
+}
+
+.MainCast .title {
+    position: relative;
+}
+
+.MainCast .title::after {
+    position: absolute;
+    content: "\e930";
+    font-family: xeicon;
+    top: 5px;
+    right: 5px;
+}
+
+/* end */
+
+
 
 .castLeft {
     flex: 1;
 }
 
 .castLeft .barro {
+    position: relative;
     width: 100%;
-    height: 800px;
-    background: #fff;
+    background: rgba(202, 231, 249, 0.3);
+    border-radius: 30px 0 0 30px;
+    padding: 40px 0;
 }
 
-.castLeft .barro figure {
-    width: 200px;
-    padding: 20px;
-    color: #fff;
+.castLeft .barro .brTop {
+    margin: 0 0 20px 0;
+}
+
+.castLeft .barro .brTop figure {
+    margin: 0 auto;
+}
+
+.castLeft .barro .brCenter {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+.castLeft .barro .brBottom {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.castLeft .barro .brTop figure {
     background: #4b72b3;
-    text-align: center;
 }
 
-.castLeft .barro figure img {
-    display: block;
-    margin: 0 0 20px 0;
+.castLeft .barro .brCenter figure,
+.castLeft .barro .brBottom figure {
+    background: rgba(75, 114, 179, 0.8);
 }
 
-.castLeft .barro figure .title {
-    border: 3px solid #fff;
-    padding: 10px;
-}
-
-.castLeft .barro figure strong {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.castLeft .barro figure em {
+.castLeft .barro .brTxt {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    line-height: 30px;
+    border: 3px solid #4b72b3;
+    background: #fff;
     font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 10px 0;
+    font-weight: 700;
+    padding: 0 0 0 10px;
 }
 
-.castLeft .barro figure i {
-    font-size: 26px;
-    margin: 0 0 0 10px;
-}
-
-.castLeft .barro figure b {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    margin: 0 0 20px 0;
+.castLeft .barro .brTxt::after {
+    position: absolute;
+    content: "\e97a";
+    font-family: xeicon;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #4b72b3;
 }
 
 
 .castRight {
     flex: 1;
+}
+
+.castRight .unicon {
+    position: relative;
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    height: 33.333%;
+    background: rgba(164, 182, 100, 0.2);
+    border-radius: 0 30px 0 0;
+    justify-content: center;
+}
+
+.castRight .unicon .uniLeft figure {
+    background: #879b3c;
+    margin: 25px 0 0 0;
+}
+
+.castRight .unicon .uniRight figure {
+    background: rgba(135, 155, 60, 0.8);
+    margin: 25px 0 0 0;
+}
+
+.castRight .unicon .uniTxt {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    line-height: 30px;
+    border: 3px solid #879b3c;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+.castRight .unicon .uniTxt::after {
+    position: absolute;
+    content: "\e97a";
+    font-family: xeicon;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #879b3c;
+}
+
+
+.castRight .etc {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    height: 33.333%;
+    background: rgba(199, 201, 196, 0.3);
+    justify-content: center;
+}
+
+.castRight .etc figure {
+    background: rgba(199, 201, 196, 0.8);
+    margin: 25px 0 0 0;
+}
+
+
+
+.castRight .millim {
+    position: relative;
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    height: 33.333%;
+    background: rgba(228, 211, 197, 0.3);
+    border-radius: 0 0 30px 0;
+    justify-content: center;
+}
+
+.castRight .millim figure {
+    background: rgba(229, 191, 168, 0.8);
+    margin: 25px 0 0 0;
+}
+
+.castRight .millim .milTxt {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    line-height: 30px;
+    border: 3px solid rgba(229, 191, 168, 0.8);
+    background: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+.castRight .millim .milTxt::after {
+    position: absolute;
+    content: "\e97a";
+    font-family: xeicon;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(229, 191, 168, 0.8);
+}
+
+
+.outLeft figure {
+    background: #cab6ab;
+}
+
+.outRight figure {
+    background: #cab6ab;
+}
+
+.first {
+    margin: 100px 0;
+}
+
+
+
+/* MainStory */
+
+.MainStory {
+    padding: 100px 0;
+    background: #f9f9f9;
+}
+
+.MainStory h2 {
+    font-family: 'ELAND_Nice_M';
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.MainStory .container {
+    position: relative;
+    border-top: 3px solid var(--mc);
+}
+
+.MainStory .container::before {
+    position: absolute;
+    content: "오늘의 글";
+    top: -24px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mc);
+}
+
+.accordion_area {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion_area .btn_toggle {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    background: #fff;
+    text-align: left;
+    line-height: 30px;
+    border: 0;
+    outline: 0
+}
+
+.accordion_area .btn_toggle span {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 0 20px;
+    color: var(--mc);
+}
+
+.accordion_area .btn_toggle strong {
+    display: inline-block;
+    width: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.accordion_area .btn_toggle p {
+    display: inline-block;
+    padding: 0 0 0 20px;
+}
+
+.accordion_area .content_area {
+    /* display: none; */
+    padding: 10px;
+    background: rgba(205, 216, 235, 0.1);
+}
+
+.accordion_area .content_area img {
+    display: block;
+    margin: 0 auto;
+}
+
+.accordion_area .content_area p {
+    width: 720px;
+    margin: 0 auto;
+}
+
+.accordion_area .content_area.act {
+    display: block;
 }
