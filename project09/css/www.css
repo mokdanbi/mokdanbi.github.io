@@ -44,6 +44,10 @@ span {
     margin: 0 auto;
 }
 
+.mainSlider figure img {
+    width: 1600px;
+}
+
 .mainTitle {
     position: absolute;
     bottom: -50px;
