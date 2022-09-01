@@ -16,11 +16,21 @@
 <body>
     <div class="Wrap">
         <header class="Header">
-            <h1>
-                <a href="#">
-                    <img src="./img/logo.png" alt="">
-                </a>
-            </h1>
+            <div class="inner">
+                <ul>
+                    <li><a href="#!">ABOUT</a></li>
+                    <li><a href="#!">CAST</a></li>
+                </ul>
+                <h1>
+                    <a href="#">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                </h1>
+                <ul>
+                    <li><a href="#!">CLIP</a></li>
+                    <li><a href="#!">OST</a></li>
+                </ul>
+            </div>
         </header>
 
         <main>
@@ -31,7 +41,7 @@
                     </figure>
                 </div>
                 <div class="mainTitle">
-                    우리들의 하루는 <span>검색</span>으로 시작해 <span>검색</span>으로 끝납니다
+                    <div class="text"></div>
                 </div>
             </section>
 
@@ -95,12 +105,13 @@
             </section>
 
             <section class="MainStory">
-                <h2>소개글을 입력하세요</h2>
+                <h2><a name="here">소개글을 입력하세요</a></h2>
                 <div class="container">
                     <div class="accordion_area" data-group="one">
                         <button class="btn_toggle">
                             <span>128514</span>
                             <strong>직장생활</strong>
+                            </a>
                             <p>
                                 안녕하세요. 저는 IT업계에 종사 중인 30대 후반의 직장인 여성입니다..
                             </p>
@@ -143,11 +154,13 @@
 
                     <div class="accordion_area" data-group="one">
                         <button class="btn_toggle">
-                            <span>128513</span>
-                            <strong>직장생활</strong>
-                            <p>
-                                오랜만에 입갤했네. 횽들 잘 지냈어? 난 잘 못 지냈다. 잘 못 지낸 이유 말해준다.
-                            </p>
+                            <a href="#here">
+                                <span>128513</span>
+                                <strong>직장생활</strong>
+                                <p>
+                                    오랜만에 입갤했네. 횽들 잘 지냈어? 난 잘 못 지냈다. 잘 못 지낸 이유 말해준다.
+                                </p>
+                            </a>
                         </button>
                         <div class="content_area">
                             <img src="./img/story02.png" alt="">
@@ -207,11 +220,13 @@
 
                     <div class="accordion_area" data-group="one">
                         <button class="btn_toggle">
-                            <span>128512</span>
-                            <strong>결혼/시댁/친정</strong>
-                            <p>
-                                결혼 10년차입니다. 아이는 없습니다.
-                            </p>
+                            <a href="#here">
+                                <span>128512</span>
+                                <strong>결혼/시댁/친정</strong>
+                                <p>
+                                    결혼 10년차입니다. 아이는 없습니다.
+                                </p>
+                            </a>
                         </button>
                         <div class="content_area">
                             <img src="./img/story03.png" alt="">
@@ -264,11 +279,13 @@
 
                     <div class="accordion_area" data-group="one">
                         <button class="btn_toggle">
-                            <span>128511</span>
-                            <strong>사랑과 고백</strong>
-                            <p>
-                                #새벽이니까_솔직히_말해보자
-                            </p>
+                            <a href="#here">
+                                <span>128511</span>
+                                <strong>사랑과 고백</strong>
+                                <p>
+                                    #새벽이니까_솔직히_말해보자
+                                </p>
+                            </a>
                         </button>
                         <div class="content_area">
                             <img src="./img/story04.png" alt="">
@@ -331,11 +348,13 @@
 
                     <div class="accordion_area" data-group="one">
                         <button class="btn btn_toggle">
-                            <span>128510</span>
-                            <strong>신앙생활</strong>
-                            <p>
-                                여러분에게 닥친 시련은 인간으로서 이겨 내지 못할 시련이 아닙니다. 하느님은 성실하십니다.
-                            </p>
+                            <a href="#here">
+                                <span>128510</span>
+                                <strong>신앙생활</strong>
+                                <p>
+                                    여러분에게 닥친 시련은 인간으로서 이겨 내지 못할 시련이 아닙니다. 하느님은 성실하십니다.
+                                </p>
+                            </a>
                         </button>
                         <div class="content_area">
                             <img src="./img/story05.png" alt="">
@@ -384,11 +403,13 @@
 
                     <div class="accordion_area" data-group="one">
                         <button class="btn btn_toggle">
-                            <span>128509</span>
-                            <strong>남자들의 이야기</strong>
-                            <p>
-                                저희 집은 기업을 운영하고 있습니다.
-                            </p>
+                            <a href="#here">
+                                <span>128509</span>
+                                <strong>남자들의 이야기</strong>
+                                <p>
+                                    저희 집은 기업을 운영하고 있습니다.
+                                </p>
+                            </a>
                         </button>
                         <div class="content_area">
                             <img src="./img/story06.png" alt="">
@@ -657,25 +678,55 @@
 
             <section class="MainVideo">
                 <h2>클립 영상을 입력하세요</h2>
-                <div class="swiper-container">
+                <div class="swiper-container videoSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slide01">
+                        <div class="swiper-slide">
                             <img src="./img/youtube01.jpg" alt="">
+                            <div class="youtube">
+                                <a href="https://youtu.be/lOIiHFQzBUA" target="_blank">
+                                    <img src="./img/youtubelogo.png" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide slide02">
+                        <div class="swiper-slide">
                             <img src="./img/youtube02.jpg" alt="">
+                            <div class="youtube">
+                                <a href="https://youtu.be/9wvwTu30b-Q" target="_blank">
+                                    <img src="./img/youtubelogo.png" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide slide03">
+                        <div class="swiper-slide">
                             <img src="./img/youtube03.jpg" alt="">
+                            <div class="youtube">
+                                <a href="https://youtu.be/th2bHZGCvGo" target="_blank">
+                                    <img src="./img/youtubelogo.png" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide slide04">
+                        <div class="swiper-slide">
                             <img src="./img/youtube04.jpg" alt="">
+                            <div class="youtube">
+                                <a href="https://youtu.be/BC0Y8E8kA00" target="_blank">
+                                    <img src="./img/youtubelogo.png" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide slide05">
+                        <div class="swiper-slide">
                             <img src="./img/youtube05.jpg" alt="">
+                            <div class="youtube">
+                                <a href="https://youtu.be/gFOIuWA5c4g" target="_blank">
+                                    <img src="./img/youtubelogo.png" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide slide06">
+                        <div class="swiper-slide">
                             <img src="./img/youtube06.jpg" alt="">
+                            <div class="youtube">
+                                <a href="https://youtu.be/WKTYtfpPgac" target="_blank">
+                                    <img src="./img/youtubelogo.png" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -688,16 +739,102 @@
                 <div class="container">
                     <div class="wwwOst">
                         <h2>OST를 입력하세요</h2>
+                        <div class="swiper ostSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/ost01.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/ost02.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/ost03.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/ost04.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/ost05.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/ost06.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/ost07.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
+
                     <div class="wwwPhoto">
                         <h2>이미지를 입력하세요</h2>
+                        <div class="swiper photoSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide itm01">
+                                </div>
+                                <div class="swiper-slide itm02">
+                                </div>
+                                <div class="swiper-slide itm03">
+                                </div>
+                                <div class="swiper-slide itm04">
+                                </div>
+                                <div class="swiper-slide itm05">
+                                </div>
+                                <div class="swiper-slide itm06">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drag">
+                            Drag
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="Footer">
-
+            <div class="ftTop">
+                <div class="inner">
+                    <dl>
+                        <dd><a href="">드라마 소개</a></dd>
+                        <dd><a href="">광고 문의</a></dd>
+                        <dt><a href="">다시보기</a></dd>
+                        <dd><a href="">클립 영상</a></dd>
+                        <dd><a href="">현장 포토</a></dd>
+                        <dd><a href="">OST</a></dd>
+                    </dl>
+                    <div class="sns">
+                        <a href="https://twitter.com/CJnDrama" target="_blank"><i class="xi-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/CJENMDRAMA" target="_blank"><i
+                                class="xi-youtube-play"></i></a>
+                        <a href="https://www.facebook.com/tvNDrama/" target="_blank"><i
+                                class="xi-facebook-official"></i></a>
+                        <a href="https://www.instagram.com/tvndrama.official/" target="_blank"><i
+                                class="xi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="ftBottom">
+                <div class="inner">
+                    <div class="btleft">
+                        <dl>
+                            <dd>제작 : 화앤담픽쳐스</dd>
+                            <dd>기획 : 스튜디오 드래곤</dd>
+                            <dd>연출 : 정지현 &#183; 권영일</dd>
+                        </dl>
+                        <p>출연 : 임수정 &#183; 장기용 &#183; 이다희 &#183; 전혜진 &#183; 이재욱 &#183; 지승현 外</p>
+                        <b>Copyright &copy; WWW All Rights Reserved.</b>
+                    </div>
+                    <div class="btright">
+                        <img src="./img/Logonetflix.png" alt="">
+                        <img src="./img/tvnlogo.png" alt="">
+                    </div>
+                </div>
+                <div class="ftlogo">
+                    <img src="./img/logo_yellow.png" alt="">
+                </div>
+            </div>
         </footer>
     </div>
 </body>
