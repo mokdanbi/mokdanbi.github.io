@@ -30,15 +30,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const swiper = new Swiper('.swiper-container', {
-        loop: true,
+        // loop: true,
         centeredSlides: true,
         slidesPerView: 'auto',
         slideToClickedSlide: true,
         effect: 'coverflow',
         coverflowEffect: {
             rotate: 0,
-            slideShadows: false,
-            stretch: 500,
+            stretch: 300,
+            scale: 0.9,
         },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+    
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
     });
 });
