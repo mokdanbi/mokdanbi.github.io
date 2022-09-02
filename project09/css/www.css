@@ -92,7 +92,7 @@
     width: 100px;
     line-height: 100px;
     text-align: center;
-    transform: translate(5px,-5px);
+    transform: translate(5px, -5px);
     background: var(--mc);
 }
 
@@ -162,7 +162,7 @@
     background: #333;
 }
 
-.MainAbout .container { 
+.MainAbout .container {
     position: relative;
     display: flex;
 }
@@ -317,6 +317,7 @@
 
 
 
+
 /* MainCast */
 .MainCast {
     position: relative;
@@ -325,6 +326,9 @@
 }
 
 .MainCast .outLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -332,6 +336,9 @@
 }
 
 .MainCast .outRight {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -362,11 +369,16 @@
     display: flex;
 }
 
-.castCenter figure {
+.castCenter {
     position: absolute;
-    top: 20px;
     left: 50%;
+    top: 20px;
     transform: translateX(-50%);
+}
+
+.castCenter figure {
+    width: 150px;
+    height: 263px;
     background: #d25656;
 }
 
@@ -374,7 +386,8 @@
     font-size: 12px !important;
 }
 
-.castCenter figure::before {
+
+.castCenter::before {
     content: "\ea10";
     font-family: xeicon;
     position: absolute;
@@ -387,14 +400,14 @@
     animation: heart linear 1s infinite;
 }
 
-.castCenter figure::after {
+.castCenter::after {
     content: "";
     position: absolute;
-    bottom: -477px;
+    bottom: -489px;
     left: 50%;
     transform: translateX(-50%);
     width: 3px;
-    height: 477px;
+    height: 489px;
     background: #ea6880;
 }
 
@@ -469,45 +482,90 @@
 
 .castLeft .barro {
     position: relative;
-    width: 100%;
     background: rgba(202, 231, 249, 0.3);
     border-radius: 30px 0 0 30px;
     padding: 40px 0;
 }
 
-.castLeft .barro .brTop {
-    margin: 0 0 20px 0;
+
+#imgWrap {
+    width: auto;
+    height: auto;
+    transform-style: preserve-3d;
+    perspective: 1000;
+    cursor: pointer;
 }
 
-.castLeft .barro .brTop figure {
+.face {
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+
+.front {
     position: relative;
-    margin: 0 auto;
+    background: red;
+    z-index: 2;
+    transform: rotateY(0deg);
 }
 
-.castLeft .barro .brTop figure::before {
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: green;
+    z-index: 1;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+.back>p {
+    margin: 10px 0 0 0;
+    text-align: justify;
+    line-height: 1.25;
+    font-size: 13px !important;
+}
+
+#imgWrap:hover>.front {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+#imgWrap:hover>.back {
+    z-index: 2;
+    transform: rotateY(0)
+}
+
+
+.castLeft .barro .brTop {
+    width: 150px;
+    margin: 0 auto 20px;
+}
+
+.castLeft .barro .brTop::before {
     content: "\ea10";
     font-family: xeicon;
     position: absolute;
-    top: 57%;
-    left: -165px;
+    top: 17.5%;
+    left: 5%;
     font-size: 20px;
-    z-index: 1;
     color: #ea6880;
-    text-shadow: 0 0 3px #fff;
+    text-shadow: 0px 0px 3px #fff;
     animation: heart linear 1s infinite;
 }
 
-.castLeft .barro .brTop figure::after {
+.castLeft .barro .brTop::after {
     content: "";
     position: absolute;
-    top: 60%;
-    left: -330px;
+    top: 18%;
+    left: -17.5%;
     width: 330px;
     height: 3px;
     background: #ea6880;
 }
 
 .castLeft .barro .brCenter {
+    height: 269px;
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -573,18 +631,20 @@
     justify-content: center;
 }
 
-.castRight .unicon .uniLeft figure {
-    position: relative;
-    background: #879b3c;
+.castRight .unicon .uniLeft {
     margin: 25px 0 0 0;
 }
 
-.castRight .unicon .uniLeft figure::before {
+.castRight .unicon .uniLeft figure {
+    background: #879b3c;
+}
+
+.castRight .unicon .uniLeft::before {
     content: "\ea10";
     font-family: xeicon;
     position: absolute;
-    bottom: -35px;
-    left: 43.5%;
+    bottom: -10px;
+    left: 31%;
     font-size: 20px;
     z-index: 1;
     color: #ea6880;
@@ -592,20 +652,22 @@
     animation: heart linear 1s infinite;
 }
 
-.castRight .unicon .uniLeft figure::after {
+.castRight .unicon .uniLeft::after {
     content: "";
     position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -25px;
+    left: 32.5%;
     width: 3px;
     height: 50px;
     background: #ea6880;
 }
 
+.castRight .unicon .uniRight {
+    margin: 25px 0 0 0;
+}
+
 .castRight .unicon .uniRight figure {
     background: rgba(135, 155, 60, 0.8);
-    margin: 25px 0 0 0;
 }
 
 .castRight .unicon .uniTxt {
@@ -648,6 +710,13 @@
 
 .castRight .etc figure {
     background: rgba(199, 201, 196, 0.8);
+}
+
+.castRight .etcLeft {
+    margin: 25px 0 0 0;
+}
+
+.castRight .etcRight {
     margin: 25px 0 0 0;
 }
 
@@ -664,9 +733,17 @@
     justify-content: center;
 }
 
+.castRight .millim .milLeft {
+    margin: 25px 0 0 0;
+}
+
+
+.castRight .millim .milRight {
+    margin: 25px 0 0 0;
+}
+
 .castRight .millim figure {
     background: rgba(229, 191, 168, 0.8);
-    margin: 25px 0 0 0;
 }
 
 .castRight .millim .milTxt {
@@ -697,11 +774,11 @@
     background: rgba(229, 191, 168, 0.8);
 }
 
-.castRight .millim .milLeft figure {
+.castRight .millim .milLeft {
     position: relative;
 }
 
-.castRight .millim .milLeft figure::after {
+.castRight .millim .milLeft::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -719,10 +796,6 @@
 
 .outRight figure {
     background: #cab6ab;
-}
-
-.first {
-    margin: 100px 0;
 }
 
 @keyframes heart {
