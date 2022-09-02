@@ -8,15 +8,17 @@
     <title>www mok.</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/www.css">
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/www.js"></script>
 </head>
 
 <body>
     <div class="Wrap">
         <header class="Header">
-            <div class="inner">
+            <div class="container">
                 <ul>
                     <li><a href="#!">ABOUT</a></li>
                     <li><a href="#!">CAST</a></li>
@@ -35,7 +37,7 @@
 
         <main>
             <section class="MainVisual">
-                <div class="mainSlider">
+                <div class="mainImg">
                     <figure>
                         <img src="./img/main01.jpg" alt="">
                     </figure>
@@ -49,18 +51,18 @@
                 <h2>검색어를 입력하세요 WWW</h2>
                 <div class="container">
                     <div class="aboutLeft">
-                        <figure class="about01">
+                        <figure class="about01" data-aos="fade-right">
                             <img src="./img/1.jpg" alt="">
                         </figure>
-                        <figure class="about02">
+                        <figure class="about02" data-aos="fade-left">
                             <img src="./img/2.jpg" alt="">
                         </figure>
-                        <figure class="about03">
+                        <figure class="about03" data-aos="fade-right">
                             <img src="./img/3.jpg" alt="">
                         </figure>
                     </div>
                     <div class="aboutRight">
-                        <div class="aboutTxt">
+                        <div class="aboutTxt" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="1000">
                             <h3>트렌드를 이끄는 포털사이트,<br />그 안에서 당당하게 일하는 여자들과<br /> 그녀들의 마음을 흔드는 남자들의 리얼 로맨스</h3>
                             <p>10대부터 60대까지 검색을 안 해 본 사람은 없다.<br />
                                 포털에 접속하지 않는 사람은 없다.<br />
@@ -631,7 +633,7 @@
                     </div>
                 </div>
                 <div class="outLeft">
-                    <figure class="first jihwan">
+                    <figure class="first">
                         <img src="./img/barro08.jpg" alt="">
                         <div class="title">
                             <strong>설지환</strong>
@@ -795,7 +797,7 @@
 
         <footer class="Footer">
             <div class="ftTop">
-                <div class="inner">
+                <div class="container">
                     <dl>
                         <dd><a href="">드라마 소개</a></dd>
                         <dd><a href="">광고 문의</a></dd>
@@ -816,7 +818,7 @@
                 </div>
             </div>
             <div class="ftBottom">
-                <div class="inner">
+                <div class="container">
                     <div class="btleft">
                         <dl>
                             <dd>제작 : 화앤담픽쳐스</dd>

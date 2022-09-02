@@ -8,22 +8,17 @@
     margin: 0 auto;
 }
 
-.inner {
-    width: 1600px;
-    margin: 0 auto;
-}
-
 
 
 /* header */
 
 .Header {
     width: 100%;
-    line-height: 150px;
+    line-height: 120px;
     border-bottom: 1px solid #fff;
 }
 
-.Header .inner {
+.Header .container {
     display: flex;
     justify-content: space-between;
 }
@@ -35,7 +30,11 @@
 
 .Header ul>li {
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 800;
+}
+
+.Header ul>li:hover {
+    color: var(--mc);
 }
 
 .Header ul>li>a {
@@ -43,9 +42,16 @@
 }
 
 .Header h1 img {
-    width: 180px;
+    width: 150px;
 }
 
+.Header .container ul {
+    width: 250px;
+}
+
+.Header .container ul:last-child {
+    justify-content: right;
+}
 
 
 /* MainVisual */
@@ -54,12 +60,12 @@
     position: relative;
 }
 
-.mainSlider {
+.mainImg {
     width: 1600px;
     margin: 0 auto;
 }
 
-.mainSlider figure img {
+.mainImg figure img {
     width: 1600px;
 }
 
@@ -75,19 +81,20 @@
     border: 5px solid var(--mc);
 }
 
-/* .mainTitle::after {
+.mainTitle::after {
     position: absolute;
     top: 0;
     right: 0;
     content: "\e97a";
     color: #fff;
     font-family: xeicon;
-    font-size: 40px;
+    font-size: 45px;
     width: 100px;
-    height: 100px;
+    line-height: 100px;
     text-align: center;
+    transform: translate(5px,-5px);
     background: var(--mc);
-} */
+}
 
 .mainTitle p {
     font-size: 36px;
@@ -100,14 +107,13 @@
     color: var(--mc);
 }
 
-
 .text {
     position: absolute;
     top: 50%;
     left: 50%;
     width: auto;
     white-space: nowrap;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-right: 2px solid #777;
     font-size: 36px;
     font-weight: 600;
@@ -140,9 +146,9 @@
 .MainAbout h2 {
     position: relative;
     font-family: 'ELAND_Nice_M';
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
 }
 
 .MainAbout h2::after {
@@ -151,12 +157,13 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    width: 480px;
+    width: 430px;
     height: 5px;
     background: #333;
 }
 
-.MainAbout .container {
+.MainAbout .container { 
+    position: relative;
     display: flex;
 }
 
@@ -164,33 +171,42 @@
     flex: 1;
 }
 
+.aboutLeft figure {
+    width: 600px;
+    height: 280px;
+}
+
 .aboutLeft .about02 {
-    transform: translate(50px, -20px)
+    position: absolute;
+    top: 260px;
+    left: 50px;
 }
 
 .aboutLeft .about03 {
-    transform: translateY(-40px)
+    position: absolute;
+    top: 520px;
 }
 
 .aboutRight {
     flex: 1;
-    transform: translateX(150px);
+    padding: 44px 0;
 }
 
 .aboutRight h3 {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     line-height: 1.25;
     margin: 0 0 30px 0;
 }
 
 .aboutRight p {
+    font-size: 15px;
     font-weight: 300;
-    line-height: 1.25;
+    line-height: 1.35;
 }
 
 .aboutTxt {
-    padding: 40px 0 0 0;
+    padding: 0 0 0 150px;
 }
 
 
@@ -206,9 +222,9 @@
 .MainStory h2 {
     position: relative;
     font-family: 'ELAND_Nice_M';
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
 }
 
 .MainStory h2::after {
@@ -217,7 +233,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    width: 350px;
+    width: 320px;
     height: 5px;
     background: #333;
 }
@@ -325,9 +341,9 @@
 .MainCast h2 {
     position: relative;
     font-family: 'ELAND_Nice_M';
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
 }
 
 .MainCast h2::after {
@@ -336,7 +352,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    width: 350px;
+    width: 320px;
     height: 5px;
     background: #333;
 }
@@ -363,12 +379,12 @@
     font-family: xeicon;
     position: absolute;
     bottom: -240px;
-    left: 50%;
+    left: 43.5%;
     font-size: 20px;
-    transform: translateX(-50%);
     z-index: 1;
     color: #ea6880;
     text-shadow: 0 0 3px #fff;
+    animation: heart linear 1s infinite;
 }
 
 .castCenter figure::after {
@@ -472,22 +488,21 @@
     content: "\ea10";
     font-family: xeicon;
     position: absolute;
-    top: 50%;
-    left: -120px;
+    top: 57%;
+    left: -165px;
     font-size: 20px;
-    transform: translateY(-50%);
     z-index: 1;
     color: #ea6880;
     text-shadow: 0 0 3px #fff;
+    animation: heart linear 1s infinite;
 }
 
 .castLeft .barro .brTop figure::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: -251px;
-    transform: translateY(-50%);
-    width: 251px;
+    top: 60%;
+    left: -330px;
+    width: 330px;
     height: 3px;
     background: #ea6880;
 }
@@ -569,12 +584,12 @@
     font-family: xeicon;
     position: absolute;
     bottom: -35px;
-    left: 50%;
+    left: 43.5%;
     font-size: 20px;
-    transform: translateX(-50%);
     z-index: 1;
     color: #ea6880;
     text-shadow: 0 0 3px #fff;
+    animation: heart linear 1s infinite;
 }
 
 .castRight .unicon .uniLeft figure::after {
@@ -710,30 +725,14 @@
     margin: 100px 0;
 }
 
-.jihwan {
-    position: relative;
-}
+@keyframes heart {
+    0% {
+        scale: 1;
+    }
 
-.jihwan::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -81px;
-    transform: translate(-50%);
-    width: 3px;
-    height: 127px;
-    background: #ea6880;
-}
-
-.jihwan::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -79px;
-    transform: translateY(-50%);
-    width: 79px;
-    height: 3px;
-    background: #ea6880;
+    100% {
+        scale: 1.2;
+    }
 }
 
 
@@ -765,9 +764,9 @@
 .MainVideo h2 {
     position: relative;
     font-family: 'ELAND_Nice_M';
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
 }
 
 .MainVideo h2::after {
@@ -776,7 +775,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    width: 400px;
+    width: 360px;
     height: 5px;
     background: #333;
 }
@@ -836,7 +835,7 @@
 }
 
 .videoSwiper .youtube:hover img {
-    width: 110px;
+    width: 120px;
     opacity: 0.8;
     transition: 0.3s;
 }
@@ -860,9 +859,9 @@
 .wwwOst h2 {
     position: relative;
     font-family: 'ELAND_Nice_M';
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
 }
 
 .wwwOst h2::after {
@@ -871,7 +870,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    width: 320px;
+    width: 245px;
     height: 5px;
     background: #333;
 }
@@ -927,28 +926,28 @@
     position: absolute;
     top: 260px;
     right: 30px;
-    font-size: 15px;
-    animation: drag 1.5s linear infinite;
+    font-size: 12px;
+    animation: drag 1s linear infinite;
 }
 
 .wwwPhoto .drag::before {
     position: absolute;
     content: "";
-    width: 20px;
-    height: 20px;
-    bottom: -18px;
-    right: 50px;
-    transform: rotate(40deg);
+    width: 15px;
+    height: 15px;
+    bottom: -17px;
+    right: 48px;
+    transform: rotate(45deg);
     border-left: 1px solid #333;
 }
 
 .wwwPhoto .drag::after {
     position: absolute;
     content: "";
-    width: 90px;
+    width: 70px;
     height: 1px;
     bottom: -10px;
-    right: -15px;
+    right: -5px;
     background: #333;
 }
 
@@ -966,9 +965,9 @@
 .wwwPhoto h2 {
     position: relative;
     font-family: 'ELAND_Nice_M';
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
 }
 
 .wwwPhoto h2::after {
@@ -977,7 +976,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    width: 350px;
+    width: 265px;
     height: 5px;
     background: #333;
 }
@@ -1021,11 +1020,11 @@
 }
 
 .ftTop {
-    line-height: 80px;
+    line-height: 60px;
     border-bottom: 1px solid #485074;
 }
 
-.ftTop .inner {
+.ftTop .container {
     display: flex;
     justify-content: space-between;
 }
@@ -1060,14 +1059,15 @@
     width: 140px;
 }
 
-.ftBottom .inner {
+.ftBottom .container {
     font-size: 14px;
-    padding: 40px 0 80px;
+    padding: 30px 0 50px;
     display: flex;
     justify-content: space-between;
 }
 
 .ftBottom .btleft dl {
+    font-size: 12px;
     display: flex;
     gap: 15px;
 }
@@ -1082,15 +1082,21 @@
 }
 
 .ftBottom .btleft p {
+    font-size: 12px;
     line-height: 1.6;
 }
 
 .ftBottom .btleft b {
+    font-size: 12px;
     font-weight: 600;
     line-height: 2;
 }
 
-.ftBottom .btright img {
+.ftBottom .btright img:first-child {
     width: 100px;
+}
+
+.ftBottom .btright img:last-child {
+    width: 70px;
     margin-left: 20px;
 }

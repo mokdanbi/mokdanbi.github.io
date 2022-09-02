@@ -144,4 +144,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // 초기 실행
     setTimeout(typing, 2700);
 
+
+
+
+    AOS.init();
 });
