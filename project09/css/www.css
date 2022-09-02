@@ -997,13 +997,15 @@
 
 .wwwPhoto .drag {
     position: absolute;
-    top: 260px;
-    right: 30px;
-    font-size: 12px;
+    top: 280px;
+    right: 40px;
+    font-size: 15px;
+    color: var(--mc);
+    font-weight: 600;
     animation: drag 1s linear infinite;
 }
 
-.wwwPhoto .drag::before {
+/* .wwwPhoto .drag::before {
     position: absolute;
     content: "";
     width: 15px;
@@ -1022,7 +1024,7 @@
     bottom: -10px;
     right: -5px;
     background: #333;
-}
+} */
 
 
 @keyframes drag {
