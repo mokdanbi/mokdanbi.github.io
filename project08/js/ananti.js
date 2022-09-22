@@ -25,11 +25,14 @@ window.addEventListener('DOMContentLoaded', () => {
     // MainDining
     const dinTab = document.querySelectorAll('.dinTab>li');
     const dinContent = document.querySelectorAll('.dinContent>div');
+    const dinTit = document.querySelectorAll('.dinTab>li>div');
 
     dinTab.forEach((el, idx) => {
         el.addEventListener('click', (e) => {
             dinContent.forEach(el => el.classList.remove('on'));
             dinContent[idx].classList.add('on');
+            dinTit.forEach(el => el.classList.remove('on'));
+            dinTit[idx].classList.add('on');
             e.preventDefault();
         })
     });

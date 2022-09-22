@@ -13,7 +13,7 @@
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 30px;
         font-weight: 700;
     }
 
@@ -168,7 +168,7 @@
         background: var(--mc);
         font-size: 15px;
         font-weight: 300;
-        transition: 0.5s;
+        transition: none;
         padding: 0 0 3px 0;
     }
 
@@ -330,7 +330,7 @@
 
     .aboutTxt strong {
         display: block;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 700;
         margin: 0 0 10px 0;
     }
@@ -342,8 +342,8 @@
 
     .aboutTxt p {
         display: block;
-        font-size: 12px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         line-height: 1.45;
         text-align: justify;
     }
@@ -361,7 +361,7 @@
     }
 
     .aboutSlider figure img {
-        width: auto;
+        width: 100%;
     }
 
 
@@ -379,6 +379,7 @@
     }
 
     .MainRooms p {
+        font-size: 14px;
         text-align: center;
     }
 
@@ -395,7 +396,6 @@
     .MainRooms .roomArrows i:nth-child(1) {
         margin: 0 0 0 -40%;
         padding: 20px;
-
     }
 
     .MainRooms .roomArrows i:nth-child(2) {
@@ -405,23 +405,6 @@
 
     .MainRooms .blueLine {
         display: none;
-        position: absolute;
-        width: 150px;
-        height: 100%;
-        background: var(--sc);
-        top: 0;
-        right: 25%;
-        z-index: -1;
-    }
-
-    .MainRooms h2 {
-        margin: 0 0 10px 0;
-    }
-
-    .MainRooms p {
-        font-size: 12px;
-        font-weight: 500;
-        margin: 0 0 30px 0;
     }
 
     .MainRooms .roomSlider {
@@ -462,13 +445,6 @@
         display: none;
     }
 
-
-    .roomBox h3 {
-        font-size: 26px;
-        font-weight: 600;
-        margin: 0 0 20px 0;
-    }
-
     .roomBox ul>li {
         font-size: 13px;
         font-weight: 300;
@@ -505,7 +481,7 @@
     }
 
     .MainDining p {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
         margin: 0 0 30px 0;
     }
@@ -520,7 +496,7 @@
         display: grid;
         /* grid-template-columns: 1 1 1 1; */
         width: 100%;
-        height: 150px;
+        height: 200px;
         padding: 0 30px;
         border-bottom: 3px solid var(--sc);
     }
@@ -545,32 +521,36 @@
         position: relative;
         display: none;
         height: auto;
-        overflow: hidden;
     }
 
+    .dinContent>div::before {
+        display: none;
+    }
+    
+    .dinContent>div::after {
+        display: none;
+    }
 
     .MainDining .dinContent>div .inbox {
         position: absolute;
         bottom: 0;
         left: 0;
+        height: 173px;
         padding: 30px;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.8);
         text-align: left;
     }
-
+    
     .inbox b {
         display: block;
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 600;
         margin: 0 0 10px 0;
     }
-
+    
     .inbox em {
-        display: block;
-        font-size: 12px;
-        font-weight: 500;
+        font-size: 14px;
         line-height: 1.45;
-        text-align: justify;
     }
 
     .dinContent>div.on {
@@ -597,27 +577,35 @@
         position: relative;
     }
 
-    .MainDining .dinTab>li .dinCover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        cursor: pointer;
+    .dinTab>li>div {
+        display: block;
     }
 
-    .MainDining .dinTab>li .dinCover strong {
+    .dinTab>li>div.on {
+        display: none;
+    }
+
+    .dinCover {
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 80%;
         transform: translate(-50%, -50%);
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 16px;
-        font-weight: 600;
-        font-family: 'Noto Sans KR';
-        line-height: 1.25;
+        cursor: pointer;
+        border-radius: 10px;
+        overflow: hidden;
     }
+
+    .dinCover strong {
+        display: block;
+        background: rgba(22, 49, 83, 0.8);
+        line-height: 30px;
+        width: 100%;
+        color: #fff;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
 
 
 
@@ -818,7 +806,7 @@
 
     .MainFacility figure:hover {
         box-shadow: 0;
-        transition: 0;
+        transition: none;
     }
 
     .MainFacility figure img {
@@ -869,7 +857,7 @@
         border-radius: 10px 0 0 10px;
         overflow: hidden;
     }
-    
+
     .scrollBtn i {
         background: var(--mc);
         color: #fff;
@@ -877,7 +865,7 @@
         padding: 10px;
         cursor: pointer;
     }
-    
+
     .scrollBtn i:nth-child(1) {
         border-bottom: 1px solid var(--sc);
     }
