@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     line-height: 100px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
     font-size: 17px;
     z-index: 999;
@@ -93,7 +93,7 @@
     background: #fff;
     z-index: 999;
     transition: 0.5s;
-}   
+}
 
 #header nav>ul:hover::before {
     height: 220px;
@@ -132,27 +132,14 @@ img {
     width: 1200px;
     color: #fff;
     letter-spacing: -0.025em;
-}
-
-.mainVisual .mainSlider .main01 .slogan {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-100%);
-}
-
-.mainVisual .mainSlider .main02 .slogan {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .mainVisual .mainSlider .main03 .slogan {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-155%);
+    text-shadow: 1px 1px 1px #999;
 }
 
 .mainVisual .mainSlider .slogan h2 {
@@ -176,13 +163,14 @@ img {
     left: 50%;
     bottom: -1px;
     transform: translateX(-50%);
+    width: 1200px;
 }
 
 .mainVisual .slick-dots li {
     display: inline-block;
-    width: 300px;
+    width: 33.33%;
     height: 6px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .mainVisual .slick-dots li::after {
@@ -254,6 +242,8 @@ img {
     font-weight: 900;
 }
 
+
+
 .mainBusiness .bnLeft_right figure:nth-child(1) {
     margin: 0 0 30px 0;
 }
@@ -302,7 +292,7 @@ img {
 .mainBusiness .bnRight p {
     font-size: 15px;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.25;
     margin: 0 0 75px 0;
 }
 
@@ -313,6 +303,7 @@ img {
     font-weight: 500;
     margin: 0 0 30px 0;
 }
+
 
 .mainBusiness .bnRight ul>li>i {
     padding: 0 10px 0 0;
@@ -361,10 +352,10 @@ img {
     content: "";
     position: absolute;
     inset: 50% 0 0 0;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 0.1px;
     height: 250px;
-    background: #999;
+    background: #dddddd;
 }
 
 .mainFuture .futureContent .futureImg {
@@ -389,7 +380,7 @@ img {
     border: 1px solid #333;
 }
 
-.mainFuture .moreView:hover a{
+.mainFuture .moreView a:hover {
     background: #333;
     color: #fff;
     transition: 0.3s;
@@ -420,7 +411,7 @@ img {
     font-size: 15px;
     font-weight: 300;
     margin: 0 0 15px 0;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .mainNews .newsRoom a {
@@ -458,9 +449,12 @@ img {
     padding: 0 0 0 43px;
 }
 
-.mainNews .newsSlider .news01, .news02, .news03, .news04 {
+.mainNews .newsSlider .news01,
+.news02,
+.news03,
+.news04 {
     position: relative;
-    height: 212px;
+    height: 220px;
 }
 
 .mainNews .container span {
@@ -471,13 +465,16 @@ img {
     color: #333;
 }
 
-.mainNews .news01::before, .news02::before, .news03::before, .news04::before {
+.mainNews .news01::before,
+.news02::before,
+.news03::before,
+.news04::before {
     content: "";
     display: block;
     width: 100px;
     height: 4px;
     background: #000;
-    margin: 0 0 43px 43px;
+    margin: 0 0 33px 43px;
 }
 
 
@@ -490,7 +487,7 @@ img {
     text-align: center;
     color: #fff;
     background: url(../img/fixed.jpg) no-repeat fixed center center/cover;
-    height: 720px;
+    height: 680px;
 }
 
 .mainFixed h2 {
@@ -534,7 +531,7 @@ img {
 
 .mainSocial {
     position: relative;
-    padding: 200px 0 100px;
+    padding: 200px 0 150px;
 }
 
 .mainSocial .inner {
@@ -575,13 +572,15 @@ img {
 
 .mainSocial .socialLeft {
     width: 510px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
 }
 
 
 .mainSocial .socialBox .titleSlider {
     position: absolute;
-    inset: 550px auto auto 460px;
+    bottom: -50px;
+    left: 110px;
     width: 330px;
     height: 220px;
     background: #fff;
@@ -613,7 +612,11 @@ img {
     vertical-align: -15%;
 }
 
-.mainSocial .socialBox .titleSlider .title01, .title02, .title03, .title04, .title05 {
+.mainSocial .socialBox .titleSlider .title01,
+.title02,
+.title03,
+.title04,
+.title05 {
     position: relative;
     height: 195px;
 }
@@ -628,12 +631,12 @@ img {
 
 
 .mainSocial .socialRight {
-    width: 70%;
+    width: calc(100% - 510px);
     overflow: hidden;
 }
 
 .mainSocial .socialRight .rightSlider {
-    width: 109%;
+    width: 1200px;
 }
 
 .mainSocial .socialRight figure {
@@ -643,9 +646,10 @@ img {
 .mainSocial .socialArrow i {
     position: absolute;
     inset: 50% auto auto 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     font-size: 120px;
     color: #f3f3f3;
+    cursor: pointer;
 }
 
 .mainSocial .socialArrow i:nth-child(1) {
@@ -672,7 +676,7 @@ img {
 
 #footer .top {
     line-height: 100px;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #444;
 }
 
 #footer .top .container {
@@ -681,7 +685,7 @@ img {
 }
 
 #footer .top h1 img:nth-child(1) {
-        width: 40px;
+    width: 40px;
 }
 
 #footer .top h1 img:nth-child(2) {
@@ -691,6 +695,7 @@ img {
 
 #footer .top dl {
     margin-right: -200px;
+    font-size: 15px;
 }
 
 #footer .top dd {
@@ -703,14 +708,15 @@ img {
     margin: 0 15px;
     width: 1px;
     height: 12px;
-    background: #ddd;
+    background: #666;
 }
+
 
 #footer .top select {
     font-size: 14px;
     background: transparent;
     color: #fff;
-    padding: 5px 15px;
+    padding: 5px 0 5px 3px;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
@@ -729,7 +735,7 @@ img {
 
 #footer .bottom .copyright {
     padding: 30px 0 0 0;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #footer .bottom dl {
@@ -746,7 +752,7 @@ img {
     margin: 0 15px;
     width: 1px;
     height: 10px;
-    background: #ddd;
+    background: #666;
 }
 
 #footer .bottom address {
@@ -761,7 +767,7 @@ img {
     margin: 0 15px;
     width: 1px;
     height: 10px;
-    background: #ddd;
+    background: #666;
 }
 
 #footer .bottom .sns {
