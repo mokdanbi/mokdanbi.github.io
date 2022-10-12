@@ -112,9 +112,11 @@ img {
     display: flex;
     width: 1200px;
     background: var(--mc);
+    border: 1px solid transparent;
     border-radius: 20px;
     color: #fff;
     font-size: 21px;
+    overflow: hidden;
     z-index: 999;
 }
 
@@ -132,17 +134,9 @@ img {
     line-height: 80px;
 }
 
-.main_button .green_btn>li:hover a {
+.main_button .green_btn>li:hover {
     background: #fff;
     color: var(--mc);
-}
-
-.main_button .green_btn>li:nth-child(1):hover a {
-    border-radius: 20px 0 0 20px;
-}
-
-.main_button .green_btn>li:nth-child(3):hover a {
-    border-radius: 0 20px 20px 0;
 }
 
 
@@ -152,18 +146,27 @@ img {
     padding: 100px 0 0 0;
 }
 
+.title_hot {
+    position: relative;
+}
+
 .main_menu .menu_arrows i {
     position: absolute;
-    inset: 500px 200px auto auto;
+    /* inset: 500px 200px auto auto; */
+    bottom: -70px;
+    left: 2px;
     padding: 10px;
     border: 1px solid #333;
     font-size: 20px;
     cursor: pointer;
 }
 
-.main_menu .menu_arrows i:nth-child(1) {
-    margin: 0 58px 0 0;
+.main_menu .menu_arrows i:nth-child(2) {
+    margin: 0 0 0 55px;
 }
+
+
+
 
 .main_menu .menu_title {
     position: absolute;
@@ -180,15 +183,39 @@ img {
 }
 
 .main_menu .menu_title:nth-child(2) span {
-    font-size: 45px;
+    /* font-size: 45px; */
+    letter-spacing: 0.25rem;
 }
 
 .main_menu .title_new {
     margin: 0 0 0 -700px;
+    padding: 0 0 0 20px;
+}
+
+.main_menu .title_new::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 10px;
+    height: 60px;
+    background: #17633d;
 }
 
 .main_menu .title_hot {
     margin: 0 0 0 700px;
+    padding: 0 20px 0 0;
+}
+
+.main_menu .title_hot::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 10px;
+    height: 60px;
+    background: #17633d;
+    ;
 }
 
 
@@ -267,6 +294,9 @@ img {
 }
 
 .main_vegan .vegan_slider .vegan_img {
+    position: relative;
+    width: 600px;
+    height: 600px;
     text-align: right;
     background: var(--bg);
     border-radius: 0 50% 50% 0;
@@ -278,8 +308,11 @@ img {
     }
 }
 
-.main_vegan .vegan_slider img {
-    width: 600px;
+.main_vegan .vegan_slider .vegan_img img {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 500px;
     animation: vegan_move 60s infinite linear;
 }
 
@@ -356,27 +389,11 @@ img {
 
 
 
+
 .main_farm .container {
     display: flex;
     justify-content: space-between;
     padding: 100px 0;
-}
-
-.main_farm .salady_kitchen img {
-    margin: 0 0 10px 0;
-    filter: brightness(1.5);
-}
-
-.main_farm .salady_kitchen img:hover {
-    filter: brightness(1);
-}
-
-.main_farm .salady_farm img {
-    filter: brightness(1.2);
-}
-
-.main_farm .salady_farm img:hover {
-    filter: brightness(1)
 }
 
 .main_farm figure h2 {
@@ -384,32 +401,102 @@ img {
     font-size: 30px;
 }
 
-.main_farm .salady_farm h2 {
-    position: absolute;
-    inset: 562px 0 0 0;
-    transform: rotate(-90deg);
-    transform-origin: left bottom;
+.salady_kitchen {
+    height: 600px;
 }
 
-/* .main_farm .salady_kitchen p {
-    position: absolute;
-    top: 155px;
-    left: 150px;
-    text-align: center;
-    color: #fff;
-    font-weight: 300;
-    line-height: 1.3;
+.salady_kitchen .inbox {
+    position: relative;
+    width: 585px;
+    height: 320px;
+    margin: 0 0 10px 0;
 }
 
-.main_farm .salady_farm p {
-    position: absolute;
-    top: 280px;
-    left: 35px;
-    text-align: center;
+.salady_kitchen .inbox .inbox_bg {
+    width: 585px;
+    height: 320px;
+    background-image: url(../img/salady_kitchen.png);
+    background-repeat: no-repeat;
+    background-position: 35%;
+    background-size: cover;
+    filter: brightness(1.5);
+    transition: 0.5s;
+}
+
+.salady_kitchen .inbox:hover .inbox_bg {
+    filter: brightness(1);
+    transition: 0.5s;
+}
+
+.salady_kitchen .inbox:hover p {
+    display: block;
     color: #fff;
-    font-weight: 300;
-    line-height: 1.3;
-} */
+}
+
+.salady_kitchen .inbox p {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.salady_farm {
+    position: relative;
+    height: 600px;
+}
+
+.salady_farm h2 {
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+    z-index: 999;
+    writing-mode: vertical-rl;
+}
+
+.salady_farm .inbox {
+    width: 457px;
+    height: 600px;
+}
+
+.salady_farm .inbox .inbox_bg {
+    width: 457px;
+    height: 600px;
+    background-image: url(../img/salady_farm.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    filter: brightness(0.9);
+    transition: 0.5s;
+}
+
+.salady_farm .inbox p {
+    display: none;
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #fff;
+}
+
+.salady_farm .inbox:hover .inbox_bg {
+    filter: brightness(0.7);
+}
+
+.salady_farm .inbox:hover p {
+    display: block;
+    color: #fff;
+}
+
 
 
 
@@ -441,6 +528,11 @@ img {
     justify-content: space-between;
 }
 
+.main_infomation ul>li {
+    width: 256px;
+    height: 236px;
+}
+
 .main_infomation ul>li img {
     width: 120px;
     margin: 0 0 30px 0;
@@ -456,12 +548,14 @@ img {
 .main_infomation ul>li>a {
     display: block;
     padding: 30px 65px;
-    border: 3px solid var(--bg);
+    border: 5px solid var(--bg);
 }
 
 .main_infomation ul>li:hover a {
     border: none;
-    box-shadow: 1px 1px 5px 5px var(--bg) inset;
+    box-shadow: 0 0 5px 5px var(--bg);
+    width: 256px;
+    height: 236px;
 }
 
 
@@ -474,14 +568,15 @@ img {
 
 .main_instagram h2 {
     position: absolute;
-    top: 33px;
-    left: 250px;
+    top: 100px;
+    left: calc((100% - 1200px) / 2);
+    writing-mode: vertical-lr;
     font-family: 'Bowlby One', cursive;
     font-size: 30px;
-    line-height: 1.2;
-    text-align: right;
-    transform: rotate(-90deg);
-    transform-origin: right bottom;
+}
+
+.main_instagram h2 span {
+    font-size: 46px;
 }
 
 .main_instagram .container {
@@ -491,8 +586,28 @@ img {
     justify-content: end;
 }
 
-.main_instagram .container>div:hover a {
+.main_instagram .container>div {
+    position: relative;
+    
+}
+
+.main_instagram .container>div i {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.8);
+    
+}
+
+.main_instagram .container>div:hover img {
     filter: brightness(0.8);
+}
+
+.main_instagram .container>div:hover i {
+    display: block;
 }
 
 .main_instagram .insta03 {
@@ -513,7 +628,7 @@ img {
 }
 
 #footer .ft_top {
-    border-bottom: 1px solid #65977e;
+    border-bottom: 1px solid #1f7449;
 }
 
 #footer .ft_top .container {
@@ -530,6 +645,7 @@ img {
     display: flex;
     gap: 40px;
     color: #fff;
+    font-size: 15px;
 }
 
 #footer .ft_top dl>dt {
@@ -561,7 +677,7 @@ img {
 
 .to_top i {
     font-size: 50px;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     color: var(--mc);
     cursor: pointer;
 }
