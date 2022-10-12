@@ -1,7 +1,6 @@
-/* * {
-    outline: 1px solid #f00;
-} */
-/* 임시 아웃라인 */
+* {
+    /* outline: 1px solid #f00; */
+}
 
 #header {
     position: absolute;
@@ -636,11 +635,11 @@ img {
 }
 
 .mainSocial .socialRight .rightSlider {
-    width: 1200px;
+    width: 1125px;
 }
 
 .mainSocial .socialRight figure {
-    padding: 100px 80px 0 0;
+    padding: 100px 60px 0 0;
 }
 
 .mainSocial .socialArrow i {
