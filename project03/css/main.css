@@ -35,6 +35,10 @@
     display: block;
 }
 
+#header nav>ul a:hover {
+    color: #17633d;
+}
+
 #header .mbtn {
     width: 80px;
     text-align: right;
@@ -101,6 +105,10 @@ img {
     font-size: 20px;
 }
 
+.main02 .slogan {
+    text-shadow: 1px 1px 1px #333;
+}
+
 
 .main_visual .main_button {
     position: relative;
@@ -116,6 +124,7 @@ img {
     border-radius: 20px;
     color: #fff;
     font-size: 21px;
+    font-weight: 500;
     overflow: hidden;
     z-index: 999;
 }
@@ -329,6 +338,10 @@ img {
     font-family: 'Bowlby One', cursive;
     font-size: 30px;
     margin: 0 0 60px 70px;
+}
+
+.vegan_text h2 span {
+    font-size: 39px;
 }
 
 .main_vegan .vegan_slider .vegan_text h3 {
@@ -588,7 +601,7 @@ img {
 
 .main_instagram .container>div {
     position: relative;
-    
+
 }
 
 .main_instagram .container>div i {
@@ -596,10 +609,10 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 80px;
     color: rgba(255, 255, 255, 0.8);
-    
+
 }
 
 .main_instagram .container>div:hover img {
@@ -633,7 +646,7 @@ img {
 
 #footer .ft_top .container {
     display: flex;
-    line-height: 80px;
+    line-height: 90px;
     justify-content: space-between;
 }
 
@@ -664,7 +677,7 @@ img {
 }
 
 #footer .ft_bottom {
-    line-height: 50px;
+    line-height: 60px;
     color: #fff;
     font-size: 14px;
     font-weight: 500;

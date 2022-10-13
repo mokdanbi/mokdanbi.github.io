@@ -52,7 +52,7 @@ $(function () {
 
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll > 3700) {
+        if (scroll > 3750) {
             $(".to_top i").css("color", "#ffffff");
         } else {
             $(".to_top i").css("color", "");
