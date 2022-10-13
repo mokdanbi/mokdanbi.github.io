@@ -178,6 +178,12 @@ h2 {
     overflow: hidden;
 }
 
+.bg_video {
+    z-index: -1;
+    width: 100%;
+
+}
+
 .main_visual .wheel {
     position: absolute;
     bottom: 40px;
@@ -216,6 +222,10 @@ h2 {
     overflow: hidden;
 }
 
+.new_slide {
+    margin: 0 auto;
+}
+
 .main_new .new_slide {
     width: 150%;
     left: -225px;
@@ -228,8 +238,9 @@ h2 {
 .main_new .new_title {
     position: absolute;
     top: 50%;
-    left: 225px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 0 0 -477px;
     text-align: center;
     width: 500px;
     height: 450px;
@@ -245,11 +256,34 @@ h2 {
     font-weight: 300;
 }
 
+.new_title .new_arrows i {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    color: #999;
+    border: 1px solid #999;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.new_title .new_arrows i:nth-child(1) {
+    margin: 0 0 0 -25px;
+}
+
+.new_title .new_arrows i:nth-child(2) {
+    margin: 0 0 0 25px;
+}
+
+
+
 .main_new .new_content {
     position: absolute;
     top: 50%;
-    left: 1178px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 0 0 477px;
     text-align: center;
     width: 500px;
     height: 450px;
@@ -348,21 +382,6 @@ h2 {
 .main_new .new_content .strong_a:hover strong {
     color: var(--mc);
     border-bottom-color: var(--mc);
-}
-
-.main_new .new_arrows i {
-    position: absolute;
-    top: 380px;
-    left: 430px;
-    padding: 5px;
-    color: #999;
-    border: 1px solid #999;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.main_new .new_arrows i:nth-child(2) {
-    margin: 0 0 0 50px;
 }
 
 

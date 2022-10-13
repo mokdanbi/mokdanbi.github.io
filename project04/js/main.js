@@ -37,8 +37,9 @@ $(function(){
         pauseOnHover: false,
         pauseOnFocus: false,
         slidesToShow: 3,
-        draggable: false,
+        draggable: true,
         autoplaySpeed: 4000,
+        // centerMode: true
     });
 
     $('.new_content').slick({
