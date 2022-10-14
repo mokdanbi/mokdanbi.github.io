@@ -132,7 +132,7 @@ h2 {
 
 .main_slider .slide_title p {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .main_slider .slick-dots {
@@ -167,7 +167,7 @@ h2 {
     display: flex;
     width: 100%;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .new_arrival .new_slide {
@@ -175,7 +175,11 @@ h2 {
 }
 
 .new_arrival .new_slide figure {
-    padding-left: 30px;
+    padding: 40px;
+}
+
+.new_arrival .new_slide figure img {
+    width: 300px;
 }
 
 .new_arrival .new_slide figure:hover img {
@@ -201,22 +205,24 @@ h2 {
 }
 
 .new_arrival .new_right {
+    position: relative;
     width: 40%;
 }
 
 .new_arrival .new_title {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 405px;
-    height: 100%;
     text-align: center;
 }
 
 .new_arrival .new_title h2 {
-    margin: 50px 0 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .new_arrival .new_title b {
-    display: inline-block;
+    display: block;
     font-size: 14px;
     font-weight: 700;
     margin: 0 0 10px;
@@ -224,13 +230,12 @@ h2 {
 
 .new_arrival .new_title p {
     font-size: 20px;
-    font-weight: 300;
     margin: 0 0 20px 0;
 }
 
 .new_arrival .new_title em {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: #f00;
 }
 
@@ -290,20 +295,20 @@ h2 {
 }
 
 .new_brand .brand_left b {
-    display: inline-block;
+    display: block;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0 0 15px;
 }
 
 .new_brand .brand_left p {
-    font-size: 16px;
-    font-weight: 300;
-    margin: 0 0 60px;
+    font-size: 15px;
+    margin: 0 0 60px 0;
 }
 
 .new_brand .brand_left a {
-    padding: 3px 20px 5px;
+    display: inline-block;
+    padding: 5px 20px;
     color: #333;
     border: 1px solid #333;
     font-size: 14px;
@@ -323,6 +328,7 @@ h2 {
 }
 
 .new_brand .brand_right img {
+
     border-radius: 30px;
 }
 
@@ -385,20 +391,17 @@ h2 {
 }
 
 .best_seller .best_right ul>li {
-    margin: 0 0 20px 0;
+    line-height: 60px;
 }
 
 .best_seller .best_right ul>li>a {
-    margin: 0 5px 0 0;
+    display: inline-block;
+    width: 180px;
+    padding: 0 15px 0 0;
 }
 
-.best_seller .best_right ul>li~li::before {
-    content: "";
-    display: block;
-    width: 160px;
-    height: 1px;
-    background: #dbdbdb;
-    margin: 0 0 20px auto;
+.best_seller .best_right ul>li~li a {
+    border-top: 1px solid #e0e0e0;
 }
 
 .best_seller .best_right ul>li.on a {
@@ -514,6 +517,7 @@ h2 {
 }
 
 .object_ex .ex_title em {
+    display: block;
     font-size: 12px;
     font-weight: 500;
     color: #f00;
@@ -585,49 +589,34 @@ h2 {
 .object_store .store_title {
     flex: 1;
     text-align: center;
+    background: #f9f9f9;
+    /* border: 1px solid #ddd; */
 }
 
 .object_store .store_title h2 {
-    margin: 0 0 30px 0;
+    margin: 30px 0 30px 0;
 }
 
 .object_store .store_title ul>li {
-    padding: 8px 0;
+    /* padding: 8px 0; */
 }
 
-.object_store .store_map {
-    position: relative;
-    flex: 1;
+.object_store .store_title ul>li>a {
+    line-height: 40px;
 }
 
-#map {
-    max-width: 510px;
-
-}
-
-.object_store .store_map h3 {
-    position: absolute;
-    bottom: 0;
-    right: -30px;
-    font-family: 'Kanit', sans-serif;
-    font-size: 144px;
-    font-weight: 600;
-    color: #9dbad1;
-    writing-mode: vertical-rl;
-    z-index: -1;
-}
-
-.store_list ul>li~li a::before {
+/* .store_list ul>li~li a::before {
     content: "";
     display: block;
     width: 280px;
     height: 1px;
     background: #dbdbdb;
     margin: 0 auto 13px auto;
-}
+} */
 
 .store_list ul>li ul>li {
     font-size: 14px;
+    line-height: 20px;
 }
 
 .store_list ul>li ul>li:nth-child(1) {
@@ -640,6 +629,29 @@ h2 {
 
 .store_list>ul>li .store_info.on {
     display: block;
+}
+
+
+.object_store .store_map {
+    position: relative;
+    flex: 1;
+}
+
+#map {
+    max-width: 510px;
+    background: #9dbad1;
+}
+
+.object_store .store_map h3 {
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 144px;
+    font-weight: 600;
+    color: #9dbad1;
+    writing-mode: vertical-rl;
+    z-index: -1;
 }
 
 
