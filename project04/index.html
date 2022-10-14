@@ -61,19 +61,19 @@
             <div class="searchBox">
                 <div id="searchForm">
                     <form action="javascript:searchAction()">
-                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <input type="text" placeholder="검색어를 입력하세요." id="searchText">
                         <button>
                             <i class="xi-search"></i>
                         </button>
                     </form>
                     <ul>
-                        <li><a href="">워터 리퀴드 글로우</a></li>
-                        <li><a href="">무드인핸서</a></li>
-                        <li><a href="">시그니처 브로우</a></li>
+                        <li value="워터 리퀴드 글로우"><a href="#!" onclick="statusChange(this)">워터 리퀴드 글로우</a></li>
+                        <li value="무드인핸서"><a href="#!" onclick="statusChange(this)">무드인핸서</a></li>
+                        <li value="시그니처 브로우"><a href="#!" onclick="statusChange(this)">시그니처 브로우</a></li>
                     </ul>
                     <ul>
-                        <li><a href="">뉴 뎁스 아이섀도우</a></li>
-                        <li><a href="">파운데이션</a></li>
+                        <li value="뉴 뎁스 아이섀도우"><a href="#!" onclick="statusChange(this)">뉴 뎁스 아이섀도우</a></li>
+                        <li value="파운데이션"><a href="#!" onclick="statusChange(this)">파운데이션</a></li>
                     </ul>
                 </div>
                 <div class="searchClose">
@@ -81,6 +81,12 @@
                 </div>
 
                 <script>
+                    function statusChange(statusItem) {
+                        var strText = $(statusItem).text();
+                        // strText 에 전체 문자열이 입력된다.
+                        $("#searchText").val(strText);
+                    };
+
                     function searchAction() {
                         var searchValue = $('#searchForm input').val();
                         // console.log(searchValue)
@@ -94,7 +100,7 @@
                         // 검색 후에 초기화
                         $('#searchForm input').focus();
                         // 검색 후에도 계속 입력상태로 유지
-                    }
+                    };
                 </script>
             </div>
         </header>
@@ -112,32 +118,32 @@
             <section class="main_new" id="wheelscroll">
                 <div class="new_slide">
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/new01.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/new03.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/new02.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/new01.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/new03.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/new02.jpg" alt="">
                         </a>
                     </figure>
@@ -154,7 +160,7 @@
                 </div>
                 <div class="new_content">
                     <div class="new01">
-                        <a href="">
+                        <a href="#!">
                             <h3>New Depth Eye Shadow</h3>
                             <h4>뉴 뎁스 아이섀도우</h4>
                         </a>
@@ -163,12 +169,12 @@
                             <li></li>
                             <li></li>
                         </ul>
-                        <a href="" class="strong_a">
+                        <a href="#!" class="strong_a">
                             <strong>Discover More</strong>
                         </a>
                     </div>
                     <div class="new02">
-                        <a href="">
+                        <a href="#!">
                             <h3>Glow Up Nail Color</h3>
                             <h4>글로우 업 네일 컬러</h4>
                         </a>
@@ -177,12 +183,12 @@
                             <li></li>
                             <li></li>
                         </ul>
-                        <a href="" class="strong_a">
+                        <a href="#!" class="strong_a">
                             <strong>Discover More</strong>
                         </a>
                     </div>
                     <div class="new03">
-                        <a href="">
+                        <a href="#!">
                             <h3>Second Skin Tone Up Base</h3>
                             <h4>세컨 스킨 톤업 베이스</h4>
                         </a>
@@ -191,12 +197,12 @@
                             <li></li>
                             <li></li>
                         </ul>
-                        <a href="" class="strong_a">
+                        <a href="#!" class="strong_a">
                             <strong>Discover More</strong>
                         </a>
                     </div>
                     <div class="new01">
-                        <a href="">
+                        <a href="#!">
                             <h3>New Depth Eye Shadow</h3>
                             <h4>뉴 뎁스 아이섀도우</h4>
                         </a>
@@ -205,12 +211,12 @@
                             <li></li>
                             <li></li>
                         </ul>
-                        <a href="" class="strong_a">
+                        <a href="#!" class="strong_a">
                             <strong>Discover More</strong>
                         </a>
                     </div>
                     <div class="new02">
-                        <a href="">
+                        <a href="#!">
                             <h3>Glow Up Nail Color</h3>
                             <h4>글로우 업 네일 컬러</h4>
                         </a>
@@ -219,12 +225,12 @@
                             <li></li>
                             <li></li>
                         </ul>
-                        <a href="" class="strong_a">
+                        <a href="#!" class="strong_a">
                             <strong>Discover More</strong>
                         </a>
                     </div>
                     <div class="new03">
-                        <a href="">
+                        <a href="#!">
                             <h3>Second Skin Tone Up Base</h3>
                             <h4>세컨 스킨 톤업 베이스</h4>
                         </a>
@@ -233,7 +239,7 @@
                             <li></li>
                             <li></li>
                         </ul>
-                        <a href="" class="strong_a">
+                        <a href="#!" class="strong_a">
                             <strong>Discover More</strong>
                         </a>
                     </div>
@@ -246,7 +252,7 @@
                 <p>가장 사랑받고 있는 힌스의 베스트 컬러</p>
                 <div class="container">
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <div class="box">
                                 <img src="./img/most01.jpg" alt="">
                             </div>
@@ -255,7 +261,7 @@
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <div class="box">
                                 <img src="./img/most02.jpg" alt="">
                             </div>
@@ -264,7 +270,7 @@
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <div class="box">
                                 <img src="./img/most03.jpg" alt="">
                             </div>
@@ -273,7 +279,7 @@
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <div class="box">
                                 <img src="./img/most04.jpg" alt="">
                             </div>
@@ -282,7 +288,7 @@
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <div class="box">
                                 <img src="./img/most05.jpg" alt="">
                             </div>
@@ -291,7 +297,7 @@
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <div class="box">
                                 <img src="./img/most06.jpg" alt="">
                             </div>
@@ -311,25 +317,25 @@
                     Hince Collection
                 </h2>
                 <div class="container">
-                    <div class="left_bg"></div>
-                    <div class="left_right"></div>
                     <div class="col_left">
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/col01.jpg" alt="">
                         </a>
                         <h3>Light Up Your Day</h3>
                         <p>투명하게 빛나는 당신의 하루<br />
                             얽매인 것들로부터 벗어나<br />
                             더욱 투명하게 피어나는 당신을 만나보세요</p>
+                        <div class="left_bg"></div>
                     </div>
                     <div class="col_right">
                         <p>새로운 계절 고조되는 활기, 생동하는 에너지처럼<br />
                             섬세한 열정으로 매일을 시작하고 살아가는<br />
                             당신이 지닌 빛을 떠오르게 할 더 비기닝 컬렉션</p>
                         <h3>Rise, Shine, Open</h3>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/col02.jpg" alt="">
                         </a>
+                        <div class="right_bg"></div>
                     </div>
                 </div>
 
@@ -348,7 +354,7 @@
                     <div class="store_left">
                         <div class="left_circle"></div>
                         <div class="left_img">
-                            <a href="">
+                            <a href="#!">
                                 <img src="./img/store01.png" alt="">
                             </a>
                         </div>
@@ -356,13 +362,13 @@
                     </div>
                     <div class="store_right">
                         <figure>
-                            <a href="">
+                            <a href="#!">
                                 <img src="./img/store02.jpg" alt="">
                             </a>
                         </figure>
                         <h2>Hince Atelier</h2>
                         <p>힌스의 무드를 경험할 수 있는 쇼룸</p>
-                        <a href="" class="strong_b">
+                        <a href="#!" class="strong_b">
                             <strong>Store More</strong>
                         </a>
                     </div>
@@ -373,6 +379,7 @@
                 <div class="animated-title">
                     <div class="content">
                         #HINCE_OFFICEAL #LIGHT_UP_YOUR_DAY #HINCE_OFFICEAL #LIGHT_UP_YOUR_DAY
+                        #HINCE_OFFICEAL #LIGHT_UP_YOUR_DAY
                     </div>
                 </div>
             </section>
@@ -380,37 +387,37 @@
             <section class="main_insta">
                 <div class="insta_slide">
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/insta01.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/insta02.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/insta03.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/insta04.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/insta05.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/insta06.jpg" alt="">
                         </a>
                     </figure>
                     <figure>
-                        <a href="">
+                        <a href="#!">
                             <img src="./img/insta07.jpg" alt="">
                         </a>
                     </figure>
@@ -423,16 +430,16 @@
             <div class="ft_top">
                 <dl>
                     <dd>
-                        <a href="">이용약관</a>
+                        <a href="#!">이용약관</a>
                     </dd>
                     <dt>
-                        <a href="">개인정보처리방침</a>
+                        <a href="#!">개인정보처리방침</a>
                     </dt>
                     <dd>
-                        <a href="">제휴문의</a>
+                        <a href="#!">제휴문의</a>
                     </dd>
                     <dd>
-                        <a href="">해외수출문의</a>
+                        <a href="#!">해외수출문의</a>
                     </dd>
                 </dl>
                 <ul>

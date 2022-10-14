@@ -37,7 +37,7 @@ $(function(){
         pauseOnHover: false,
         pauseOnFocus: false,
         slidesToShow: 3,
-        draggable: true,
+        draggable: false,
         autoplaySpeed: 4000,
         // centerMode: true
     });
