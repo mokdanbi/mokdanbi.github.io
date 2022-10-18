@@ -54,9 +54,10 @@
         width: calc(100% - 80px);
         height: 100vh;
         background: var(--mc);
-        z-index: 999;
+        z-index: 1000;
         display: block;
         transition: 0.5s;
+        border-right: 1px solid #ddd;
     }
 
     .Header nav.on {
@@ -165,6 +166,7 @@
         margin: auto 30px auto 20px;
         width: 30px;
         height: 30px;
+        cursor: pointer;
     }
 
     .mbtn::before,
@@ -295,8 +297,7 @@
         background: #fffbe2;
         color: #333;
         border-radius: 20px;
-        font-size: 14px;
-        line-height: 2;
+        font-size:min-height: 100%;
     }
 
     .searchForm ul>li:hover {
@@ -309,10 +310,6 @@
         top: 0;
         right: 30px;
     }
-
-
-
-
 
     .MainCategory {
         padding: 50px 0 90px 0;
@@ -479,7 +476,7 @@
         margin: 0 0 0 -30%;
     }
 
-    .MainBest .BestWine .bestArrows i:nth-child(2) {
+    .MainBest .BestWine min-height: 100%) {
         margin: 0 0 0 30%;
     }
 
@@ -887,8 +884,7 @@
         color: #333;
         background: #fff;
         border: 2px solid #333;
-        border-radius: 20px;
-        line-height: 1.2;
+        border-radius: 2min-height: 100%;
         white-space: nowrap;
     }
 
@@ -950,30 +946,39 @@
     }
 
 
-    .ftTop .topCenter {
+    .ftTop .fter {
         line-height: 4;
         border-top: 1px solid #444;
         border-bottom: 1px solid #444;
     }
 
     .ftTop .topCenter dl {
-        display: flex;
+        display: block;
         font-size: 12px;
         gap: 10px;
-        white-space: nowrap;
+        white-space: wrap;
         justify-content: center;
+        width: auto;
+        text-align: center;
+    }
+
+    .ftTop .topCenter min-height: 100%;
+      border-top: 1px solid #444;
+    }
+
+    .ftTop .topCenter dl>dd:last-child {
+      border-bottom: 1px solid #444;
     }
 
     .ftTop .topCenter dl>dd~dd::before {
-        content: "\00B7";
-        padding-right: 10px;
+        content: "";
+        padding-right: 0;
     }
 
     .ftTop .topRight {
         font-size: 26px;
         width: auto;
-        text-align: center;
-        line-height: 2;
+        text-align: cmin-height: 100%;
     }
 
     .Footer .ftBottom {
@@ -993,7 +998,7 @@
         margin: 0;
     }
 
-    .Footer .ftBottom dl:nth-child(2) {
+    .Footermin-height: 100%) {
         margin: 0;
     }
 
