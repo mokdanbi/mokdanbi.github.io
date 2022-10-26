@@ -140,6 +140,11 @@
   .main_slider figure {
     position: relative;
     width: auto;
+    height: 400px;
+  }
+
+  .main_slider .slick-slide img {
+    height: 100%;
   }
 
   .main_slider .slide_title {
@@ -299,30 +304,30 @@
     overflow-x: hidden;
     padding: 60px 0;
   }
-  
+
   .new_arrival .new_slide {
     width: auto;
   }
-  
+
   .new_arrival .new_slide figure {
     padding: 0;
     margin: 0 0 30px 0;
   }
-  
+
   .new_arrival .new_slide figure img {
     width: 50%;
     margin: 0 auto;
   }
-  
+
   .new_arrival .new_slide figure:hover img {
     animation: none;
   }
-  
+
   .new_arrival .new_right {
     position: static;
     width: auto;
   }
-  
+
   .new_arrival .new_title {
     position: static;
     top: 0;
@@ -330,40 +335,40 @@
     width: auto;
     text-align: center;
   }
-  
+
   .new_arrival .new_title h2 {
     margin: 0 0 30px 0;
   }
-  
+
   .new_arrival .new_title b {
     display: block;
     font-size: 14px;
     font-weight: 700;
     margin: 0 0 10px;
   }
-  
+
   .new_arrival .new_title p {
     font-size: 20px;
     margin: 0 0 20px 0;
   }
-  
+
   .new_arrival .new_title em {
     font-size: 16px;
     font-weight: 600;
     color: #f00;
   }
-  
+
   .new_arrival .new_title .title_slide {
     margin: 0 0 50px 0;
   }
-  
+
   .new_arrival .new_arrows i {
     font-size: 40px;
     color: #ddd;
     cursor: pointer;
     padding: 0 10px;
   }
-  
+
 
 
   .slide01 {
